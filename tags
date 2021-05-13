@@ -1,0 +1,37 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ENDCOLOR	checker.c	6;"	d	file:
+ENDCOLOR	push_swap.c	8;"	d	file:
+GREEN	checker.c	7;"	d	file:
+GREEN	push_swap.c	9;"	d	file:
+RED	checker.c	8;"	d	file:
+RED	push_swap.c	10;"	d	file:
+check_ordered	checker.c	/^bool	check_ordered(int *numbers, int size)$/;"	f
+check_ordered	push_swap.c	/^bool	check_ordered(int *numbers, int size)$/;"	f
+dll_append	doubly_linked_lists.c	/^void	dll_append(t_stack **head, t_stack *node)$/;"	f
+dll_new_node	doubly_linked_lists.c	/^t_stack	*dll_new_node(int n)$/;"	f
+dll_pop	doubly_linked_lists.c	/^t_stack	*dll_pop(t_stack **head)$/;"	f
+dll_poppush	doubly_linked_lists.c	/^void	dll_poppush(t_stack **a, t_stack **b)$/;"	f
+dll_push	doubly_linked_lists.c	/^void	dll_push(t_stack **dll, t_stack *node)$/;"	f
+dll_revrotate	doubly_linked_lists.c	/^void	dll_revrotate(t_stack **head)$/;"	f
+dll_rotate	doubly_linked_lists.c	/^void	dll_rotate(t_stack **head)$/;"	f
+dll_swaptop	doubly_linked_lists.c	/^void	dll_swaptop(t_stack **head)$/;"	f
+free_dll	push_swap.c	/^void	free_dll(t_stack **list, int nmemb)$/;"	f
+head	doubly_linked_lists.c	/^	struct s_stack	**head;$/;"	m	struct:s_dll	typeref:struct:s_dll::s_stack	file:
+main	checker.c	/^int 	main(int argc, char **argv)$/;"	f
+main	push_swap.c	/^int 	main(int argc, char **argv)$/;"	f
+next	doubly_linked_lists.c	/^	struct s_stack	*next;$/;"	m	struct:s_stack	typeref:struct:s_stack::s_stack	file:
+num	doubly_linked_lists.c	/^	int				num;$/;"	m	struct:s_stack	file:
+prev	doubly_linked_lists.c	/^	struct s_stack	*prev;$/;"	m	struct:s_stack	typeref:struct:s_stack::s_stack	file:
+print_both_dll	push_swap.c	/^void	print_both_dll(t_stack **a, int size_a, t_stack **b, int size_b)$/;"	f
+print_dll	push_swap.c	/^void	print_dll(t_stack **a, int size_a)$/;"	f
+print_two_stacks	checker.c	/^void	print_two_stacks(int *a, int siza, int *b, int sizb)$/;"	f
+s_dll	doubly_linked_lists.c	/^typedef struct	s_dll {$/;"	s	file:
+s_stack	doubly_linked_lists.c	/^typedef	struct	s_stack	{$/;"	s	file:
+size	doubly_linked_lists.c	/^	int				size;$/;"	m	struct:s_dll	file:
+t_dll	doubly_linked_lists.c	/^} t_dll;$/;"	t	typeref:struct:s_dll	file:
+t_stack	doubly_linked_lists.c	/^} t_stack;$/;"	t	typeref:struct:s_stack	file:
