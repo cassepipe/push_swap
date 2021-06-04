@@ -4,86 +4,174 @@
 #include <unistd.h>
 #include <stdbool.h>
 #include "dll.h"
+#include "libft/get_next_line.h"
 
 #define ENDCOLOR "\033[0m"
 #define GREEN "\033[92m"
 #define RED "\033[31m"
 
-bool	check_ordered(int *numbers, int size);
+bool	check_ordered(t_stack **numbers);
 void	print_both_dll(t_stack **a, int size_a, t_stack **b, int size_b);
 void	print_dll(t_stack **a, int size_a);
 void	free_dll(t_stack **list, int nmemb);
 
-int 	main(int argc, char **argv)
+struct s_fat_token {
+	char *token;
+	void (*operation)(t_stack **list);
+};
+
+void	readexec_stack_ops(t_stack **a, t_stack **b)
 {
-	int	numbers[argc - 1];
+	char *line;
 	int i;
-	int op_n;
-	t_stack **a;
-	t_stack **b;
+	int y;
 
-	argv++;
-	argc--;
-	b = NULL;
-	i = 0;
-	while (i < argc)
+	while (get_next_line(STDOUT_FILENO, &line))
 	{
-		dll_append(a, dll_new_node(atoi(argv[i])));
-		i++;
+		if (line[0] == 's')
+		{
+			if (line[1] == 'a')
+				dll_swaptop(a);
+			else if (line[1] == 'b')
+				dll_swaptop(b);
+		}
+		if (line[0] == 'p')
+		{
+			if (line[1] == 'a')
+				dll_poppush(b,a);
+			else if (line[1] == 'b')
+				dll_poppush(a,b);
+		}
+		if (line[0] == 'r')
+		{
+			if (line[1] == 'r')
+			{
+				if (line[2] == 'a')
+					dll_revrotate(a);
+				else if (line[2] == 'b')
+					dll_revrotate(b);
+				else if (line[2] == 'r')
+				{
+					dll_revrotate(a);
+					dll_revrotate(b);
+				}
+				else
+				{
+					dll_rotate(a);
+					dll_rotate(b);
+				}
+			}
+			else if (line[1] == 'a')
+				dll_rotate(a);
+			else if (line[1] == 'b')
+				dll_rotate(b);
+		}
+		free(line);
+		print_both_dll(a, i, b, y);
 	}
-	i++;
+	free(line);
+}
 
-	print_dll(a, i);
-	/*print_both_dll(a, i, a, i - 2);*/
-	/*print_both_dll(a, i, b, 0);*/
-	if (check_ordered(numbers, argc))
+void	put_ordered(t_stack **list)
+{
+	if (check_ordered(list))
 		printf(GREEN "OK" ENDCOLOR "\n");
 	else
 		printf(RED "KO" ENDCOLOR "\n");
+}
+
+int 	main(int argc, char **argv)
+{
+	int i;
+	int y;
+	t_stack **a;
+	t_stack **b;
+	char *line;
+
+	argv++;
+	argc--;
+	a = malloc(sizeof(t_stack**));
+	b = malloc(sizeof(t_stack**));
+	if (!a || !b)
+		return (0);
+	*a = NULL;
+	*b = NULL;
+	y = 0;
+	i = 0;
+	while (i < argc)
+	{
+		a = dll_append(a, dll_new_node(atoi(argv[i])));
+		i++;
+	}
+
+	print_both_dll(a, i, b, y);
+
+	while (get_next_line(STDOUT_FILENO, &line))
+	{
+		if (line[0] == 's')
+		{
+			if (line[1] == 'a')
+				dll_swaptop(a);
+			else if (line[1] == 'b')
+				dll_swaptop(b);
+		}
+		if (line[0] == 'p')
+		{
+			if (line[1] == 'a')
+			{
+				dll_poppush(b,a);
+				i++;
+				y--;
+			}
+			else if (line[1] == 'b')
+			{
+				dll_poppush(a,b);
+				y++;
+				i--;
+			}
+		}
+		if (line[0] == 'r')
+		{
+			if (line[1] == 'r')
+			{
+				if (line[2] == 'a')
+					dll_revrotate(a);
+				else if (line[2] == 'b')
+					dll_revrotate(b);
+				else if (line[2] == 'r')
+				{
+					dll_revrotate(a);
+					dll_revrotate(b);
+				}
+				else
+				{
+					dll_rotate(a);
+					dll_rotate(b);
+				}
+			}
+			else if (line[1] == 'a')
+				dll_rotate(a);
+			else if (line[1] == 'b')
+				dll_rotate(b);
+		}
+		free(line);
+		print_both_dll(a, i, b, y);
+	}
+	free(line);
 
 	free_dll(a, i);
-	/*free_dll(b, 0);*/
-
-	op_n = 0;
+	free_dll(b, y);
+	free(a);
+	free(b);
 
 	return (0);
 }
 
-void	free_dll(t_stack **list, int nmemb)
-{
-	t_stack *node;
-
-	if (list)
-	{
-		if (*list)
-		{
-			node = (*list)->next;
-			while (--nmemb)
-			{
-				node = node->next;
-				free(node->prev);
-			}
-			free(*list);
-		}
-	}
-}
-
-void	print_dll(t_stack **a, int size_a)
-{
-	size_a = size_a > 0 ? size_a: 0;
-
-	while (size_a--)
-	{
-		printf("\t%i", (*a)->num);
-		puts("\n");
-		*a = (*a)->next;
-	}
-}
 
 void	print_both_dll(t_stack **a, int size_a, t_stack **b, int size_b)
 {
 	size_a = size_a > 0 ? size_a : 0;
-	size_a = size_a > 0 ? size_b : 0;
+	size_b = size_b > 0 ? size_b : 0;
 	if (size_a > size_b)
 		while (size_a > size_b)
 		{
@@ -108,24 +196,25 @@ void	print_both_dll(t_stack **a, int size_a, t_stack **b, int size_b)
 		*a = (*a)->next;
 		*b = (*b)->next;
 	}
+	put_ordered(a);
 }
 
-bool	check_ordered(int *numbers, int size)
+bool	check_ordered(t_stack **list)
 {
-	int *next_num;
-	int *end;
+	t_stack *node;
+	t_stack *next_node;
 
-	next_num = numbers + 1;
-	end = numbers + size;
-	while (next_num != end)
+	if (list && *list)
 	{
-		if (*numbers > *next_num)
-			break;
-		numbers++;
-		next_num++;
+		node = (*list);
+		next_node = (*list)->next;
+		while (next_node != *list)
+		{
+			if (node->num > next_node-> num)
+				return (false);
+			node = next_node;
+			next_node = next_node->next;
+		}
 	}
-	if (next_num == end)
-		return (true);
-	else
-		return (false);
+	return (true);
 }

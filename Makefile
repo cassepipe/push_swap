@@ -6,7 +6,7 @@
 #    By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/23 16:37:33 by tpouget           #+#    #+#              #
-#    Updated: 2021/05/13 21:03:18 by tpouget          ###   ########.fr        #
+#    Updated: 2021/06/03 16:47:09 by tpouget          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@
 
 PHONY			=	all clean fclean re 
 
-BLACKLIST		=	checker.c
+BLACKLIST		=	checker.c push_swap.c
 
 SOURCEFILES		=	$(filter-out ${BLACKLIST}, $(wildcard *.c))
 
@@ -37,14 +37,20 @@ NAME			=	prog
 
 all:			${NAME} 
 
-${NAME}:		${OBJECTFILES} 
-				${CC} ${SANITIZER} ${OBJECTFILES} -o $@
+test:			${OBJECTFILES} libft/libft.a
+				${CC} ${SANITIZER} ${OBJECTFILES} -Llibft -lft -lcriterion -o test 
+
+${NAME}:		${OBJECTFILES} libft/libft.a
+				${CC} ${SANITIZER} ${OBJECTFILES} -Llibft -lft -o $@
 
 obj/%.o:		%.c	Makefile ${HEADERS}| obj
 				${CC} ${CFLAGS} -c $< -o $@
 
 obj:			
 				mkdir obj
+
+libft/libft.a:
+				make -C libft
 
 clean:			
 				rm -rf obj
