@@ -10,17 +10,17 @@
 #define GREEN "\033[92m"
 #define RED "\033[31m"
 
-bool	check_ordered(t_stack **numbers);
-void	print_both_dll(t_stack **a, int size_a, t_stack **b, int size_b);
-void	print_dll(t_stack **a, int size_a);
-void	free_dll(t_stack **list, int nmemb);
+bool	check_ordered(t_dllnode **numbers);
+void	print_both_dll(t_dllnode **a, int size_a, t_dllnode **b, int size_b);
+void	print_dll(t_dllnode **a, int size_a);
+void	free_dll(t_dllnode **list, int nmemb);
 
 struct s_fat_token {
 	char *token;
-	void (*operation)(t_stack **list);
+	void (*operation)(t_dllnode **list);
 };
 
-void	put_ordered(t_stack **list)
+void	put_ordered(t_dllnode **list)
 {
 	if (check_ordered(list))
 		printf(GREEN "OK" ENDCOLOR "\n");
@@ -32,14 +32,15 @@ int 	main(int argc, char **argv)
 {
 	int i;
 	int y;
-	t_stack **a;
-	t_stack **b;
+	int max;
+	t_dllnode **a;
+	t_dllnode **b;
 	char *line;
 
 	argv++;
 	argc--;
-	a = malloc(sizeof(t_stack**));
-	b = malloc(sizeof(t_stack**));
+	a = malloc(sizeof(t_dllnode**));
+	b = malloc(sizeof(t_dllnode**));
 	if (!a || !b)
 		return (0);
 	*a = NULL;
@@ -51,6 +52,7 @@ int 	main(int argc, char **argv)
 		a = dll_append(a, dll_new_node(atoi(argv[i])));
 		i++;
 	}
+	max = i;
 
 	print_both_dll(a, i, b, y);
 
@@ -105,6 +107,8 @@ int 	main(int argc, char **argv)
 			else if (line[1] == 'b')
 				dll_rotate(b);
 		}
+		i = i < max ? i : max;
+		y = y < max ? y : max;
 		free(line);
 		/*print_both_dll(a, i, b, y);*/
 		print_dll(a, i);
@@ -123,7 +127,7 @@ int 	main(int argc, char **argv)
 }
 
 
-void	print_both_dll(t_stack **a, int size_a, t_stack **b, int size_b)
+void	print_both_dll(t_dllnode **a, int size_a, t_dllnode **b, int size_b)
 {
 	size_a = size_a > 0 ? size_a : 0;
 	size_b = size_b > 0 ? size_b : 0;
@@ -154,10 +158,10 @@ void	print_both_dll(t_stack **a, int size_a, t_stack **b, int size_b)
 	put_ordered(a);
 }
 
-bool	check_ordered(t_stack **list)
+bool	check_ordered(t_dllnode **list)
 {
-	t_stack *node;
-	t_stack *next_node;
+	t_dllnode *node;
+	t_dllnode *next_node;
 
 	if (list && *list)
 	{

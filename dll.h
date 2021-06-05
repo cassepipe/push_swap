@@ -1,18 +1,21 @@
+#ifndef DLL_H
+# define DLL_H
 #include <stdlib.h>
 
-typedef	struct	s_stack	{
+typedef	struct	s_dllnode	{
 	int				num;
-	struct s_stack	*prev;
-	struct s_stack	*next;
-} t_stack;
+	struct s_dllnode	*prev;
+	struct s_dllnode	*next;
+} t_dllnode;
 
-t_stack	*dll_new_node(int n);
-t_stack **dll_append(t_stack **head, t_stack *node);
-void	dll_rotate(t_stack **head);
-void	dll_revrotate(t_stack **head);
-void	dll_swaptop(t_stack **head);
-t_stack	*dll_pop(t_stack **head);
-void	dll_push(t_stack **dll, t_stack *node);
-void	dll_poppush(t_stack **a, t_stack **b);
-void	free_dll(t_stack **list, int nmemb);
-void	print_dll(t_stack **a, int size_a);
+t_dllnode	*dll_new_node(int n);
+t_dllnode	**dll_append(t_dllnode **head, t_dllnode *node);
+void		dll_rotate(t_dllnode **head);
+void		dll_revrotate(t_dllnode **head);
+void		dll_swaptop(t_dllnode **head);
+t_dllnode	*dll_pop(t_dllnode **head);
+void		dll_push(t_dllnode **dll, t_dllnode *node);
+void		dll_poppush(t_dllnode **a, t_dllnode **b);
+void		free_dll(t_dllnode **list, int nmemb);
+void		print_dll(t_dllnode **a, int size_a);
+#endif
