@@ -10,6 +10,16 @@
 #define GREEN "\033[92m"
 #define RED "\033[31m"
 
+#define PRINT_TWO_STACKS(A, B) do { \
+		printf("\x1b[2J");										\
+		printf("\x1b[H");										\
+		printf("\n\tSTACK A\n--------------------------\n");	\
+		print_stack(*A);										\
+		printf("\n\tSTACK B\n--------------------------\n");   	\
+		print_stack(*B);										\
+		put_dll_ordered(&A->top);								\
+	} while (0);												\
+
 struct s_fat_token {
 	char *token;
 	void (*operation)(t_dllnode **list);
@@ -55,6 +65,11 @@ void	loop_exec_stack_ops(t_stack *A, t_stack *B)
 				stack_swaptop(A);
 			else if (line[1] == 'b')
 				stack_swaptop(B);
+			else if (line[1] == 's')
+			{
+				stack_swaptop(A);
+				stack_swaptop(B);
+			}
 		}
 		if (line[0] == 'p')
 		{
@@ -88,8 +103,7 @@ void	loop_exec_stack_ops(t_stack *A, t_stack *B)
 				stack_rotate(B);
 		}
 		free(line);
-		print_two_stacks(*A, *B);
-		put_dll_ordered(&A->top);
+		PRINT_TWO_STACKS(A, B);
 	}
 	free(line);
 }
@@ -107,11 +121,16 @@ int 	main(int argc, char **argv)
 		return (-1);
 	while (argc--)
 	{
-		printf("Appending %c\n", **argv);
+		/*printf("Appending %c\n", **argv);*/
 		stack_append(A, dll_new_node(atoi(*argv++)));
 	}
-	print_two_stacks(*A, *B);
+
+	PRINT_TWO_STACKS(A, B);
+
 	loop_exec_stack_ops(A, B);
+
+	free_stack(A);
+	free_stack(B);
 
 	return (0);
 }

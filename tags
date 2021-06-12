@@ -4,20 +4,13 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-ENDCOLOR	checker.c	6;"	d	file:
 ENDCOLOR	push_swap.c	9;"	d	file:
-ENDCOLOR	testpop.c	9;"	d	file:
-GREEN	checker.c	7;"	d	file:
 GREEN	push_swap.c	10;"	d	file:
-GREEN	testpop.c	10;"	d	file:
-RED	checker.c	8;"	d	file:
+PRINT_TWO_STACKS	push_swap.c	13;"	d	file:
 RED	push_swap.c	11;"	d	file:
-RED	testpop.c	11;"	d	file:
 arrange_format	libft/ft_printf/format_utils.c	/^void		arrange_format(struct s_parameters *format)$/;"	f
 char_repr	libft/ft_printf/repr.c	/^char		*char_repr(unsigned char c,$/;"	f
 check_dll_ordered	push_swap.c	/^bool	check_dll_ordered(t_dllnode **list)$/;"	f
-check_ordered	checker.c	/^bool	check_ordered(int *numbers, int size)$/;"	f
-check_ordered	testpop.c	/^bool	check_ordered(t_dllnode **list)$/;"	f
 diralloc	libft/ft_split.c	/^static char			**diralloc(const char *s, char c)$/;"	f	file:
 dll_append	doubly_linked_lists.c	/^t_dllnode **dll_append(t_dllnode **head, t_dllnode *node)$/;"	f
 dll_new_node	doubly_linked_lists.c	/^t_dllnode	*dll_new_node(int n)$/;"	f
@@ -89,9 +82,7 @@ is_in	libft/ft_printf/format_utils.c	/^int			is_in(char c, const char *charset)$
 is_in_set	libft/ft_strtrim.c	/^static int	is_in_set(char c, char const *set)$/;"	f	file:
 leftpad	libft/ft_printf/pad.c	/^void	leftpad(char **str, char c, size_t n)$/;"	f
 loop_exec_stack_ops	push_swap.c	/^void	loop_exec_stack_ops(t_stack *A, t_stack *B)$/;"	f
-main	checker.c	/^int 	main(int argc, char **argv)$/;"	f
 main	push_swap.c	/^int 	main(int argc, char **argv)$/;"	f
-main	testpop.c	/^int 	main(int argc, char **argv)$/;"	f
 nbr_repr	libft/ft_printf/repr.c	/^char		*nbr_repr(long nbr, struct s_parameters *format, ssize_t *size)$/;"	f
 new_stack	stack.c	/^t_stack *new_stack(t_dllnode *top, int size)$/;"	f
 next	doubly_linked_lists.c	/^	struct s_dllnode	*next;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode::s_dllnode	file:
@@ -99,21 +90,16 @@ next_sep	libft/ft_split.c	/^static const char	*next_sep(const char *str, char se
 next_word	libft/ft_split.c	/^static const char	*next_word(const char *str, char sep)$/;"	f	file:
 num	doubly_linked_lists.c	/^	int				num;$/;"	m	struct:s_dllnode	file:
 operation	push_swap.c	/^	void (*operation)(t_dllnode **list);$/;"	m	struct:s_fat_token	file:
-operation	testpop.c	/^	void (*operation)(t_dllnode **list);$/;"	m	struct:s_fat_token	file:
 parse_str_into_format	libft/ft_printf/format_utils.c	/^void		*parse_str_into_format(const char *fs,$/;"	f
 prev	doubly_linked_lists.c	/^	struct s_dllnode	*prev;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode::s_dllnode	file:
-print_both_dll	testpop.c	/^void	print_both_dll(t_dllnode **a, int size_a, t_dllnode **b, int size_b)$/;"	f
 print_dll	doubly_linked_lists.c	/^void	print_dll(t_dllnode **a, int size_a)$/;"	f
 print_stack	stack.c	/^void	print_stack(t_stack stack)$/;"	f
-print_two_stacks	checker.c	/^void	print_two_stacks(int *a, int siza, int *b, int sizb)$/;"	f
 print_two_stacks	stack.c	/^void	print_two_stacks(t_stack A, t_stack B)$/;"	f
 ptr_repr	libft/ft_printf/repr.c	/^char		*ptr_repr(void *ptr, struct s_parameters *format, ssize_t *size)$/;"	f
 put_dll_ordered	push_swap.c	/^void	put_dll_ordered(t_dllnode **list)$/;"	f
-put_ordered	testpop.c	/^void	put_ordered(t_dllnode **list)$/;"	f
 rightpad	libft/ft_printf/pad.c	/^void	rightpad(char **str, char c, size_t n)$/;"	f
 s_dllnode	doubly_linked_lists.c	/^typedef struct	s_dllnode	{$/;"	s	file:
 s_fat_token	push_swap.c	/^struct s_fat_token {$/;"	s	file:
-s_fat_token	testpop.c	/^struct s_fat_token {$/;"	s	file:
 s_stack	stack.c	/^typedef struct	s_stack	{$/;"	s	file:
 size	stack.c	/^	int size;$/;"	m	struct:s_stack	file:
 stack_append	stack.c	/^void	*stack_append(t_stack *stack, t_dllnode* node)$/;"	f
@@ -128,6 +114,5 @@ t_dllnode	doubly_linked_lists.c	/^} t_dllnode;$/;"	t	typeref:struct:s_dllnode	fi
 t_stack	stack.c	/^} t_stack;$/;"	t	typeref:struct:s_stack	file:
 to_the_power_of	libft/ft_printf/ft_lutoa_base.c	/^static unsigned long	to_the_power_of(unsigned long n, unsigned long p)$/;"	f	file:
 token	push_swap.c	/^	char *token;$/;"	m	struct:s_fat_token	file:
-token	testpop.c	/^	char *token;$/;"	m	struct:s_fat_token	file:
 top	stack.c	/^	t_dllnode *top;$/;"	m	struct:s_stack	file:
 write_format	libft/ft_printf/format_utils.c	/^ssize_t		write_format(int fd,$/;"	f

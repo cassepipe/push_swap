@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "dll.h"
+#include <unistd.h>
 
 typedef struct	s_stack	{
 	t_dllnode *top;
@@ -30,7 +31,11 @@ void	*stack_append(t_stack *stack, t_dllnode* node)
 		stack->top->prev = node;
 	}
 	else
+	{
+		node->prev = node;
+		node->next = node;
 		stack->top = node;
+	}
 	stack->size++;
 	return (stack);
 }
@@ -57,26 +62,28 @@ t_dllnode	*stack_pop(t_stack *stack)
 	stack->top = stack->top->next;
 	if (stack->size > 0)
 		stack->size--;
+	if (stack->size == 0)
+		stack->top = NULL;
 	return (ret);
 }
 
 void	stack_push(t_stack *stack, t_dllnode *node)
 {
-		stack_append(stack, node);
+	stack_append(stack, node);
+	if (stack->size > 1)
 		stack_revrotate(stack);
 }
 
 void	stack_swaptop(t_stack *stack)
 {
-	t_dllnode *tmp;
-	t_dllnode *second_element;
+	t_dllnode *first;
+	t_dllnode *second;
 	if (stack && stack->top)
 	{
-		tmp = stack_pop(stack);
-		/*printf("Popped struct at %lu { .prev =  %lu, .next = %lu\n", tmp, tmp->prev, tmp->next);*/
-		/*printf("Popped %d out of stack A\n", tmp->num);*/
-		second_element = stack->top->next;
-		dll_append(&second_element, tmp);
+		first = stack_pop(stack);
+		second = stack_pop(stack);
+		stack_push(stack, first);
+		stack_push(stack, second);
 	}
 }
 
@@ -87,7 +94,7 @@ void	stack_poppush(t_stack *src, t_stack *dst)
 	if (src && src->top)
 	{
 		tmp = stack_pop(src);
-		printf("Popped %d out of stack A\n", tmp->num);
+		/*printf("Popped %d out of stack A\n", tmp->num);*/
 		stack_push(dst, tmp);
 	}
 }
@@ -113,6 +120,7 @@ void	print_stack(t_stack stack)
 
 void	print_two_stacks(t_stack A, t_stack B)
 {
+	printf("\x1b[2J");
 	if (A.size > B.size)
 		while (A.size > B.size)
 		{
@@ -124,7 +132,7 @@ void	print_two_stacks(t_stack A, t_stack B)
 	else
 		while (B.size > A.size)
 		{
-			printf("\t%i", B.top->num);
+			printf("\t\t%i", B.top->num);
 			printf("\n");
 			B.top = B.top->next;
 			B.size--;
