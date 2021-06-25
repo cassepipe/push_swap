@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdbool.h>
+#include <strings.h>
+#include <string.h>
 #include "dll.h"
 #include "stack.h"
 #include "libft/get_next_line.h"
@@ -9,6 +11,12 @@
 #define ENDCOLOR "\033[0m"
 #define GREEN "\033[92m"
 #define RED "\033[31m"
+
+#define PRINT_ARRAY(arr, size) do { \
+	for(int i = 0; i < size; i++)	\
+		printf("%i\t", arr[i]);		\
+	printf("\n");					\
+	} while (0);												\
 
 #define PRINT_TWO_STACKS(A, B) do { \
 		printf("\x1b[2J");										\
@@ -18,7 +26,7 @@
 		printf("\n\tSTACK B\n--------------------------\n");   	\
 		print_stack(*B);										\
 		put_dll_ordered(&A->top);								\
-	} while (0);												\
+	} while (0);
 
 struct s_fat_token {
 	char *token;
@@ -108,30 +116,56 @@ void	loop_exec_stack_ops(t_stack *A, t_stack *B)
 	free(line);
 }
 
+int 	*new_int_array(int size)
+{
+	int *new_array;
+
+	new_array = malloc(size * sizeof(int));
+	if (!new_array)
+		return (NULL);
+	return new_array;
+}
+
 int 	main(int argc, char **argv)
 {
 	t_stack *A;
 	t_stack *B;
+	int		i;
+	int		num;
+	int *input_array;
+	int *output_array;
 
 	argv++;
 	argc--;
 	A = new_stack(NULL, 0);
 	B = new_stack(NULL, 0);
-	if (!A || !B)
+	input_array = new_int_array(argc);
+	if (!A || !B || !input_array)
 		return (-1);
-	while (argc--)
+	i = 0;
+	while (i < argc)
 	{
 		/*printf("Appending %c\n", **argv);*/
-		stack_append(A, dll_new_node(atoi(*argv++)));
+		num = atoi(*argv++);
+		input_array[i] = num;
+		i++;
+		stack_append(A, dll_new_node(num));
 	}
 
-	PRINT_TWO_STACKS(A, B);
 
-	loop_exec_stack_ops(A, B);
+	output_array = radix_sort_int(input_array, argc);
 
+	PRINT_ARRAY(input_array, argc);
+	PRINT_ARRAY(output_array, argc);
+
+	/*PRINT_TWO_STACKS(A, B);*/
+
+	/*loop_exec_stack_ops(A, B);*/
+
+	free(output_array);
+	free(input_array);
 	free_stack(A);
 	free_stack(B);
 
 	return (0);
 }
-
