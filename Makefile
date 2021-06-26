@@ -6,7 +6,7 @@
 #    By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/23 16:37:33 by tpouget           #+#    #+#              #
-#    Updated: 2021/06/26 14:02:12 by tpouget          ###   ########.fr        #
+#    Updated: 2021/06/26 14:59:43 by tpouget          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@
 
 PHONY			=	all clean fclean re 
 
-BLACKLIST		=	
+BLACKLIST		=	checker.c
 
 SOURCEFILES		=	$(filter-out ${BLACKLIST}, $(wildcard *.c))
 

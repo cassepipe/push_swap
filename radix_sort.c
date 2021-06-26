@@ -84,26 +84,89 @@ int *radix_sort_int_pass(int *input_array, int *output_array, int nb_items, int 
 
 	return output_array;
 }
+int *radix_sort_int_last_pass(int *input_array, int *output_array, int nb_items,
+																	int shift)
+{
+	int counters[256] = {0};
+	int offset_table[256];
+	int i;
+	int nb_negative_values = 0;
+	unsigned char c;
+	printf("Pass number %i, shifting bits by %i\n", shift / 8 + 1, shift);
 
-int *radix_sort_int(int *input_array, int nb_items)
+	i = 0;
+	while (i < nb_items)
+	{
+		c = (input_array[i] >> shift) & 0xff;
+		printf("(%i >> %i) & 0xff = %i\n", input_array[i], shift, c);
+		counters[c]++;
+		i++;
+	}
+	puts("Counters table :\t");
+	PRINT_INT_ARRAY(counters, 256);
+
+	i = 128;
+	while (i < 256)
+	{
+		nb_negative_values += counters[i];
+		i++;
+	}
+
+	offset_table[0] = nb_negative_values;
+	offset_table[255] = 0;
+
+	i = 1;
+	while (i < 128)
+	{
+			offset_table[i] = offset_table[i-1] + counters[i - 1];
+			i++;
+	}
+	for(i=0;i<127;i++)
+	{
+        offset_table[254-i] = offset_table[255-i] + counters[255-i];
+	}
+
+	i =  254;
+	puts("Offset table :\t");
+	PRINT_INT_ARRAY(offset_table, 256);
+
+	i = 0;
+	while (i < nb_items)
+	{
+		c = (input_array[i] >> shift) & 0xff;
+		printf("output_array[offset_table[%i]] = input_array[%i]\n", c, i);
+		output_array[offset_table[c]++] = input_array[i];
+		i++;
+		puts("Offset table :\t");
+		PRINT_INT_ARRAY(offset_table, 256);
+	}
+
+	return output_array;
+}
+
+
+int *radix_sort_int(int *int_array, int nb_items)
 {
 	int *buffer;
 	int shift = 0;
 
 	buffer = new_int_array(nb_items);
-	while (shift < sizeof(int) * 8)
+	while (shift < 24)
 	{
-		buffer = radix_sort_int_pass(input_array, buffer, nb_items, shift);
-		SWAP_BUFFERS(buffer, input_array);
+		buffer = radix_sort_int_pass(int_array, buffer, nb_items, shift);
+		SWAP_BUFFERS(buffer, int_array);
 		printf("PASS %i:\n", shift / 8 + 1);
 		PRINT_INT_ARRAY(buffer, nb_items);
 		/*PRINT_INT_ARRAY_HEX(buffer, nb_items);*/
 		shift += 8;
 	}
-	//output_array = radix_sort_int_last_pass(input_array, nb_items, shift);
+	buffer = radix_sort_int_last_pass(int_array, buffer, nb_items, shift);
+	SWAP_BUFFERS(buffer, int_array);
+	printf("PASS %i:\n", shift / 8 + 1);
+	PRINT_INT_ARRAY(buffer, nb_items);
 
 	free(buffer);
-	return (input_array);
+	return (int_array);
 
 }
 
