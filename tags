@@ -4,14 +4,14 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-ENDCOLOR	push_swap.c	11;"	d	file:
-GREEN	push_swap.c	12;"	d	file:
-PRINT_ARRAY	push_swap.c	15;"	d	file:
-PRINT_INT_ARRAY	radix_sort.c	4;"	d	file:
-PRINT_INT_ARRAY_HEX	radix_sort.c	14;"	d	file:
-PRINT_TWO_STACKS	push_swap.c	21;"	d	file:
-RED	push_swap.c	13;"	d	file:
-SWAP_BUFFERS	radix_sort.c	24;"	d	file:
+ENDCOLOR	push_swap.c	13;"	d	file:
+GREEN	push_swap.c	14;"	d	file:
+PRINT_ARRAY	push_swap.c	17;"	d	file:
+PRINT_INT_ARRAY	radix_sort.c	5;"	d	file:
+PRINT_INT_ARRAY_HEX	radix_sort.c	15;"	d	file:
+PRINT_TWO_STACKS	push_swap.c	23;"	d	file:
+RED	push_swap.c	15;"	d	file:
+SWAP_BUFFERS	radix_sort.c	25;"	d	file:
 arrange_format	libft/ft_printf/format_utils.c	/^void		arrange_format(struct s_parameters *format)$/;"	f
 char_repr	libft/ft_printf/repr.c	/^char		*char_repr(unsigned char c,$/;"	f
 check_dll_ordered	push_swap.c	/^bool	check_dll_ordered(t_dllnode **list)$/;"	f
@@ -88,7 +88,7 @@ leftpad	libft/ft_printf/pad.c	/^void	leftpad(char **str, char c, size_t n)$/;"	f
 loop_exec_stack_ops	push_swap.c	/^void	loop_exec_stack_ops(t_stack *A, t_stack *B)$/;"	f
 main	push_swap.c	/^int 	main(int argc, char **argv)$/;"	f
 nbr_repr	libft/ft_printf/repr.c	/^char		*nbr_repr(long nbr, struct s_parameters *format, ssize_t *size)$/;"	f
-new_int_array	push_swap.c	/^int 	*new_int_array(int size)$/;"	f
+new_int_array	new_int_array.c	/^int 	*new_int_array(int size)$/;"	f
 new_stack	stack.c	/^t_stack *new_stack(t_dllnode *top, int size)$/;"	f
 next	doubly_linked_lists.c	/^	struct s_dllnode	*next;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode::s_dllnode	file:
 next_sep	libft/ft_split.c	/^static const char	*next_sep(const char *str, char sep)$/;"	f	file:
@@ -104,7 +104,7 @@ print_two_stacks	stack.c	/^void	print_two_stacks(t_stack A, t_stack B)$/;"	f
 ptr_repr	libft/ft_printf/repr.c	/^char		*ptr_repr(void *ptr, struct s_parameters *format, ssize_t *size)$/;"	f
 put_dll_ordered	push_swap.c	/^void	put_dll_ordered(t_dllnode **list)$/;"	f
 radix_sort_int	radix_sort.c	/^int *radix_sort_int(int *input_array, int nb_items)$/;"	f
-radix_sort_int_pass	radix_sort.c	/^int *radix_sort_int_pass(int *input_array, int nb_items, int shift)$/;"	f
+radix_sort_int_pass	radix_sort.c	/^int *radix_sort_int_pass(int *input_array, int *output_array, int nb_items, int shift)$/;"	f
 rightpad	libft/ft_printf/pad.c	/^void	rightpad(char **str, char c, size_t n)$/;"	f
 s_dllnode	doubly_linked_lists.c	/^typedef struct	s_dllnode	{$/;"	s	file:
 s_fat_token	push_swap.c	/^struct s_fat_token {$/;"	s	file:

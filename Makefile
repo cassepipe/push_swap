@@ -6,7 +6,7 @@
 #    By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/23 16:37:33 by tpouget           #+#    #+#              #
-#    Updated: 2021/06/07 10:24:53 by tpouget          ###   ########.fr        #
+#    Updated: 2021/06/26 14:02:12 by tpouget          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ test:			${OBJECTFILES} libft/libft.a
 ${NAME}:		${OBJECTFILES} libft/libft.a
 				${CC} ${SANITIZER} ${OBJECTFILES} -Llibft -lft -o $@
 
-obj/%.o:		%.c	Makefile ${HEADERS}| obj
+obj/%.o:		%.c	Makefile ${HEADERS} | obj
 				${CC} ${CFLAGS} -c $< -o $@
 
 obj:			

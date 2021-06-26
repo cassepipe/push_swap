@@ -6,6 +6,8 @@
 #include <string.h>
 #include "dll.h"
 #include "stack.h"
+#include "radix_sort.h"
+#include "new_int_array.h"
 #include "libft/get_next_line.h"
 
 #define ENDCOLOR "\033[0m"
@@ -116,54 +118,45 @@ void	loop_exec_stack_ops(t_stack *A, t_stack *B)
 	free(line);
 }
 
-int 	*new_int_array(int size)
-{
-	int *new_array;
-
-	new_array = malloc(size * sizeof(int));
-	if (!new_array)
-		return (NULL);
-	return new_array;
-}
-
 int 	main(int argc, char **argv)
 {
 	t_stack *A;
 	t_stack *B;
 	int		i;
 	int		num;
-	int *input_array;
+	int *int_array;
 	int *output_array;
 
 	argv++;
 	argc--;
 	A = new_stack(NULL, 0);
 	B = new_stack(NULL, 0);
-	input_array = new_int_array(argc);
-	if (!A || !B || !input_array)
+	int_array = new_int_array(argc);
+	if (!A || !B || !int_array)
 		return (-1);
 	i = 0;
 	while (i < argc)
 	{
 		/*printf("Appending %c\n", **argv);*/
 		num = atoi(*argv++);
-		input_array[i] = num;
+		int_array[i] = num;
 		i++;
 		stack_append(A, dll_new_node(num));
 	}
 
+	PRINT_ARRAY(int_array, argc);
 
-	output_array = radix_sort_int(input_array, argc);
+	int_array = radix_sort_int(int_array, argc);
 
-	PRINT_ARRAY(input_array, argc);
-	PRINT_ARRAY(output_array, argc);
+	printf("Output :\n");
+	PRINT_ARRAY(int_array, argc);
+
 
 	/*PRINT_TWO_STACKS(A, B);*/
 
 	/*loop_exec_stack_ops(A, B);*/
 
-	free(output_array);
-	free(input_array);
+	free(int_array);
 	free_stack(A);
 	free_stack(B);
 
