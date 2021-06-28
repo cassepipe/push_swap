@@ -6,7 +6,7 @@
 #    By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/23 16:37:33 by tpouget           #+#    #+#              #
-#    Updated: 2021/06/26 14:59:43 by tpouget          ###   ########.fr        #
+#    Updated: 2021/06/27 16:50:05 by tpouget          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@
 
 PHONY			=	all clean fclean re 
 
-BLACKLIST		=	checker.c
+BLACKLIST		=	push_swap.c checker.c
 
 SOURCEFILES		=	$(filter-out ${BLACKLIST}, $(wildcard *.c))
 
@@ -35,13 +35,16 @@ NAME			=	prog
 
 #	Rules
 
-all:			${NAME} 
+all:			push_swap checker
 
 test:			${OBJECTFILES} libft/libft.a
 				${CC} ${SANITIZER} ${OBJECTFILES} -Llibft -lft -lcriterion -o test 
 
-${NAME}:		${OBJECTFILES} libft/libft.a
-				${CC} ${SANITIZER} ${OBJECTFILES} -Llibft -lft -o $@
+push_swap:		obj/push_swap.o ${OBJECTFILES} libft/libft.a
+				${CC} ${SANITIZER} obj/push_swap.o ${OBJECTFILES} -Llibft -lft -o $@
+
+checker:		obj/checker.o ${OBJECTFILES} libft/libft.a
+				${CC} ${SANITIZER} obj/checker.o ${OBJECTFILES} -Llibft -lft -o $@
 
 obj/%.o:		%.c	Makefile ${HEADERS} | obj
 				${CC} ${CFLAGS} -c $< -o $@

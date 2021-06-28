@@ -21,8 +21,6 @@
 	} while (0);												\
 
 #define PRINT_TWO_STACKS(A, B) do { \
-		printf("\x1b[2J");										\
-		printf("\x1b[H");										\
 		printf("\n\tSTACK A\n--------------------------\n");	\
 		print_stack(*A);										\
 		printf("\n\tSTACK B\n--------------------------\n");   	\
@@ -63,11 +61,13 @@ void	put_dll_ordered(t_dllnode **list)
 		printf(RED "KO" ENDCOLOR "\n");
 }
 
+#include <stdio.h>
 void	loop_exec_stack_ops(t_stack *A, t_stack *B)
 {
-	char *line;
+	int size = 512;
+	char *line = malloc(512);
 
-	while (get_next_line(STDOUT_FILENO, &line))
+	while (getline(&line, &size, stdin))
 	{
 		if (line[0] == 's')
 		{
@@ -112,10 +112,10 @@ void	loop_exec_stack_ops(t_stack *A, t_stack *B)
 			else if (line[1] == 'b')
 				stack_rotate(B);
 		}
-		free(line);
+		/*free(line);*/
 		PRINT_TWO_STACKS(A, B);
 	}
-	free(line);
+	/*free(line);*/
 }
 
 int 	main(int argc, char **argv)
@@ -124,38 +124,28 @@ int 	main(int argc, char **argv)
 	t_stack *B;
 	int		i;
 	int		num;
-	int *int_array;
 
 	argv++;
 	argc--;
 	A = new_stack(NULL, 0);
 	B = new_stack(NULL, 0);
-	int_array = new_int_array(argc);
-	if (!A || !B || !int_array)
+	if (!A || !B )
 		return (-1);
 	i = 0;
 	while (i < argc)
 	{
 		/*printf("Appending %c\n", **argv);*/
 		num = atoi(*argv++);
-		int_array[i] = num;
 		i++;
 		stack_append(A, dll_new_node(num));
 	}
 
-	PRINT_ARRAY(int_array, argc);
+	PRINT_TWO_STACKS(A, B);
 
-	int_array = radix_sort_int(int_array, argc);
+	loop_exec_stack_ops(A, B);
 
-	printf("Output :\n");
-	PRINT_ARRAY(int_array, argc);
+	PRINT_TWO_STACKS(A, B);
 
-
-	/*PRINT_TWO_STACKS(A, B);*/
-
-	/*loop_exec_stack_ops(A, B);*/
-
-	free(int_array);
 	free_stack(A);
 	free_stack(B);
 

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <limits.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdbool.h>
@@ -35,129 +36,61 @@ struct s_fat_token {
 	void (*operation)(t_dllnode **list);
 };
 
-bool	check_dll_ordered(t_dllnode **list)
+void  put_array_ordered(int *int_array, int size)
 {
-	t_dllnode *node;
-	t_dllnode *next_node;
+	int i;
 
-	if (list && *list)
+	i = 1;
+	while (i < size)
 	{
-		node = (*list);
-		next_node = (*list)->next;
-		while (next_node != *list)
-		{
-			if (node->num > next_node-> num)
-				return (false);
-			node = next_node;
-			next_node = next_node->next;
-		}
+			if (int_array[i] < int_array[i-1])
+			{
+				printf(RED "KO" ENDCOLOR "\n");
+				break;
+			}
+		i++;
 	}
-	return (true);
-}
-
-void	put_dll_ordered(t_dllnode **list)
-{
-	if (check_dll_ordered(list))
+	if (i == size)
 		printf(GREEN "OK" ENDCOLOR "\n");
-	else
-		printf(RED "KO" ENDCOLOR "\n");
-}
-
-void	loop_exec_stack_ops(t_stack *A, t_stack *B)
-{
-	char *line;
-
-	while (get_next_line(STDOUT_FILENO, &line))
-	{
-		if (line[0] == 's')
-		{
-			if (line[1] == 'a')
-				stack_swaptop(A);
-			else if (line[1] == 'b')
-				stack_swaptop(B);
-			else if (line[1] == 's')
-			{
-				stack_swaptop(A);
-				stack_swaptop(B);
-			}
-		}
-		if (line[0] == 'p')
-		{
-			if (line[1] == 'a')
-				stack_poppush(B,A);
-			else if (line[1] == 'b')
-				stack_poppush(A,B);
-		}
-		if (line[0] == 'r')
-		{
-			if (line[1] == 'r')
-			{
-				if (line[2] == 'A')
-					stack_revrotate(A);
-				else if (line[2] == 'b')
-					stack_revrotate(B);
-				else if (line[2] == 'r')
-				{
-					stack_revrotate(A);
-					stack_revrotate(B);
-				}
-				else
-				{
-					stack_rotate(A);
-					stack_rotate(B);
-				}
-			}
-			else if (line[1] == 'a')
-				stack_rotate(A);
-			else if (line[1] == 'b')
-				stack_rotate(B);
-		}
-		free(line);
-		PRINT_TWO_STACKS(A, B);
-	}
-	free(line);
 }
 
 int 	main(int argc, char **argv)
 {
-	t_stack *A;
-	t_stack *B;
 	int		i;
 	int		num;
-	int *int_array;
+	int 	max;
+	int		*int_array;
 
 	argv++;
 	argc--;
-	A = new_stack(NULL, 0);
-	B = new_stack(NULL, 0);
 	int_array = new_int_array(argc);
-	if (!A || !B || !int_array)
+	if (!int_array)
 		return (-1);
 	i = 0;
+	max = INT_MIN;
 	while (i < argc)
 	{
-		/*printf("Appending %c\n", **argv);*/
 		num = atoi(*argv++);
+		if (num > max)
+			max = num;
 		int_array[i] = num;
 		i++;
-		stack_append(A, dll_new_node(num));
 	}
+	i = sizeof(int) * 8 - 1;
+	while (((max >> i) & 1) == 0)
+		i--;
+	i++;
 
-	PRINT_ARRAY(int_array, argc);
+	/*printf("Input :\n");*/
+	/*PRINT_ARRAY(int_array, argc);*/
 
-	int_array = radix_sort_int(int_array, argc);
+	int_array = bit_sort_int(int_array, argc, i);
 
-	printf("Output :\n");
-	PRINT_ARRAY(int_array, argc);
-
-
-	/*PRINT_TWO_STACKS(A, B);*/
-
-	/*loop_exec_stack_ops(A, B);*/
+	/*printf("Output :\n");*/
+	/*PRINT_ARRAY(int_array, argc);*/
+	/*put_array_ordered(int_array, argc);*/
 
 	free(int_array);
-	free_stack(A);
-	free_stack(B);
 
 	return (0);
 }

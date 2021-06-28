@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <unistd.h>
 #include "new_int_array.h"
 
 #define PRINT_INT_ARRAY(array, size)	do {	\
@@ -29,43 +30,52 @@
 	buff2 = tmp;				\
 } while (0);
 
-int *radix_sort_int_pass(int *input_array, int *output_array, int nb_items, int shift)
+void swap_buffers(void **buff1, void **buff2)
 {
-	int counters[256] = {0};
-	int offset_table[256] = {0};
+	void *tmp;
+
+	tmp = *buff1;
+	*buff1 = buff2;
+	*buff2 = tmp;
+}
+
+int *bit_sort_int_pass(int *input_array, int *output_array, int nb_items, int shift)
+{
+	int counters[2] = {0};
+	int offset_table[2] = {0};
 	int i;
 	unsigned char c;
 
 	i = 0;
 	while (i < nb_items)
 	{
-		c = (input_array[i] >> shift) & 0xff;
+		c = (input_array[i] >> shift) & 1;
 		counters[c]++;
 		i++;
 	}
 
-	i = 1;
-	while (i < 256)
-	{
-		offset_table[i] = offset_table[i-1] + counters[i-1];
-		i++;
-	}
+	offset_table[1] = counters[0];
 
 	i = 0;
 	while (i < nb_items)
 	{
-		c = (input_array[i] >> shift) & 0xff;
+		c = (input_array[i] >> shift) & 1;
+		if (c)
+			write(1, "ra\n", 3);
+		else
+			write(1, "pb\n", 3);
 		output_array[offset_table[c]++] = input_array[i];
 		i++;
 	}
+	while (counters[0]--)
+		write(1, "pa\n", 3);
 
 	return output_array;
 }
-int *radix_sort_int_last_pass(int *input_array, int *output_array, int nb_items,
-																	int shift)
+int *bit_sort_int_sign_bit(int *input_array, int *output_array, int nb_items)
 {
-	int counters[256] = {0};
-	int offset_table[256];
+	int counters[2] = {0};
+	int offset_table[2];
 	int i;
 	int nb_negative_values = 0;
 	unsigned char c;
@@ -73,59 +83,48 @@ int *radix_sort_int_last_pass(int *input_array, int *output_array, int nb_items,
 	i = 0;
 	while (i < nb_items)
 	{
-		c = (input_array[i] >> shift) & 0xff;
+		c = (input_array[i] >> (sizeof(int)*8 - 1)) & 1;
 		counters[c]++;
 		i++;
 	}
 
-	i = 128;
-	while (i < 256)
-	{
-		nb_negative_values += counters[i];
-		i++;
-	}
+	nb_negative_values = counters[1];
 
 	offset_table[0] = nb_negative_values;
-	offset_table[255] = 0;
-
-	i = 1;
-	while (i < 128)
-	{
-			offset_table[i] = offset_table[i-1] + counters[i - 1];
-			i++;
-	}
-	for(i=0;i<127;i++)
-	{
-        offset_table[254-i] = offset_table[255-i] + counters[255-i];
-	}
-
-	i =  254;
+	offset_table[1] = 0;
 
 	i = 0;
 	while (i < nb_items)
 	{
-		c = (input_array[i] >> shift) & 0xff;
+		c = (input_array[i] >> (sizeof(int)*8 - 1)) & 1;
+		if (c)
+			write(1, "pb\n", 3);
+		else
+			write(1, "ra\n", 3);
 		output_array[offset_table[c]++] = input_array[i];
 		i++;
 	}
+	while (counters[1]--)
+		write(1, "pa\n", 3);
 
 	return output_array;
 }
 
 
-int *radix_sort_int(int *int_array, int nb_items)
+int *bit_sort_int(int *int_array, int nb_items, int nb_bits_to_sort)
 {
 	int *buffer;
 	int shift = 0;
 
 	buffer = new_int_array(nb_items);
-	while (shift < 24)
+	shift = 0;
+	while (shift < nb_bits_to_sort)
 	{
-		buffer = radix_sort_int_pass(int_array, buffer, nb_items, shift);
+		buffer = bit_sort_int_pass(int_array, buffer, nb_items, shift);
 		SWAP_BUFFERS(buffer, int_array);
-		shift += 8;
+		shift++;
 	}
-	buffer = radix_sort_int_last_pass(int_array, buffer, nb_items, shift);
+	buffer = bit_sort_int_sign_bit(int_array, buffer, nb_items);
 	SWAP_BUFFERS(buffer, int_array);
 
 	free(buffer);
