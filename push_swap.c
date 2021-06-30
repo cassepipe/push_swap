@@ -17,7 +17,7 @@
 
 #define PRINT_ARRAY(arr, size) do { \
 	for(int i = 0; i < size; i++)	\
-		printf("%i\t", arr[i]);		\
+		printf("%li\t", arr[i]);		\
 	printf("\n");					\
 	} while (0);												\
 
@@ -36,7 +36,7 @@ struct s_fat_token {
 	void (*operation)(t_dllnode **list);
 };
 
-void  put_array_ordered(int *int_array, int size)
+void  put_array_ordered(long *int_array, size_t size)
 {
 	int i;
 
@@ -59,38 +59,51 @@ int 	main(int argc, char **argv)
 	int		i;
 	int		num;
 	int 	max;
-	int		*int_array;
+	int 	min;
+	long	*long_array;
 
 	argv++;
 	argc--;
-	int_array = new_int_array(argc);
-	if (!int_array)
+	long_array = malloc(argc * sizeof(long));
+	if (!long_array)
 		return (-1);
 	i = 0;
 	max = INT_MIN;
+	min = INT_MAX;
 	while (i < argc)
 	{
 		num = atoi(*argv++);
 		if (num > max)
 			max = num;
-		int_array[i] = num;
+		if (num < min)
+			min = num;
+		long_array[i] = num;
 		i++;
 	}
-	i = sizeof(int) * 8 - 1;
-	while (((max >> i) & 1) == 0)
-		i--;
-	i++;
+	i = 0;
+	if (min < 0)
+		while (i < argc)
+		{
+			long_array[i] -= min;
+			i++;
+		}
+	max -= min;
+	i = 0;
+	while (max >> i)
+		i++;
 
-	/*printf("Input :\n");*/
-	/*PRINT_ARRAY(int_array, argc);*/
+	printf("Max is %i\n", max);
+	printf("Min is %i\n", min);
+	printf("Input :\n");
+	PRINT_ARRAY(long_array, argc);
 
-	int_array = bit_sort_int(int_array, argc, i);
+	long_array = (long*)bit_sort((unsigned long*)long_array, argc, i);
 
-	/*printf("Output :\n");*/
-	/*PRINT_ARRAY(int_array, argc);*/
-	/*put_array_ordered(int_array, argc);*/
+	printf("Output :\n");
+	PRINT_ARRAY(long_array, argc);
+	put_array_ordered(long_array, argc);
 
-	free(int_array);
+	free(long_array);
 
 	return (0);
 }

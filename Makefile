@@ -6,7 +6,7 @@
 #    By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/23 16:37:33 by tpouget           #+#    #+#              #
-#    Updated: 2021/06/27 16:50:05 by tpouget          ###   ########.fr        #
+#    Updated: 2021/06/29 21:07:36 by tpouget          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 ##  VARIABLES  ##
 #################
 
-PHONY			=	all clean fclean re 
+PHONY			=	all clean fclean re test
 
 BLACKLIST		=	push_swap.c checker.c
 
@@ -26,7 +26,7 @@ HEADERS			=	$(wildcard *.h)
 	
 CFLAGS			=	-Wall -Wextra  -g3
 
-CC	  		  	=	gcc
+CC	  		  	=	clang
 
 SANITIZER		=	-fsanitize=address
 
@@ -59,7 +59,7 @@ clean:
 				rm -rf obj
 
 fclean:			clean
-				rm -rf miniRT
+				rm -rf push_swap checker
 
 re:				fclean all
 

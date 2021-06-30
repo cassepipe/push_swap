@@ -30,15 +30,6 @@
 	buff2 = tmp;				\
 } while (0);
 
-void swap_buffers(void **buff1, void **buff2)
-{
-	void *tmp;
-
-	tmp = *buff1;
-	*buff1 = buff2;
-	*buff2 = tmp;
-}
-
 int *bit_sort_int_pass(int *input_array, int *output_array, int nb_items, int shift)
 {
 	int counters[2] = {0};

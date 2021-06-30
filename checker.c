@@ -16,7 +16,7 @@
 
 #define PRINT_ARRAY(arr, size) do { \
 	for(int i = 0; i < size; i++)	\
-		printf("%i\t", arr[i]);		\
+		printf("%li\t", arr[i]);		\
 	printf("\n");					\
 	} while (0);												\
 
