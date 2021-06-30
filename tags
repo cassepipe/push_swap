@@ -8,32 +8,28 @@ ENDCOLOR	checker.c	13;"	d	file:
 ENDCOLOR	push_swap.c	14;"	d	file:
 GREEN	checker.c	14;"	d	file:
 GREEN	push_swap.c	15;"	d	file:
+PRINT_ARRAY	bit_sort.c	6;"	d	file:
 PRINT_ARRAY	checker.c	17;"	d	file:
 PRINT_ARRAY	push_swap.c	18;"	d	file:
-PRINT_ARRAY	raw_bit_sort.c	6;"	d	file:
-PRINT_ARRAY_HEX	raw_bit_sort.c	16;"	d	file:
-PRINT_INT_ARRAY	bit_sort_int.c	6;"	d	file:
+PRINT_ARRAY_HEX	bit_sort.c	16;"	d	file:
 PRINT_INT_ARRAY	custom_radix_sort.c	6;"	d	file:
 PRINT_INT_ARRAY	push_swap.c	24;"	d	file:
 PRINT_INT_ARRAY	radix_sort.c	5;"	d	file:
-PRINT_INT_ARRAY_HEX	bit_sort_int.c	16;"	d	file:
 PRINT_INT_ARRAY_HEX	custom_radix_sort.c	16;"	d	file:
 PRINT_INT_ARRAY_HEX	radix_sort.c	15;"	d	file:
 PRINT_TWO_STACKS	checker.c	23;"	d	file:
 PRINT_TWO_STACKS	push_swap.c	30;"	d	file:
 RED	checker.c	15;"	d	file:
 RED	push_swap.c	16;"	d	file:
-SWAP_BUFFERS	bit_sort_int.c	26;"	d	file:
+SWAP_BUFFERS	bit_sort.c	26;"	d	file:
 SWAP_BUFFERS	custom_radix_sort.c	26;"	d	file:
 SWAP_BUFFERS	radix_sort.c	25;"	d	file:
-SWAP_BUFFERS	raw_bit_sort.c	26;"	d	file:
 arrange_format	libft/ft_printf/format_utils.c	/^void		arrange_format(struct s_parameters *format)$/;"	f
 array_member	custom_radix_sort.c	/^struct array_member {$/;"	s	file:
-bit_sort	raw_bit_sort.c	/^unsigned long *bit_sort(unsigned long *input_array,$/;"	f
-bit_sort_int	bit_sort_int.c	/^int *bit_sort_int(int *int_array, int nb_items, int nb_bits_to_sort)$/;"	f
-bit_sort_int_pass	bit_sort_int.c	/^int *bit_sort_int_pass(int *input_array, int *output_array, int nb_items, int shift)$/;"	f
-bit_sort_int_sign_bit	bit_sort_int.c	/^int *bit_sort_int_sign_bit(int *input_array, int *output_array, int nb_items)$/;"	f
-bit_sort_pass	raw_bit_sort.c	/^static unsigned long	*bit_sort_pass(unsigned long *input_array,$/;"	f	file:
+bit_sort_int	bit_sort.c	/^int *bit_sort_int(int *int_array, int nb_items, int nb_bits_to_sort)$/;"	f
+bit_sort_pass	bit_sort.c	/^static int *bit_sort_pass(int *input_array, int *output_array, int nb_items, int shift)$/;"	f	file:
+bit_sort_raw	bit_sort.c	/^int *bit_sort_raw(int *input_array,$/;"	f
+bit_sort_sign_pass	bit_sort.c	/^int *bit_sort_sign_pass(int *input_array, int *output_array, int nb_items)$/;"	f
 char_repr	libft/ft_printf/repr.c	/^char		*char_repr(unsigned char c,$/;"	f
 check_dll_ordered	checker.c	/^bool	check_dll_ordered(t_dllnode **list)$/;"	f
 diralloc	libft/ft_split.c	/^static char			**diralloc(const char *s, char c)$/;"	f	file:
@@ -147,7 +143,7 @@ stack_revrotate	stack.c	/^void	stack_revrotate(t_stack *stack)$/;"	f
 stack_rotate	stack.c	/^void	stack_rotate(t_stack *stack)$/;"	f
 stack_swaptop	stack.c	/^void	stack_swaptop(t_stack *stack)$/;"	f
 str_repr	libft/ft_printf/repr.c	/^char		*str_repr(char *s, struct s_parameters *format, ssize_t *size)$/;"	f
-swap_buffers	raw_bit_sort.c	/^static void		swap_buffers(unsigned long **buff1, unsigned long **buff2)$/;"	f	file:
+swap_buffers	bit_sort.c	/^static void	swap_buffers(int **buff1, int **buff2)$/;"	f	file:
 t_dllnode	doubly_linked_lists.c	/^} t_dllnode;$/;"	t	typeref:struct:s_dllnode	file:
 t_stack	stack.c	/^} t_stack;$/;"	t	typeref:struct:s_stack	file:
 to_the_power_of	libft/ft_printf/ft_lutoa_base.c	/^static unsigned long	to_the_power_of(unsigned long n, unsigned long p)$/;"	f	file:

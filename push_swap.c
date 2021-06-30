@@ -76,13 +76,10 @@ int 	main(int argc, char **argv)
 		array[i].offset = i;
 		i++;
 	}
-	printf("Input :\n");
-	PRINT_ARRAY(array, argc);
+	/*printf("Input :\n");*/
+	/*PRINT_ARRAY(array, argc);*/
 
 	array = radix_sort_int(array, argc);
-
-	printf("Output :\n");
-	PRINT_ARRAY(array, argc);
 
 	int_array = malloc(argc * sizeof(int));
 	i = 0;
@@ -92,14 +89,18 @@ int 	main(int argc, char **argv)
 		i++;
 	}
 
-	printf("Output :\n");
-	PRINT_INT_ARRAY(int_array, argc);
+	/*printf("Output :\n");*/
+	/*PRINT_INT_ARRAY(int_array, argc);*/
 
 
 	max = argc - 1;
 	i = 0;
 	while (max >> i)
 		i++;
+
+	int_array = bit_sort_raw(int_array, argc, i);
+
+	/*PRINT_INT_ARRAY(int_array, argc);*/
 
 	free(array);
 	free(int_array);

@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include "new_int_array.h"
 
-#define PRINT_INT_ARRAY(array, size)	do {	\
+#define PRINT_ARRAY(array, size)	do {	\
 	int i = 0;						\
 	while (i < size)				\
 	{								\
@@ -13,7 +13,7 @@
 	printf("\n");					\
 } while (0);
 
-#define PRINT_INT_ARRAY_HEX(array, size)	do {	\
+#define PRINT_ARRAY_HEX(array, size)	do {	\
 	int i = 0;						\
 	while (i < size)				\
 	{								\
@@ -30,7 +30,16 @@
 	buff2 = tmp;				\
 } while (0);
 
-int *bit_sort_int_pass(int *input_array, int *output_array, int nb_items, int shift)
+static void	swap_buffers(int **buff1, int **buff2)
+{
+		int *tmp;
+
+		tmp = *buff1;
+		*buff1 = *buff2;
+		*buff2 = tmp;
+}
+
+static int *bit_sort_pass(int *input_array, int *output_array, int nb_items, int shift)
 {
 	int counters[2] = {0};
 	int offset_table[2] = {0};
@@ -63,7 +72,29 @@ int *bit_sort_int_pass(int *input_array, int *output_array, int nb_items, int sh
 
 	return output_array;
 }
-int *bit_sort_int_sign_bit(int *input_array, int *output_array, int nb_items)
+
+int *bit_sort_raw(int *input_array,
+						int nb_items,
+						int nb_bits_to_sort)
+{
+	int *buffer;
+	int shift = 0;
+
+	buffer = malloc(nb_items * sizeof(int));
+	shift = 0;
+	while (shift < nb_bits_to_sort)
+	{
+		buffer = bit_sort_pass(input_array, buffer, nb_items, shift);
+		/*PRINT_ARRAY(buffer, nb_items);*/
+		swap_buffers(&buffer, &input_array);
+		/*SWAP_BUFFERS(buffer, input_array);*/
+		shift++;
+	}
+	free(buffer);
+	return (input_array);
+}
+
+int *bit_sort_sign_pass(int *input_array, int *output_array, int nb_items)
 {
 	int counters[2] = {0};
 	int offset_table[2];
@@ -111,11 +142,11 @@ int *bit_sort_int(int *int_array, int nb_items, int nb_bits_to_sort)
 	shift = 0;
 	while (shift < nb_bits_to_sort)
 	{
-		buffer = bit_sort_int_pass(int_array, buffer, nb_items, shift);
+		buffer = bit_sort_pass(int_array, buffer, nb_items, shift);
 		SWAP_BUFFERS(buffer, int_array);
 		shift++;
 	}
-	buffer = bit_sort_int_sign_bit(int_array, buffer, nb_items);
+	buffer = bit_sort_sign_pass(int_array, buffer, nb_items);
 	SWAP_BUFFERS(buffer, int_array);
 
 	free(buffer);
