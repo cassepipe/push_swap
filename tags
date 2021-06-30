@@ -14,12 +14,13 @@ PRINT_ARRAY	raw_bit_sort.c	6;"	d	file:
 PRINT_ARRAY_HEX	raw_bit_sort.c	16;"	d	file:
 PRINT_INT_ARRAY	bit_sort_int.c	6;"	d	file:
 PRINT_INT_ARRAY	custom_radix_sort.c	6;"	d	file:
+PRINT_INT_ARRAY	push_swap.c	24;"	d	file:
 PRINT_INT_ARRAY	radix_sort.c	5;"	d	file:
 PRINT_INT_ARRAY_HEX	bit_sort_int.c	16;"	d	file:
 PRINT_INT_ARRAY_HEX	custom_radix_sort.c	16;"	d	file:
 PRINT_INT_ARRAY_HEX	radix_sort.c	15;"	d	file:
 PRINT_TWO_STACKS	checker.c	23;"	d	file:
-PRINT_TWO_STACKS	push_swap.c	24;"	d	file:
+PRINT_TWO_STACKS	push_swap.c	30;"	d	file:
 RED	checker.c	15;"	d	file:
 RED	push_swap.c	16;"	d	file:
 SWAP_BUFFERS	bit_sort_int.c	26;"	d	file:

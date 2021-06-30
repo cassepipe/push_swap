@@ -21,6 +21,12 @@
 	printf("\n");					\
 	} while (0);												\
 
+#define PRINT_INT_ARRAY(arr, size) do { \
+	for(int i = 0; i < size; i++)	\
+		printf("%i\t", arr[i]);		\
+	printf("\n");					\
+	} while (0);												\
+
 #define PRINT_TWO_STACKS(A, B) do { \
 		printf("\x1b[2J");										\
 		printf("\x1b[H");										\
@@ -55,6 +61,7 @@ int 	main(int argc, char **argv)
 	int		num;
 	int 	max;
 	struct array_member	*array;
+	int		*int_array;
 
 	argv++;
 	argc--;
@@ -76,11 +83,26 @@ int 	main(int argc, char **argv)
 
 	printf("Output :\n");
 	PRINT_ARRAY(array, argc);
-	put_array_ordered(array, argc);
+
+	int_array = malloc(argc * sizeof(int));
+	i = 0;
+	while (i < argc)
+	{
+		int_array[array[i].offset] = i;
+		i++;
+	}
+
+	printf("Output :\n");
+	PRINT_INT_ARRAY(int_array, argc);
+
 
 	max = argc - 1;
+	i = 0;
+	while (max >> i)
+		i++;
 
 	free(array);
+	free(int_array);
 
 	return (0);
 }
