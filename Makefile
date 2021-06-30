@@ -6,7 +6,7 @@
 #    By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/23 16:37:33 by tpouget           #+#    #+#              #
-#    Updated: 2021/06/29 21:07:36 by tpouget          ###   ########.fr        #
+#    Updated: 2021/06/30 10:48:00 by tpouget          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@
 
 PHONY			=	all clean fclean re test
 
-BLACKLIST		=	push_swap.c checker.c
+BLACKLIST		=	radix_sort.c push_swap.c checker.c
 
 SOURCEFILES		=	$(filter-out ${BLACKLIST}, $(wildcard *.c))
 
@@ -26,7 +26,7 @@ HEADERS			=	$(wildcard *.h)
 	
 CFLAGS			=	-Wall -Wextra  -g3
 
-CC	  		  	=	clang
+CC	  		  	=	gcc
 
 SANITIZER		=	-fsanitize=address
 

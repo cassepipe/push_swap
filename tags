@@ -13,17 +13,21 @@ PRINT_ARRAY	push_swap.c	18;"	d	file:
 PRINT_ARRAY	raw_bit_sort.c	6;"	d	file:
 PRINT_ARRAY_HEX	raw_bit_sort.c	16;"	d	file:
 PRINT_INT_ARRAY	bit_sort_int.c	6;"	d	file:
+PRINT_INT_ARRAY	custom_radix_sort.c	6;"	d	file:
 PRINT_INT_ARRAY	radix_sort.c	5;"	d	file:
 PRINT_INT_ARRAY_HEX	bit_sort_int.c	16;"	d	file:
+PRINT_INT_ARRAY_HEX	custom_radix_sort.c	16;"	d	file:
 PRINT_INT_ARRAY_HEX	radix_sort.c	15;"	d	file:
 PRINT_TWO_STACKS	checker.c	23;"	d	file:
 PRINT_TWO_STACKS	push_swap.c	24;"	d	file:
 RED	checker.c	15;"	d	file:
 RED	push_swap.c	16;"	d	file:
 SWAP_BUFFERS	bit_sort_int.c	26;"	d	file:
+SWAP_BUFFERS	custom_radix_sort.c	26;"	d	file:
 SWAP_BUFFERS	radix_sort.c	25;"	d	file:
 SWAP_BUFFERS	raw_bit_sort.c	26;"	d	file:
 arrange_format	libft/ft_printf/format_utils.c	/^void		arrange_format(struct s_parameters *format)$/;"	f
+array_member	custom_radix_sort.c	/^struct array_member {$/;"	s	file:
 bit_sort	raw_bit_sort.c	/^unsigned long *bit_sort(unsigned long *input_array,$/;"	f
 bit_sort_int	bit_sort_int.c	/^int *bit_sort_int(int *int_array, int nb_items, int nb_bits_to_sort)$/;"	f
 bit_sort_int_pass	bit_sort_int.c	/^int *bit_sort_int_pass(int *input_array, int *output_array, int nb_items, int shift)$/;"	f
@@ -110,24 +114,28 @@ new_stack	stack.c	/^t_stack *new_stack(t_dllnode *top, int size)$/;"	f
 next	doubly_linked_lists.c	/^	struct s_dllnode	*next;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode::s_dllnode	file:
 next_sep	libft/ft_split.c	/^static const char	*next_sep(const char *str, char sep)$/;"	f	file:
 next_word	libft/ft_split.c	/^static const char	*next_word(const char *str, char sep)$/;"	f	file:
+num	custom_radix_sort.c	/^	int	num;$/;"	m	struct:array_member	file:
 num	doubly_linked_lists.c	/^	int				num;$/;"	m	struct:s_dllnode	file:
+offset	custom_radix_sort.c	/^	int	offset;$/;"	m	struct:array_member	file:
 operation	checker.c	/^	void (*operation)(t_dllnode **list);$/;"	m	struct:s_fat_token	file:
-operation	push_swap.c	/^	void (*operation)(t_dllnode **list);$/;"	m	struct:s_fat_token	file:
+ord	custom_radix_sort.c	/^	int	ord;$/;"	m	struct:array_member	file:
 parse_str_into_format	libft/ft_printf/format_utils.c	/^void		*parse_str_into_format(const char *fs,$/;"	f
 prev	doubly_linked_lists.c	/^	struct s_dllnode	*prev;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode::s_dllnode	file:
 print_dll	doubly_linked_lists.c	/^void	print_dll(t_dllnode **a, int size_a)$/;"	f
 print_stack	stack.c	/^void	print_stack(t_stack stack)$/;"	f
 print_two_stacks	stack.c	/^void	print_two_stacks(t_stack A, t_stack B)$/;"	f
 ptr_repr	libft/ft_printf/repr.c	/^char		*ptr_repr(void *ptr, struct s_parameters *format, ssize_t *size)$/;"	f
-put_array_ordered	push_swap.c	/^void  put_array_ordered(long *int_array, size_t size)$/;"	f
+put_array_ordered	push_swap.c	/^void  put_array_ordered(struct array_member *int_array, size_t size)$/;"	f
 put_dll_ordered	checker.c	/^void	put_dll_ordered(t_dllnode **list)$/;"	f
+radix_sort_int	custom_radix_sort.c	/^struct array_member *radix_sort_int(struct array_member *array, int nb_items)$/;"	f
 radix_sort_int	radix_sort.c	/^int *radix_sort_int(int *int_array, int nb_items)$/;"	f
+radix_sort_int_last_pass	custom_radix_sort.c	/^struct array_member *radix_sort_int_last_pass(struct array_member *input_array,$/;"	f
 radix_sort_int_last_pass	radix_sort.c	/^int *radix_sort_int_last_pass(int *input_array, int *output_array, int nb_items,$/;"	f
+radix_sort_int_pass	custom_radix_sort.c	/^struct array_member *radix_sort_int_pass(struct array_member *input_array,$/;"	f
 radix_sort_int_pass	radix_sort.c	/^int *radix_sort_int_pass(int *input_array, int *output_array, int nb_items, int shift)$/;"	f
 rightpad	libft/ft_printf/pad.c	/^void	rightpad(char **str, char c, size_t n)$/;"	f
 s_dllnode	doubly_linked_lists.c	/^typedef struct	s_dllnode	{$/;"	s	file:
 s_fat_token	checker.c	/^struct s_fat_token {$/;"	s	file:
-s_fat_token	push_swap.c	/^struct s_fat_token {$/;"	s	file:
 s_stack	stack.c	/^typedef struct	s_stack	{$/;"	s	file:
 size	stack.c	/^	int size;$/;"	m	struct:s_stack	file:
 stack_append	stack.c	/^void	*stack_append(t_stack *stack, t_dllnode* node)$/;"	f
@@ -143,6 +151,5 @@ t_dllnode	doubly_linked_lists.c	/^} t_dllnode;$/;"	t	typeref:struct:s_dllnode	fi
 t_stack	stack.c	/^} t_stack;$/;"	t	typeref:struct:s_stack	file:
 to_the_power_of	libft/ft_printf/ft_lutoa_base.c	/^static unsigned long	to_the_power_of(unsigned long n, unsigned long p)$/;"	f	file:
 token	checker.c	/^	char *token;$/;"	m	struct:s_fat_token	file:
-token	push_swap.c	/^	char *token;$/;"	m	struct:s_fat_token	file:
 top	stack.c	/^	t_dllnode *top;$/;"	m	struct:s_stack	file:
 write_format	libft/ft_printf/format_utils.c	/^ssize_t		write_format(int fd,$/;"	f
