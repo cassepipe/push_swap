@@ -1,11 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-
-typedef struct	s_dllnode	{
-	int				num;
-	struct s_dllnode	*prev;
-	struct s_dllnode	*next;
-} t_dllnode;
+#include "dll_operations.h"
 
 t_dllnode	*dll_new_node(int n)
 {

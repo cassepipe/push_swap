@@ -1,14 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
 #include <stdbool.h>
-#include <strings.h>
-#include <string.h>
-#include "dll.h"
-#include "stack.h"
-#include "radix_sort.h"
-#include "new_int_array.h"
-#include "libft/get_next_line.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include "checker.h"
 
 #define ENDCOLOR "\033[0m"
 #define GREEN "\033[92m"
@@ -27,11 +20,6 @@
 		print_stack(*B);										\
 		put_dll_ordered(&A->top);								\
 	} while (0);
-
-struct s_fat_token {
-	char *token;
-	void (*operation)(t_dllnode **list);
-};
 
 bool	check_dll_ordered(t_dllnode **list)
 {

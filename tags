@@ -4,31 +4,25 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-ENDCOLOR	checker.c	13;"	d	file:
-ENDCOLOR	push_swap.c	15;"	d	file:
-GREEN	checker.c	14;"	d	file:
-GREEN	push_swap.c	16;"	d	file:
-PRINT_ARRAY	bit_sort.c	6;"	d	file:
-PRINT_ARRAY	checker.c	17;"	d	file:
-PRINT_ARRAY	push_swap.c	21;"	d	file:
-PRINT_ARRAY_HEX	bit_sort.c	16;"	d	file:
-PRINT_INT_ARRAY	custom_radix_sort.c	6;"	d	file:
-PRINT_INT_ARRAY	insertion_sort.c	7;"	d	file:
-PRINT_INT_ARRAY	push_swap.c	27;"	d	file:
-PRINT_INT_ARRAY	radix_sort.c	5;"	d	file:
-PRINT_INT_ARRAY_HEX	custom_radix_sort.c	16;"	d	file:
-PRINT_INT_ARRAY_HEX	insertion_sort.c	17;"	d	file:
-PRINT_INT_ARRAY_HEX	radix_sort.c	15;"	d	file:
-PRINT_TWO_STACKS	checker.c	23;"	d	file:
-PRINT_TWO_STACKS	push_swap.c	33;"	d	file:
-RED	checker.c	15;"	d	file:
-RED	push_swap.c	17;"	d	file:
-SWAP_BUFFERS	bit_sort.c	26;"	d	file:
-SWAP_BUFFERS	custom_radix_sort.c	26;"	d	file:
-SWAP_BUFFERS	radix_sort.c	25;"	d	file:
-SWITCH	push_swap.c	19;"	d	file:
+ENDCOLOR	checker.c	6;"	d	file:
+ENDCOLOR	push_swap.c	5;"	d	file:
+GREEN	checker.c	7;"	d	file:
+GREEN	push_swap.c	6;"	d	file:
+PRINT_ARRAY	bit_sort.c	5;"	d	file:
+PRINT_ARRAY	checker.c	10;"	d	file:
+PRINT_ARRAY	push_swap.c	11;"	d	file:
+PRINT_ARRAY_HEX	bit_sort.c	15;"	d	file:
+PRINT_INT_ARRAY	custom_radix_sort.c	4;"	d	file:
+PRINT_INT_ARRAY	push_swap.c	17;"	d	file:
+PRINT_INT_ARRAY_HEX	custom_radix_sort.c	14;"	d	file:
+PRINT_TWO_STACKS	checker.c	16;"	d	file:
+PRINT_TWO_STACKS	push_swap.c	23;"	d	file:
+RED	checker.c	8;"	d	file:
+RED	push_swap.c	7;"	d	file:
+SWAP_BUFFERS	bit_sort.c	25;"	d	file:
+SWAP_BUFFERS	custom_radix_sort.c	24;"	d	file:
+SWITCH	push_swap.c	9;"	d	file:
 arrange_format	libft/ft_printf/format_utils.c	/^void		arrange_format(struct s_parameters *format)$/;"	f
-array_member	custom_radix_sort.c	/^struct array_member {$/;"	s	file:
 bit_sort_int	bit_sort.c	/^int *bit_sort_int(int *int_array, int nb_items, int nb_bits_to_sort)$/;"	f
 bit_sort_pass	bit_sort.c	/^static int *bit_sort_pass(int *input_array, int *output_array, int nb_items, int shift)$/;"	f	file:
 bit_sort_raw	bit_sort.c	/^int *bit_sort_raw(int *input_array,$/;"	f
@@ -36,17 +30,17 @@ bit_sort_sign_pass	bit_sort.c	/^int *bit_sort_sign_pass(int *input_array, int *o
 char_repr	libft/ft_printf/repr.c	/^char		*char_repr(unsigned char c,$/;"	f
 check_dll_ordered	checker.c	/^bool	check_dll_ordered(t_dllnode **list)$/;"	f
 diralloc	libft/ft_split.c	/^static char			**diralloc(const char *s, char c)$/;"	f	file:
-dll_append	doubly_linked_lists.c	/^t_dllnode **dll_append(t_dllnode **head, t_dllnode *node)$/;"	f
-dll_new_node	doubly_linked_lists.c	/^t_dllnode	*dll_new_node(int n)$/;"	f
-dll_pop	doubly_linked_lists.c	/^t_dllnode	*dll_pop(t_dllnode **head)$/;"	f
-dll_poppush	doubly_linked_lists.c	/^void	dll_poppush(t_dllnode **a, t_dllnode **b)$/;"	f
-dll_push	doubly_linked_lists.c	/^void	dll_push(t_dllnode **dll, t_dllnode *node)$/;"	f
-dll_revrotate	doubly_linked_lists.c	/^void	dll_revrotate(t_dllnode **head)$/;"	f
-dll_rotate	doubly_linked_lists.c	/^void	dll_rotate(t_dllnode **head)$/;"	f
-dll_swaptop	doubly_linked_lists.c	/^void	dll_swaptop(t_dllnode **head)$/;"	f
-empty_stack	stack.c	/^void	empty_stack(t_stack *stack)$/;"	f
-free_dll	doubly_linked_lists.c	/^void	free_dll(t_dllnode **list, int nmemb)$/;"	f
-free_stack	stack.c	/^void	free_stack(t_stack *stack)$/;"	f
+dll_append	dll_operations.c	/^t_dllnode **dll_append(t_dllnode **head, t_dllnode *node)$/;"	f
+dll_new_node	dll_operations.c	/^t_dllnode	*dll_new_node(int n)$/;"	f
+dll_pop	dll_operations.c	/^t_dllnode	*dll_pop(t_dllnode **head)$/;"	f
+dll_poppush	dll_operations.c	/^void	dll_poppush(t_dllnode **a, t_dllnode **b)$/;"	f
+dll_push	dll_operations.c	/^void	dll_push(t_dllnode **dll, t_dllnode *node)$/;"	f
+dll_revrotate	dll_operations.c	/^void	dll_revrotate(t_dllnode **head)$/;"	f
+dll_rotate	dll_operations.c	/^void	dll_rotate(t_dllnode **head)$/;"	f
+dll_swaptop	dll_operations.c	/^void	dll_swaptop(t_dllnode **head)$/;"	f
+empty_stack	stack_operations.c	/^void	empty_stack(t_stack *stack)$/;"	f
+free_dll	dll_operations.c	/^void	free_dll(t_dllnode **list, int nmemb)$/;"	f
+free_stack	stack_operations.c	/^void	free_stack(t_stack *stack)$/;"	f
 ft_10powerof	libft/ft_itoa.c	/^static long	ft_10powerof(long n)$/;"	f	file:
 ft_10powerof	libft/ft_putnbr_fd.c	/^static long	ft_10powerof(long n)$/;"	f	file:
 ft_atoi	libft/ft_atoi.c	/^int			ft_atoi(const char *nptr)$/;"	f
@@ -105,66 +99,40 @@ grow_buffer_until_newline	libft/get_next_line.c	/^static int	grow_buffer_until_n
 init_format	libft/ft_printf/format_utils.c	/^void		init_format(struct s_parameters *format)$/;"	f
 is_in	libft/ft_printf/format_utils.c	/^int			is_in(char c, const char *charset)$/;"	f
 is_in_set	libft/ft_strtrim.c	/^static int	is_in_set(char c, char const *set)$/;"	f	file:
-is_stack_sorted	stack.c	/^bool	is_stack_sorted(t_stack A)$/;"	f
+is_stack_sorted	stack_operations.c	/^bool	is_stack_sorted(t_stack A)$/;"	f
 leftpad	libft/ft_printf/pad.c	/^void	leftpad(char **str, char c, size_t n)$/;"	f
 loop_exec_stack_ops	checker.c	/^void	loop_exec_stack_ops(t_stack *A, t_stack *B)$/;"	f
 main	checker.c	/^int 	main(int argc, char **argv)$/;"	f
 main	push_swap.c	/^int 	main(int argc, char **argv)$/;"	f
 nbr_repr	libft/ft_printf/repr.c	/^char		*nbr_repr(long nbr, struct s_parameters *format, ssize_t *size)$/;"	f
 new_int_array	new_int_array.c	/^int 	*new_int_array(int size)$/;"	f
-new_stack	stack.c	/^t_stack *new_stack(t_dllnode *top, int size)$/;"	f
-next	doubly_linked_lists.c	/^	struct s_dllnode	*next;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode::s_dllnode	file:
+new_stack	stack_operations.c	/^t_stack *new_stack(t_dllnode *top, int size)$/;"	f
 next_sep	libft/ft_split.c	/^static const char	*next_sep(const char *str, char sep)$/;"	f	file:
 next_word	libft/ft_split.c	/^static const char	*next_word(const char *str, char sep)$/;"	f	file:
-num	custom_radix_sort.c	/^	int	num;$/;"	m	struct:array_member	file:
-num	doubly_linked_lists.c	/^	int				num;$/;"	m	struct:s_dllnode	file:
-offset	custom_radix_sort.c	/^	int	offset;$/;"	m	struct:array_member	file:
-operation	checker.c	/^	void (*operation)(t_dllnode **list);$/;"	m	struct:s_fat_token	file:
-ord	custom_radix_sort.c	/^	int	ord;$/;"	m	struct:array_member	file:
-pa	insertion_sort.c	/^static void	pa()$/;"	f	file:
 pa	stack_sort.c	/^static void	pa()$/;"	f	file:
 parse_str_into_format	libft/ft_printf/format_utils.c	/^void		*parse_str_into_format(const char *fs,$/;"	f
-pb	insertion_sort.c	/^static void	pb()$/;"	f	file:
 pb	stack_sort.c	/^static void	pb()$/;"	f	file:
-pos_modulo	insertion_sort.c	/^int pos_modulo(int a, int b)$/;"	f
-prev	doubly_linked_lists.c	/^	struct s_dllnode	*prev;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode::s_dllnode	file:
-print_dll	doubly_linked_lists.c	/^void	print_dll(t_dllnode **a, int size_a)$/;"	f
-print_stack	stack.c	/^void	print_stack(t_stack stack)$/;"	f
-print_two_stacks	stack.c	/^void	print_two_stacks(t_stack A, t_stack B)$/;"	f
+print_dll	dll_operations.c	/^void	print_dll(t_dllnode **a, int size_a)$/;"	f
+print_stack	stack_operations.c	/^void	print_stack(t_stack stack)$/;"	f
+print_two_stacks	stack_operations.c	/^void	print_two_stacks(t_stack A, t_stack B)$/;"	f
 ptr_repr	libft/ft_printf/repr.c	/^char		*ptr_repr(void *ptr, struct s_parameters *format, ssize_t *size)$/;"	f
-put_array_ordered	push_swap.c	/^void  put_array_ordered(struct array_member *int_array, size_t size)$/;"	f
+put_array_ordered	push_swap.c	/^void  put_array_ordered(struct array_member *int_array, int size)$/;"	f
 put_dll_ordered	checker.c	/^void	put_dll_ordered(t_dllnode **list)$/;"	f
-ra	insertion_sort.c	/^static void	ra()$/;"	f	file:
 radix_sort_int	custom_radix_sort.c	/^struct array_member *radix_sort_int(struct array_member *array, int nb_items)$/;"	f
-radix_sort_int	radix_sort.c	/^int *radix_sort_int(int *int_array, int nb_items)$/;"	f
 radix_sort_int_last_pass	custom_radix_sort.c	/^struct array_member *radix_sort_int_last_pass(struct array_member *input_array,$/;"	f
-radix_sort_int_last_pass	radix_sort.c	/^int *radix_sort_int_last_pass(int *input_array, int *output_array, int nb_items,$/;"	f
 radix_sort_int_pass	custom_radix_sort.c	/^struct array_member *radix_sort_int_pass(struct array_member *input_array,$/;"	f
-radix_sort_int_pass	radix_sort.c	/^int *radix_sort_int_pass(int *input_array, int *output_array, int nb_items, int shift)$/;"	f
 rightpad	libft/ft_printf/pad.c	/^void	rightpad(char **str, char c, size_t n)$/;"	f
-rra	insertion_sort.c	/^static void	rra(int *a, int* b, int *c, int nb_items)$/;"	f	file:
 rra	stack_sort.c	/^static void	rra()$/;"	f	file:
-s_dllnode	doubly_linked_lists.c	/^typedef struct	s_dllnode	{$/;"	s	file:
-s_fat_token	checker.c	/^struct s_fat_token {$/;"	s	file:
-s_stack	stack.c	/^typedef struct	s_stack	{$/;"	s	file:
-sa	insertion_sort.c	/^static void sa()$/;"	f	file:
 sa	stack_sort.c	/^static void sa()$/;"	f	file:
-size	stack.c	/^	int size;$/;"	m	struct:s_stack	file:
-small_sort	insertion_sort.c	/^int 		*small_sort(int *array, int nb_items)$/;"	f
-stack_append	stack.c	/^void	*stack_append(t_stack *stack, t_dllnode* node)$/;"	f
-stack_pop	stack.c	/^t_dllnode	*stack_pop(t_stack *stack)$/;"	f
-stack_poppush	stack.c	/^void	stack_poppush(t_stack *src, t_stack *dst)$/;"	f
-stack_push	stack.c	/^void	stack_push(t_stack *stack, t_dllnode *node)$/;"	f
-stack_revrotate	stack.c	/^void	stack_revrotate(t_stack *stack)$/;"	f
-stack_rotate	stack.c	/^void	stack_rotate(t_stack *stack)$/;"	f
+stack_append	stack_operations.c	/^void	*stack_append(t_stack *stack, t_dllnode* node)$/;"	f
+stack_pop	stack_operations.c	/^t_dllnode	*stack_pop(t_stack *stack)$/;"	f
+stack_poppush	stack_operations.c	/^void	stack_poppush(t_stack *src, t_stack *dst)$/;"	f
+stack_push	stack_operations.c	/^void	stack_push(t_stack *stack, t_dllnode *node)$/;"	f
+stack_revrotate	stack_operations.c	/^void	stack_revrotate(t_stack *stack)$/;"	f
+stack_rotate	stack_operations.c	/^void	stack_rotate(t_stack *stack)$/;"	f
 stack_sort	stack_sort.c	/^void 	stack_sort(t_stack *A)$/;"	f
-stack_swaptop	stack.c	/^void	stack_swaptop(t_stack *stack)$/;"	f
+stack_swaptop	stack_operations.c	/^void	stack_swaptop(t_stack *stack)$/;"	f
 str_repr	libft/ft_printf/repr.c	/^char		*str_repr(char *s, struct s_parameters *format, ssize_t *size)$/;"	f
 swap_buffers	bit_sort.c	/^static void	swap_buffers(int **buff1, int **buff2)$/;"	f	file:
-swap_int	insertion_sort.c	/^static void swap_int(int *a, int *b)$/;"	f	file:
-t_dllnode	doubly_linked_lists.c	/^} t_dllnode;$/;"	t	typeref:struct:s_dllnode	file:
-t_stack	stack.c	/^} t_stack;$/;"	t	typeref:struct:s_stack	file:
 to_the_power_of	libft/ft_printf/ft_lutoa_base.c	/^static unsigned long	to_the_power_of(unsigned long n, unsigned long p)$/;"	f	file:
-token	checker.c	/^	char *token;$/;"	m	struct:s_fat_token	file:
-top	stack.c	/^	t_dllnode *top;$/;"	m	struct:s_stack	file:
 write_format	libft/ft_printf/format_utils.c	/^ssize_t		write_format(int fd,$/;"	f

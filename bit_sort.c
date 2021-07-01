@@ -1,7 +1,6 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include <unistd.h>
-#include "new_int_array.h"
+#include <stdlib.h>
+#include "bit_sort.h"
 
 #define PRINT_ARRAY(array, size)	do {	\
 	int i = 0;						\

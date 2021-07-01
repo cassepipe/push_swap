@@ -1,3 +1,4 @@
+#include "new_int_array.h"
 #include <stdlib.h>
 
 int 	*new_int_array(int size)

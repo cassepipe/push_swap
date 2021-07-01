@@ -1,7 +1,5 @@
-
 #include <stdlib.h>
-#include <stdio.h>
-#include "new_int_array.h"
+#include "custom_radix_sort.h"
 
 #define PRINT_INT_ARRAY(array, size)	do {	\
 	int i = 0;						\
@@ -29,12 +27,6 @@
 	buff1 = buff2;				\
 	buff2 = tmp;				\
 } while (0);
-
-struct array_member {
-	int	num;
-	int	offset;
-	int	ord;
-};
 
 struct array_member *radix_sort_int_pass(struct array_member *input_array,
 										struct array_member *output_array,

@@ -1,8 +1,7 @@
-#include <stdlib.h>
+#include <stdbool.h>
 #include <unistd.h>
-#include <stdio.h>
-#include "new_int_array.h"
-#include "stack.h"
+#include <stdlib.h>
+#include "stack_sort.h"
 
 static void	pb()
 {
@@ -48,7 +47,7 @@ void 	stack_sort(t_stack *A)
 			rra();
 		}
 	}
-	while (B.size--)
+	while (B.size)
 	{
 		free(stack_pop(&B));
 		pa();

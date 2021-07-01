@@ -6,7 +6,7 @@
 #    By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/23 16:37:33 by tpouget           #+#    #+#              #
-#    Updated: 2021/07/01 10:30:45 by tpouget          ###   ########.fr        #
+#    Updated: 2021/07/01 15:41:11 by tpouget          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@
 
 PHONY			=	all clean fclean re test
 
-BLACKLIST		=	radix_sort.c push_swap.c checker.c insertion_sort.c
+BLACKLIST		=	push_swap.c checker.c 
 
 SOURCEFILES		=	$(filter-out ${BLACKLIST}, $(wildcard *.c))
 
@@ -35,12 +35,12 @@ NAME			=	prog
 
 #	Rules
 
-all:			push_swap checker
+all:			prog checker
 
 test:			${OBJECTFILES} libft/libft.a
 				${CC} ${SANITIZER} ${OBJECTFILES} -Llibft -lft -lcriterion -o test 
 
-push_swap:		obj/push_swap.o ${OBJECTFILES} libft/libft.a
+prog:			obj/push_swap.o ${OBJECTFILES} libft/libft.a
 				${CC} ${SANITIZER} obj/push_swap.o ${OBJECTFILES} -Llibft -lft -o $@
 
 checker:		obj/checker.o ${OBJECTFILES} libft/libft.a
@@ -48,6 +48,7 @@ checker:		obj/checker.o ${OBJECTFILES} libft/libft.a
 
 obj/%.o:		%.c	Makefile ${HEADERS} | obj
 				${CC} ${CFLAGS} -c $< -o $@
+
 
 obj:			
 				mkdir obj

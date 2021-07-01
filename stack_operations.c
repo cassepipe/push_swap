@@ -1,13 +1,7 @@
-#include <stdlib.h>
 #include <stdbool.h>
+#include <stdlib.h>
 #include <stdio.h>
-#include "dll.h"
-#include <unistd.h>
-
-typedef struct	s_stack	{
-	t_dllnode *top;
-	int size;
-} t_stack;
+#include "stack_operations.h"
 
 t_stack *new_stack(t_dllnode *top, int size)
 {

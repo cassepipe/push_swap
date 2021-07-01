@@ -1,16 +1,6 @@
-#include <stdio.h>
-#include <limits.h>
 #include <stdlib.h>
-#include <unistd.h>
-#include <stdbool.h>
-#include <strings.h>
-#include <string.h>
-#include "dll.h"
-#include "stack.h"
-#include "radix_sort.h"
-#include "stack_sort.h"
-#include "new_int_array.h"
-#include "libft/get_next_line.h"
+#include <stdio.h>
+#include "push_swap.h"
 
 #define ENDCOLOR "\033[0m"
 #define GREEN "\033[92m"
@@ -40,7 +30,7 @@
 	put_dll_ordered(&A->top);								\
 } while (0);
 
-void  put_array_ordered(struct array_member *int_array, size_t size)
+void  put_array_ordered(struct array_member *int_array, int size)
 {
 	int i;
 
@@ -104,13 +94,12 @@ int 	main(int argc, char **argv)
 			stack_append(&A, dll_new_node(int_array[i]));
 			i++;
 		}
-		/*empty_stack(&A);*/
-		free_dll(&A.top, A.size);
+		stack_sort(&A);
+		empty_stack(&A);
+		/*free_dll(&A.top, A.size);*/
 	}
 	else
 	{
-
-
 		max = argc - 1;
 		i = 0;
 		while (max >> i)
