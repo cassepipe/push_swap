@@ -6,7 +6,7 @@
 #    By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/23 16:37:33 by tpouget           #+#    #+#              #
-#    Updated: 2021/06/30 14:21:10 by tpouget          ###   ########.fr        #
+#    Updated: 2021/07/01 10:30:45 by tpouget          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@
 
 PHONY			=	all clean fclean re test
 
-BLACKLIST		=	radix_sort.c push_swap.c checker.c 
+BLACKLIST		=	radix_sort.c push_swap.c checker.c insertion_sort.c
 
 SOURCEFILES		=	$(filter-out ${BLACKLIST}, $(wildcard *.c))
 

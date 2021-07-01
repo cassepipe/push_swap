@@ -71,6 +71,7 @@ struct array_member *radix_sort_int_pass(struct array_member *input_array,
 
 	return output_array;
 }
+
 struct array_member *radix_sort_int_last_pass(struct array_member *input_array,
 											struct array_member *output_array,
 											int nb_items,

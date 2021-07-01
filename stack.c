@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include "dll.h"
 #include <unistd.h>
@@ -99,6 +100,12 @@ void	stack_poppush(t_stack *src, t_stack *dst)
 	}
 }
 
+void	empty_stack(t_stack *stack)
+{
+	free_dll(&stack->top, stack->size);
+	stack->size = 0;
+}
+
 void	free_stack(t_stack *stack)
 {
 	free_dll(&stack->top, stack->size);
@@ -145,6 +152,17 @@ void	print_two_stacks(t_stack A, t_stack B)
 		A.top = A.top->next;
 		B.top = B.top->next;
 	}
+}
+
+bool	is_stack_sorted(t_stack A)
+{
+	while (A.size--)
+	{
+		if (A.top->num > A.top->next->num)
+			return (false);
+		stack_rotate(&A);
+	}
+	return (true);
 }
 
 
