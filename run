@@ -1,3 +1,5 @@
 #!/usr/bin/zsh
 
 ./prog $@ | ./checker_linux $@
+#./prog $@ | wc -l
+

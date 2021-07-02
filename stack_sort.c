@@ -43,6 +43,14 @@ void 	stack_sort(t_stack *A)
 		{
 			stack_swaptop(A);
 			sa();
+			if (A->size > 2)
+			{
+				stack_revrotate(A);
+				rra();
+			}
+		}
+		else
+		{
 			stack_revrotate(A);
 			rra();
 		}

@@ -83,8 +83,8 @@ int 	main(int argc, char **argv)
 		int_array[array[i].offset] = i;
 		i++;
 	}
-	printf("Simpler array :\n");
-	PRINT_INT_ARRAY(int_array, argc);
+	/*printf("Simpler array :\n");*/
+	/*PRINT_INT_ARRAY(int_array, argc);*/
 	if (argc < SWITCH)
 	{
 		A = (t_stack){.top = NULL, .size = 0};

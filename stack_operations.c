@@ -150,7 +150,7 @@ void	print_two_stacks(t_stack A, t_stack B)
 
 bool	is_stack_sorted(t_stack A)
 {
-	while (A.size--)
+	while (--A.size)
 	{
 		if (A.top->num > A.top->next->num)
 			return (false);
