@@ -156,6 +156,7 @@ next	dll_node.h	/^	struct s_dllnode	*next;$/;"	m	struct:s_dllnode	typeref:struct
 next	dll_operations.h	/^	struct s_dllnode	*next;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
 next	libft/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list *
 next	push_swap.h	/^	struct s_dllnode	*next;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
+next	selection_sort.h	/^	struct s_dllnode	*next;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
 next	stack_operations.h	/^	struct s_dllnode	*next;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
 next	stack_sort.h	/^	struct s_dllnode	*next;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
 next_sep	libft/ft_split.c	/^static const char	*next_sep(const char *str, char sep)$/;"	f	typeref:typename:const char *	file:
@@ -167,6 +168,7 @@ num	dll_node.h	/^	int				num;$/;"	m	struct:s_dllnode	typeref:typename:int
 num	dll_operations.h	/^	int				num;$/;"	m	struct:s_dllnode	typeref:typename:int
 num	push_swap.h	/^	int				num;$/;"	m	struct:s_dllnode	typeref:typename:int
 num	push_swap.h	/^	int	num;$/;"	m	struct:array_member	typeref:typename:int
+num	selection_sort.h	/^	int				num;$/;"	m	struct:s_dllnode	typeref:typename:int
 num	stack_operations.h	/^	int				num;$/;"	m	struct:s_dllnode	typeref:typename:int
 num	stack_sort.h	/^	int				num;$/;"	m	struct:s_dllnode	typeref:typename:int
 obj	Makefile	/^obj:			$/;"	t
@@ -177,14 +179,17 @@ offset	push_swap.h	/^	int	offset;$/;"	m	struct:array_member	typeref:typename:int
 ord	array_member.h	/^	int	ord;$/;"	m	struct:array_member	typeref:typename:int
 ord	custom_radix_sort.h	/^	int	ord;$/;"	m	struct:array_member	typeref:typename:int
 ord	push_swap.h	/^	int	ord;$/;"	m	struct:array_member	typeref:typename:int
+pa	selection_sort.c	/^static void	pa()$/;"	f	typeref:typename:void	file:
 pa	stack_sort.c	/^static void	pa()$/;"	f	typeref:typename:void	file:
 parse_str_into_format	libft/ft_printf/format_utils.c	/^void		*parse_str_into_format(const char *fs,$/;"	f	typeref:typename:void *
+pb	selection_sort.c	/^static void	pb()$/;"	f	typeref:typename:void	file:
 pb	stack_sort.c	/^static void	pb()$/;"	f	typeref:typename:void	file:
 precision	libft/ft_printf/ft_printf_utils.h	/^	int	precision;$/;"	m	struct:s_parameters	typeref:typename:int
 prev	checker.h	/^	struct s_dllnode	*prev;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
 prev	dll_node.h	/^	struct s_dllnode	*prev;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
 prev	dll_operations.h	/^	struct s_dllnode	*prev;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
 prev	push_swap.h	/^	struct s_dllnode	*prev;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
+prev	selection_sort.h	/^	struct s_dllnode	*prev;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
 prev	stack_operations.h	/^	struct s_dllnode	*prev;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
 prev	stack_sort.h	/^	struct s_dllnode	*prev;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
 print_dll	dll_operations.c	/^void	print_dll(t_dllnode **a, int size_a)$/;"	f	typeref:typename:void
@@ -194,12 +199,14 @@ prog	Makefile	/^prog:			obj\/push_swap.o ${OBJECTFILES} libft\/libft.a$/;"	t
 ptr_repr	libft/ft_printf/repr.c	/^char		*ptr_repr(void *ptr, struct s_parameters *format, ssize_t *size)$/;"	f	typeref:typename:char *
 put_array_ordered	push_swap.c	/^void  put_array_ordered(struct array_member *int_array, int size)$/;"	f	typeref:typename:void
 put_dll_ordered	checker.c	/^void	put_dll_ordered(t_dllnode **list)$/;"	f	typeref:typename:void
+ra	selection_sort.c	/^static void	ra()$/;"	f	typeref:typename:void	file:
 radix_sort_int	custom_radix_sort.c	/^struct array_member *radix_sort_int(struct array_member *array, int nb_items)$/;"	f	typeref:struct:array_member *
 radix_sort_int_last_pass	custom_radix_sort.c	/^struct array_member *radix_sort_int_last_pass(struct array_member *input_array,$/;"	f	typeref:struct:array_member *
 radix_sort_int_pass	custom_radix_sort.c	/^struct array_member *radix_sort_int_pass(struct array_member *input_array,$/;"	f	typeref:struct:array_member *
 re	Makefile	/^re:				fclean all$/;"	t
 re	libft/Makefile	/^re:				fclean all$/;"	t
 rightpad	libft/ft_printf/pad.c	/^void	rightpad(char **str, char c, size_t n)$/;"	f	typeref:typename:void
+rra	selection_sort.c	/^static void	rra()$/;"	f	typeref:typename:void	file:
 rra	stack_sort.c	/^static void	rra()$/;"	f	typeref:typename:void	file:
 s_dllnode	checker.h	/^struct s_dllnode {$/;"	s
 s_dllnode	checker.h	/^typedef struct s_dllnode s_dllnode;$/;"	t	typeref:struct:s_dllnode
@@ -208,6 +215,8 @@ s_dllnode	dll_operations.h	/^struct s_dllnode {$/;"	s
 s_dllnode	dll_operations.h	/^typedef struct s_dllnode s_dllnode;$/;"	t	typeref:struct:s_dllnode
 s_dllnode	push_swap.h	/^struct s_dllnode {$/;"	s
 s_dllnode	push_swap.h	/^typedef struct s_dllnode s_dllnode;$/;"	t	typeref:struct:s_dllnode
+s_dllnode	selection_sort.h	/^struct s_dllnode {$/;"	s
+s_dllnode	selection_sort.h	/^typedef struct s_dllnode s_dllnode;$/;"	t	typeref:struct:s_dllnode
 s_dllnode	stack_operations.h	/^struct s_dllnode {$/;"	s
 s_dllnode	stack_operations.h	/^typedef struct s_dllnode s_dllnode;$/;"	t	typeref:struct:s_dllnode
 s_dllnode	stack_sort.h	/^struct s_dllnode {$/;"	s
@@ -218,21 +227,28 @@ s_stack	checker.h	/^struct s_stack {$/;"	s
 s_stack	checker.h	/^typedef struct s_stack s_stack;$/;"	t	typeref:struct:s_stack
 s_stack	push_swap.h	/^struct s_stack {$/;"	s
 s_stack	push_swap.h	/^typedef struct s_stack s_stack;$/;"	t	typeref:struct:s_stack
+s_stack	selection_sort.h	/^struct s_stack {$/;"	s
+s_stack	selection_sort.h	/^typedef struct s_stack s_stack;$/;"	t	typeref:struct:s_stack
 s_stack	stack.h	/^typedef struct	s_stack	{$/;"	s
 s_stack	stack_operations.h	/^struct s_stack {$/;"	s
 s_stack	stack_operations.h	/^typedef struct s_stack s_stack;$/;"	t	typeref:struct:s_stack
 s_stack	stack_sort.h	/^struct s_stack {$/;"	s
 s_stack	stack_sort.h	/^typedef struct s_stack s_stack;$/;"	t	typeref:struct:s_stack
+sa	selection_sort.c	/^static void sa()$/;"	f	typeref:typename:void	file:
 sa	stack_sort.c	/^static void sa()$/;"	f	typeref:typename:void	file:
+selection_sort	selection_sort.c	/^void 	selection_sort(t_stack *A)$/;"	f	typeref:typename:void
 size	checker.h	/^	int size;$/;"	m	struct:s_stack	typeref:typename:int
 size	push_swap.h	/^	int size;$/;"	m	struct:s_stack	typeref:typename:int
+size	selection_sort.h	/^	int size;$/;"	m	struct:s_stack	typeref:typename:int
 size	stack.h	/^	int size;$/;"	m	struct:s_stack	typeref:typename:int
 size	stack_operations.h	/^	int size;$/;"	m	struct:s_stack	typeref:typename:int
 size	stack_sort.h	/^	int size;$/;"	m	struct:s_stack	typeref:typename:int
 stack_append	stack_operations.c	/^void	*stack_append(t_stack *stack, t_dllnode* node)$/;"	f	typeref:typename:void *
+stack_find	selection_sort.c	/^int	stack_find(t_stack stack, int num)$/;"	f	typeref:typename:int
 stack_pop	stack_operations.c	/^t_dllnode	*stack_pop(t_stack *stack)$/;"	f	typeref:typename:t_dllnode *
 stack_poppush	stack_operations.c	/^void	stack_poppush(t_stack *src, t_stack *dst)$/;"	f	typeref:typename:void
 stack_push	stack_operations.c	/^void	stack_push(t_stack *stack, t_dllnode *node)$/;"	f	typeref:typename:void
+stack_rev_find	selection_sort.c	/^int	stack_rev_find(t_stack stack, int num)$/;"	f	typeref:typename:int
 stack_revrotate	stack_operations.c	/^void	stack_revrotate(t_stack *stack)$/;"	f	typeref:typename:void
 stack_rotate	stack_operations.c	/^void	stack_rotate(t_stack *stack)$/;"	f	typeref:typename:void
 stack_sort	stack_sort.c	/^void 	stack_sort(t_stack *A)$/;"	f	typeref:typename:void
@@ -243,11 +259,13 @@ t_dllnode	checker.h	/^typedef struct s_dllnode t_dllnode;$/;"	t	typeref:struct:s
 t_dllnode	dll_node.h	/^} t_dllnode;$/;"	t	typeref:struct:s_dllnode
 t_dllnode	dll_operations.h	/^typedef struct s_dllnode t_dllnode;$/;"	t	typeref:struct:s_dllnode
 t_dllnode	push_swap.h	/^typedef struct s_dllnode t_dllnode;$/;"	t	typeref:struct:s_dllnode
+t_dllnode	selection_sort.h	/^typedef struct s_dllnode t_dllnode;$/;"	t	typeref:struct:s_dllnode
 t_dllnode	stack_operations.h	/^typedef struct s_dllnode t_dllnode;$/;"	t	typeref:struct:s_dllnode
 t_dllnode	stack_sort.h	/^typedef struct s_dllnode t_dllnode;$/;"	t	typeref:struct:s_dllnode
 t_list	libft/libft.h	/^}					t_list;$/;"	t	typeref:struct:s_list
 t_stack	checker.h	/^typedef struct s_stack t_stack;$/;"	t	typeref:struct:s_stack
 t_stack	push_swap.h	/^typedef struct s_stack t_stack;$/;"	t	typeref:struct:s_stack
+t_stack	selection_sort.h	/^typedef struct s_stack t_stack;$/;"	t	typeref:struct:s_stack
 t_stack	stack.h	/^} t_stack;$/;"	t	typeref:struct:s_stack
 t_stack	stack_operations.h	/^typedef struct s_stack t_stack;$/;"	t	typeref:struct:s_stack
 t_stack	stack_sort.h	/^typedef struct s_stack t_stack;$/;"	t	typeref:struct:s_stack
@@ -255,6 +273,7 @@ test	Makefile	/^test:			${OBJECTFILES} libft\/libft.a$/;"	t
 to_the_power_of	libft/ft_printf/ft_lutoa_base.c	/^static unsigned long	to_the_power_of(unsigned long n, unsigned long p)$/;"	f	typeref:typename:unsigned long	file:
 top	checker.h	/^	t_dllnode *top;$/;"	m	struct:s_stack	typeref:typename:t_dllnode *
 top	push_swap.h	/^	t_dllnode *top;$/;"	m	struct:s_stack	typeref:typename:t_dllnode *
+top	selection_sort.h	/^	t_dllnode *top;$/;"	m	struct:s_stack	typeref:typename:t_dllnode *
 top	stack.h	/^	t_dllnode *top;$/;"	m	struct:s_stack	typeref:typename:t_dllnode *
 top	stack_operations.h	/^	t_dllnode *top;$/;"	m	struct:s_stack	typeref:typename:t_dllnode *
 top	stack_sort.h	/^	t_dllnode *top;$/;"	m	struct:s_stack	typeref:typename:t_dllnode *

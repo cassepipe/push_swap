@@ -31,7 +31,7 @@ void 	stack_sort(t_stack *A)
 	B = (t_stack){ .top = NULL, .size = 0};
 	min = 0;
 
-	while (!is_stack_sorted(*A) && min < A->size)
+	while (!is_stack_sorted(*A))// && min < A->size)
 	{
 		if (A->top->num == min)
 		{
@@ -43,13 +43,13 @@ void 	stack_sort(t_stack *A)
 		{
 			stack_swaptop(A);
 			sa();
-			if (A->size > 2)
-			{
-				stack_revrotate(A);
-				rra();
-			}
+			/*if (A->size > 2)*/
+			/*{*/
+				/*stack_revrotate(A);*/
+				/*rra();*/
+			/*}*/
 		}
-		else
+		else //if (A->size > 2)
 		{
 			stack_revrotate(A);
 			rra();

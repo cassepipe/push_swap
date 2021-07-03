@@ -1,5 +1,5 @@
 #!/usr/bin/zsh
-
+echo "$@"
 ./prog $@ | ./checker_linux $@
-#./prog $@ | wc -l
+./prog $@ | wc -l
 

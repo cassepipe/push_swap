@@ -95,6 +95,7 @@ int 	main(int argc, char **argv)
 			i++;
 		}
 		stack_sort(&A);
+		/*selection_sort(&A);*/
 		empty_stack(&A);
 		/*free_dll(&A.top, A.size);*/
 	}
