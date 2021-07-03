@@ -18,6 +18,4 @@ void stack_poppush(t_stack *src,t_stack *dst);
 bool is_stack_sorted(t_stack A);
 void selection_sort(t_stack *A);
 void stack_revrotate(t_stack *stack);
-int stack_rev_find(t_stack stack,int num);
 void stack_rotate(t_stack *stack);
-int stack_find(t_stack stack,int num);

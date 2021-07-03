@@ -28,7 +28,7 @@ static void sa()
 	write(1, "sa\n", 3);
 }
 
-int	stack_find(t_stack stack, int num)
+static int	stack_find(t_stack stack, int num)
 {
 	int i;	
 	
@@ -41,7 +41,7 @@ int	stack_find(t_stack stack, int num)
 	return (i);
 }
 
-int	stack_rev_find(t_stack stack, int num)
+static int	stack_rev_find(t_stack stack, int num)
 {
 	int i;	
 	
