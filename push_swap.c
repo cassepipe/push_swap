@@ -48,6 +48,29 @@ void  put_array_ordered(struct array_member *int_array, int size)
 		printf(GREEN "OK" ENDCOLOR "\n");
 }
 
+void 	check_for_duplicates(struct array_member *array, int nb_items)
+{
+	int i;
+	int y;
+
+	i = 0;
+	y = 0;
+	while (i < nb_items)
+	{
+		while (y < nb_items)
+		{
+			if (array[i].num == array[y].num
+					&& i != y)
+			{
+				printf("Duplicates !");
+				exit(-1);
+			}
+			y++;
+		}
+		i++;
+	}
+}
+
 int 	main(int argc, char **argv)
 {
 	int		i;
@@ -71,6 +94,7 @@ int 	main(int argc, char **argv)
 		array[i].offset = i;
 		i++;
 	}
+	check_for_duplicates(array, argc);
 	/*printf("Input :\n");*/
 	/*PRINT_ARRAY(array, argc);*/
 

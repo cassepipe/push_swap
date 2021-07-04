@@ -20,6 +20,7 @@ t_dllnode *dll_new_node(int n);
 void *stack_append(t_stack *stack,t_dllnode *node);
 typedef struct array_member array_member;
 struct array_member *radix_sort_int(struct array_member *array,int nb_items);
+void check_for_duplicates(struct array_member *array,int nb_items);
 struct array_member {
 	int	num;
 	int	offset;

@@ -6,7 +6,7 @@
 #    By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/23 16:37:33 by tpouget           #+#    #+#              #
-#    Updated: 2021/07/01 15:41:11 by tpouget          ###   ########.fr        #
+#    Updated: 2021/07/04 16:00:34 by tpouget          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,13 +35,14 @@ NAME			=	prog
 
 #	Rules
 
-all:			prog checker
+all:			push_swap 
 
 test:			${OBJECTFILES} libft/libft.a
 				${CC} ${SANITIZER} ${OBJECTFILES} -Llibft -lft -lcriterion -o test 
 
-prog:			obj/push_swap.o ${OBJECTFILES} libft/libft.a
+push_swap:		obj/push_swap.o ${OBJECTFILES} libft/libft.a
 				${CC} ${SANITIZER} obj/push_swap.o ${OBJECTFILES} -Llibft -lft -o $@
+				cp push_swap push_swap_tester/
 
 checker:		obj/checker.o ${OBJECTFILES} libft/libft.a
 				${CC} ${SANITIZER} obj/checker.o ${OBJECTFILES} -Llibft -lft -o $@
