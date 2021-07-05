@@ -71,13 +71,30 @@ void 	check_for_duplicates(struct array_member *array, int nb_items)
 	}
 }
 
+int	check_for_some_order(int *array, int nb_items)
+{
+	int min;	
+	int i;	
+
+	i = 1;
+	min = 0;
+	while (i < nb_items)
+	{	
+		if (array[i] && array[i] < array[i-1])	
+			return (-1);
+		i++;
+	}
+	return (i);
+}
+
 int 	main(int argc, char **argv)
 {
-	int		i;
-	int		num;
+	int	i;
+	int	num;
 	int 	max;
-	struct array_member	*array;
-	int		*int_array;
+	struct	array_member	*array;
+	int	*int_array;
+	int	to_rotate;
 	t_stack	A;
 
 	argv++;
@@ -95,6 +112,7 @@ int 	main(int argc, char **argv)
 		i++;
 	}
 	check_for_duplicates(array, argc);
+	
 	/*printf("Input :\n");*/
 	/*PRINT_ARRAY(array, argc);*/
 
@@ -109,6 +127,7 @@ int 	main(int argc, char **argv)
 	}
 	/*printf("Simpler array :\n");*/
 	/*PRINT_INT_ARRAY(int_array, argc);*/
+	to_rotate = check_for_some_order(int_array, argc);
 	if (argc < SWITCH)
 	{
 		A = (t_stack){.top = NULL, .size = 0};

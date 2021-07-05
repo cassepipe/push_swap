@@ -1,10 +1,4 @@
 #!/usr/bin/zsh
-
-GREEN='\033[0;32m'
-RED='\033[0;31m'
-WHITE='\033[0;37m'
-RESET='\033[0m'
-
 echo "$@"
 ./push_swap $@ | ./checker_linux $@
 ./push_swap $@ | wc -l
