@@ -1,5 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <stdbool.h>
+#include <unistd.h>
 #include "push_swap.h"
 
 #define ENDCOLOR "\033[0m"
@@ -48,51 +50,57 @@ void  put_array_ordered(struct array_member *int_array, int size)
 		printf(GREEN "OK" ENDCOLOR "\n");
 }
 
-void 	check_for_duplicates(struct array_member *array, int nb_items)
+bool are_there_duplicates(struct array_member *array, int nb_items)
 {
 	int i;
 	int y;
 
 	i = 0;
-	y = 0;
 	while (i < nb_items)
 	{
+		y = 0;
 		while (y < nb_items)
 		{
-			if (array[i].num == array[y].num
-					&& i != y)
+			if (array[i].num == array[y].num && i != y)
 			{
-				printf("Duplicates !");
-				exit(-1);
+				return (true);
 			}
 			y++;
 		}
 		i++;
 	}
+	return (false);
 }
 
-int	check_for_some_order(int *array, int nb_items)
+bool	check_for_some_order(int *array, int nb_items, int min, int *to_rotate)
 {
-	int min;	
-	int i;	
+	bool found_min;
+	int i;
 
 	i = 1;
-	min = 0;
+	*to_rotate = 0;
+	found_min = array[0] == min ? true : false;
 	while (i < nb_items)
-	{	
-		if (array[i] && array[i] < array[i-1])	
-			return (-1);
+	{
+		if (array[i] != min && array[i] < array[i-1])
+			return (false);
+		if (!found_min)
+		{
+			(*to_rotate)++;
+			if (array[i] == min)
+				found_min = true;
+		}
 		i++;
 	}
-	return (i);
+	return (true);
 }
 
 int 	main(int argc, char **argv)
 {
 	int	i;
 	int	num;
-	int 	max;
-	struct	array_member	*array;
+	int	max;
+	struct array_member	*array;
 	int	*int_array;
 	int	to_rotate;
 	t_stack	A;
@@ -111,8 +119,14 @@ int 	main(int argc, char **argv)
 		array[i].offset = i;
 		i++;
 	}
-	check_for_duplicates(array, argc);
-	
+	if (are_there_duplicates(array, argc))
+	{
+			free(array);
+			write(STDOUT_FILENO, "Error\n", sizeof("Error\n"));
+			return (-1);
+	}
+
+
 	/*printf("Input :\n");*/
 	/*PRINT_ARRAY(array, argc);*/
 
@@ -125,10 +139,23 @@ int 	main(int argc, char **argv)
 		int_array[array[i].offset] = i;
 		i++;
 	}
+	free(array);
 	/*printf("Simpler array :\n");*/
 	/*PRINT_INT_ARRAY(int_array, argc);*/
-	to_rotate = check_for_some_order(int_array, argc);
-	if (argc < SWITCH)
+	if (check_for_some_order(int_array, argc, 0, &to_rotate))
+	{
+		/*printf("to_rotate is %i\n", to_rotate);*/
+		if ((float)to_rotate <= (float)argc / 2.0)
+			while (to_rotate--)
+				ra();
+		else
+		{
+			to_rotate -= argc;
+			while (to_rotate++)
+				rra();
+		}
+	}
+	else if (argc < SWITCH)
 	{
 		A = (t_stack){.top = NULL, .size = 0};
 		i = 0;
@@ -154,7 +181,6 @@ int 	main(int argc, char **argv)
 		/*PRINT_INT_ARRAY(int_array, argc);*/
 	}
 
-	free(array);
 	free(int_array);
 
 	return (0);

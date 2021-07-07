@@ -3,35 +3,10 @@
 #include <stdlib.h>
 #include "stack_sort.h"
 
-static void	pb()
-{
-	write(1, "pb\n", 3);
-}
-
-static void	ra()
-{
-	write(1, "ra\n", 3);
-}
-
-static void	rra()
-{
-	write(1, "rra\n", 4);
-}
-
-static void	pa()
-{
-	write(1, "pa\n", 3);
-}
-
-static void sa()
-{
-	write(1, "sa\n", 3);
-}
-
 static int	stack_find(t_stack stack, int num)
 {
-	int i;	
-	
+	int i;
+
 	i = 0;
 	while (stack.top->num != num)
 	{
@@ -43,8 +18,8 @@ static int	stack_find(t_stack stack, int num)
 
 static int	stack_rev_find(t_stack stack, int num)
 {
-	int i;	
-	
+	int i;
+
 	i = 0;
 	while (stack.top->num != num)
 	{

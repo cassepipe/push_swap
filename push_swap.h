@@ -18,10 +18,12 @@ void empty_stack(t_stack *stack);
 void stack_sort(t_stack *A);
 t_dllnode *dll_new_node(int n);
 void *stack_append(t_stack *stack,t_dllnode *node);
+void rra();
+void ra();
 typedef struct array_member array_member;
 struct array_member *radix_sort_int(struct array_member *array,int nb_items);
-int check_for_some_order(int *array,int nb_items);
-void check_for_duplicates(struct array_member *array,int nb_items);
+bool check_for_some_order(int *array,int nb_items,int min,int *to_rotate);
+bool are_there_duplicates(struct array_member *array,int nb_items);
 struct array_member {
 	int	num;
 	int	offset;
