@@ -95,6 +95,20 @@ bool	check_for_some_order(int *array, int nb_items, int min, int *to_rotate)
 	return (true);
 }
 
+void	fewest_rotations(int to_rotate, int nb_items)
+{
+		/*printf("to_rotate is %i\n", to_rotate);*/
+		if ((float)to_rotate <= (float)nb_items / 2.0)
+			while (to_rotate--)
+				ra();
+		else
+		{
+			to_rotate -= nb_items;
+			while (to_rotate++)
+				rra();
+		}
+}
+
 int 	main(int argc, char **argv)
 {
 	int	i;
@@ -104,6 +118,7 @@ int 	main(int argc, char **argv)
 	int	*int_array;
 	int	to_rotate;
 	t_stack	A;
+	bool	error;
 
 	argv++;
 	argc--;
@@ -112,14 +127,14 @@ int 	main(int argc, char **argv)
 	if (!array)
 		return (-1);
 	i = 0;
-	while (i < argc)
+	while (i < argc && !error)
 	{
-		num = atoi(*argv++);
+		num = atoi_error(*argv++, &error);
 		array[i].num = num;
 		array[i].offset = i;
 		i++;
 	}
-	if (are_there_duplicates(array, argc))
+	if (error || are_there_duplicates(array, argc))
 	{
 			free(array);
 			write(STDOUT_FILENO, "Error\n", sizeof("Error\n"));

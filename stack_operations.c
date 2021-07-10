@@ -159,4 +159,3 @@ bool	is_stack_sorted(t_stack A)
 	return (true);
 }
 
-

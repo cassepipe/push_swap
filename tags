@@ -24,6 +24,7 @@ SWAP_BUFFERS	custom_radix_sort.c	24;"	d	file:
 SWITCH	push_swap.c	11;"	d	file:
 are_there_duplicates	push_swap.c	/^bool are_there_duplicates(struct array_member *array, int nb_items)$/;"	f
 arrange_format	libft/ft_printf/format_utils.c	/^void		arrange_format(struct s_parameters *format)$/;"	f
+atoi_error	atoi_error.c	/^int	atoi_error(const char *ptr, bool *error)$/;"	f
 bit_sort_int	bit_sort.c	/^int *bit_sort_int(int *int_array, int nb_items, int nb_bits_to_sort)$/;"	f
 bit_sort_pass	bit_sort.c	/^static int *bit_sort_pass(int *input_array, int *output_array, int nb_items, int shift)$/;"	f	file:
 bit_sort_raw	bit_sort.c	/^int *bit_sort_raw(int *input_array,$/;"	f
@@ -41,6 +42,7 @@ dll_revrotate	dll_operations.c	/^void	dll_revrotate(t_dllnode **head)$/;"	f
 dll_rotate	dll_operations.c	/^void	dll_rotate(t_dllnode **head)$/;"	f
 dll_swaptop	dll_operations.c	/^void	dll_swaptop(t_dllnode **head)$/;"	f
 empty_stack	stack_operations.c	/^void	empty_stack(t_stack *stack)$/;"	f
+fewest_rotations	push_swap.c	/^void	fewest_rotations(int to_rotate, int nb_items)$/;"	f
 free_dll	dll_operations.c	/^void	free_dll(t_dllnode **list, int nmemb)$/;"	f
 free_stack	stack_operations.c	/^void	free_stack(t_stack *stack)$/;"	f
 ft_10powerof	libft/ft_itoa.c	/^static long	ft_10powerof(long n)$/;"	f	file:
@@ -112,6 +114,7 @@ new_stack	stack_operations.c	/^t_stack *new_stack(t_dllnode *top, int size)$/;"	
 next_sep	libft/ft_split.c	/^static const char	*next_sep(const char *str, char sep)$/;"	f	file:
 next_word	libft/ft_split.c	/^static const char	*next_word(const char *str, char sep)$/;"	f	file:
 pa	print_operations.c	/^void	pa()$/;"	f
+parse_sign	atoi_error.c	/^bool	parse_sign(const char **ptr)$/;"	f
 parse_str_into_format	libft/ft_printf/format_utils.c	/^void		*parse_str_into_format(const char *fs,$/;"	f
 pb	print_operations.c	/^void	pb()$/;"	f
 print_dll	dll_operations.c	/^void	print_dll(t_dllnode **a, int size_a)$/;"	f
