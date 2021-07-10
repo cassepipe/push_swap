@@ -25,6 +25,8 @@ int	atoi_error(const char *ptr, bool *error)
 	*error = false;
 	result = 0;
 	neg = 0;
+	if (*ptr == '\0')
+		*error = true;
 	while (ft_isspace(*ptr))
 		ptr++;
 	neg = parse_sign(&ptr);

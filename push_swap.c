@@ -134,7 +134,7 @@ int 	main(int argc, char **argv)
 		array[i].offset = i;
 		i++;
 	}
-	if (error || are_there_duplicates(array, argc))
+	if (are_there_duplicates(array, argc) || error)
 	{
 			free(array);
 			write(STDOUT_FILENO, "Error\n", sizeof("Error\n"));
