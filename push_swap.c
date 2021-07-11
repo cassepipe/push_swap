@@ -137,7 +137,7 @@ int 	main(int argc, char **argv)
 	if (are_there_duplicates(array, argc) || error)
 	{
 			free(array);
-			write(STDOUT_FILENO, "Error\n", sizeof("Error\n"));
+			write(STDERR_FILENO, "Error\n", sizeof("Error\n"));
 			return (-1);
 	}
 
