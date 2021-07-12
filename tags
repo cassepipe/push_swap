@@ -101,6 +101,7 @@ new_stack	stack_operations.c	/^t_stack *new_stack(t_dllnode *top, int size)$/;"	
 next_sep	libft/ft_split.c	/^static const char	*next_sep(const char *str, char sep)$/;"	f	file:
 next_word	libft/ft_split.c	/^static const char	*next_word(const char *str, char sep)$/;"	f	file:
 pa	print_operations.c	/^void	pa()$/;"	f
+parse_numbers	push_swap.c	/^struct fat_int *parse_numbers(char **num_strings, int nb_items, bool *parse_error)$/;"	f
 parse_sign	atoi_error.c	/^bool	parse_sign(const char **ptr)$/;"	f
 parse_str_into_format	libft/ft_printf/format_utils.c	/^void		*parse_str_into_format(const char *fs,$/;"	f
 pb	print_operations.c	/^void	pb()$/;"	f

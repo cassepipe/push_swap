@@ -21,6 +21,7 @@ void *stack_append(t_stack *stack,t_dllnode *node);
 typedef struct fat_int fat_int;
 struct fat_int *radix_sort_int(struct fat_int *array,int nb_items);
 int atoi_error(const char *ptr,bool *error);
+struct fat_int *parse_numbers(char **num_strings,int nb_items,bool *parse_error);
 void rra();
 void ra();
 void fewest_rotations(int to_rotate,int nb_items);

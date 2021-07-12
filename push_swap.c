@@ -3,7 +3,6 @@
 #include <stdbool.h>
 #include <unistd.h>
 #include "push_swap.h"
-#include "debug.h"
 
 bool are_there_duplicates(struct fat_int *array, int nb_items)
 {
@@ -63,12 +62,31 @@ void	fewest_rotations(int to_rotate, int nb_items)
 		}
 }
 
+struct fat_int *parse_numbers(char **num_strings, int nb_items, bool *parse_error)
+{
+	struct fat_int *array;
+	int i;
+	int num;
+
+	array = malloc(nb_items * sizeof(struct fat_int));
+	if (!array)
+		return (NULL);
+	i = 0;
+	while (i < nb_items && *parse_error == false)
+	{
+		num = atoi_error(*num_strings++, parse_error);
+		array[i].num = num;
+		array[i].offset = i;
+		i++;
+	}
+	return (array);
+}
+
 int 	main(int argc, char **argv)
 {
 	int	i;
-	int	num;
 	int	max;
-	struct fat_int	*array;
+	struct fat_int*fat_array;
 	int	*int_array;
 	int	to_rotate;
 	t_stack	A;
@@ -77,34 +95,24 @@ int 	main(int argc, char **argv)
 	argv++;
 	argc--;
 
-	array = malloc(argc * sizeof(struct fat_int));
-	if (!array)
-		return (-1);
-	i = 0;
-	while (i < argc && !error)
+	fat_array = parse_numbers(argv, argc, &error);
+	if (!fat_array || are_there_duplicates(fat_array, argc) || error)
 	{
-		num = atoi_error(*argv++, &error);
-		array[i].num = num;
-		array[i].offset = i;
-		i++;
-	}
-	if (are_there_duplicates(array, argc) || error)
-	{
-			free(array);
+			free(fat_array);
 			write(STDERR_FILENO, "Error\n", sizeof("Error\n"));
 			return (-1);
 	}
 
-	array = radix_sort_int(array, argc);
+	fat_array = radix_sort_int(fat_array, argc);
 
 	int_array = malloc(argc * sizeof(int));
 	i = 0;
 	while (i < argc)
 	{
-		int_array[array[i].offset] = i;
+		int_array[fat_array[i].offset] = i;
 		i++;
 	}
-	free(array);
+	free(fat_array);
 	if (check_for_some_order(int_array, argc, 0, &to_rotate))
 	{
 		if ((float)to_rotate <= (float)argc / 2.0)
@@ -127,9 +135,7 @@ int 	main(int argc, char **argv)
 			i++;
 		}
 		stack_sort(&A);
-		/*selection_sort(&A);*/
 		empty_stack(&A);
-		/*free_dll(&A.top, A.size);*/
 	}
 	else
 	{
