@@ -18,19 +18,16 @@ void empty_stack(t_stack *stack);
 void stack_sort(t_stack *A);
 t_dllnode *dll_new_node(int n);
 void *stack_append(t_stack *stack,t_dllnode *node);
-typedef struct array_member array_member;
-struct array_member *radix_sort_int(struct array_member *array,int nb_items);
+typedef struct fat_int fat_int;
+struct fat_int *radix_sort_int(struct fat_int *array,int nb_items);
 int atoi_error(const char *ptr,bool *error);
 void rra();
 void ra();
 void fewest_rotations(int to_rotate,int nb_items);
 bool check_for_some_order(int *array,int nb_items,int min,int *to_rotate);
-bool are_there_duplicates(struct array_member *array,int nb_items);
-struct array_member {
+struct fat_int {
 	int	num;
 	int	offset;
 	int	ord;
 };
-void put_array_ordered(struct array_member *int_array,int size);
-void put_dll_ordered(t_dllnode **list);
-void print_stack(t_stack stack);
+bool are_there_duplicates(struct fat_int *array,int nb_items);

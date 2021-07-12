@@ -25,3 +25,22 @@ void loop_exec_stack_ops(t_stack *A,t_stack *B);
 bool check_dll_ordered(t_dllnode **list);
 void put_dll_ordered(t_dllnode **list);
 void print_stack(t_stack stack);
+#include <stdio.h>
+#define PRINT_TWO_STACKS(A, B) do { \
+	printf("\x1b[2J");										\
+	printf("\x1b[H");										\
+	printf("\n\tSTACK A\n--------------------------\n");	\
+	print_stack(*A);										\
+	printf("\n\tSTACK B\n--------------------------\n");   	\
+	print_stack(*B);										\
+	put_dll_ordered(&A->top);								\
+} while (0);
+#define PRINT_ARRAY(arr, size) do { \
+	for(int i = 0; i < size; i++)	\
+	printf("%i\t", arr[i]);		\
+	printf("\n");					\
+} while (0);												\
+
+#define RED "\033[31m"
+#define GREEN "\033[92m"
+#define ENDCOLOR "\033[0m"

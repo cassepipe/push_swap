@@ -5,24 +5,11 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 ENDCOLOR	checker.c	6;"	d	file:
-ENDCOLOR	push_swap.c	7;"	d	file:
 GREEN	checker.c	7;"	d	file:
-GREEN	push_swap.c	8;"	d	file:
-PRINT_ARRAY	bit_sort.c	5;"	d	file:
 PRINT_ARRAY	checker.c	10;"	d	file:
-PRINT_ARRAY	push_swap.c	13;"	d	file:
-PRINT_ARRAY_HEX	bit_sort.c	15;"	d	file:
-PRINT_INT_ARRAY	custom_radix_sort.c	4;"	d	file:
-PRINT_INT_ARRAY	push_swap.c	19;"	d	file:
-PRINT_INT_ARRAY_HEX	custom_radix_sort.c	14;"	d	file:
 PRINT_TWO_STACKS	checker.c	16;"	d	file:
-PRINT_TWO_STACKS	push_swap.c	25;"	d	file:
 RED	checker.c	8;"	d	file:
-RED	push_swap.c	9;"	d	file:
-SWAP_BUFFERS	bit_sort.c	25;"	d	file:
-SWAP_BUFFERS	custom_radix_sort.c	24;"	d	file:
-SWITCH	push_swap.c	11;"	d	file:
-are_there_duplicates	push_swap.c	/^bool are_there_duplicates(struct array_member *array, int nb_items)$/;"	f
+are_there_duplicates	push_swap.c	/^bool are_there_duplicates(struct fat_int *array, int nb_items)$/;"	f
 arrange_format	libft/ft_printf/format_utils.c	/^void		arrange_format(struct s_parameters *format)$/;"	f
 atoi_error	atoi_error.c	/^int	atoi_error(const char *ptr, bool *error)$/;"	f
 bit_sort_int	bit_sort.c	/^int *bit_sort_int(int *int_array, int nb_items, int nb_bits_to_sort)$/;"	f
@@ -121,12 +108,11 @@ print_dll	dll_operations.c	/^void	print_dll(t_dllnode **a, int size_a)$/;"	f
 print_stack	stack_operations.c	/^void	print_stack(t_stack stack)$/;"	f
 print_two_stacks	stack_operations.c	/^void	print_two_stacks(t_stack A, t_stack B)$/;"	f
 ptr_repr	libft/ft_printf/repr.c	/^char		*ptr_repr(void *ptr, struct s_parameters *format, ssize_t *size)$/;"	f
-put_array_ordered	push_swap.c	/^void  put_array_ordered(struct array_member *int_array, int size)$/;"	f
 put_dll_ordered	checker.c	/^void	put_dll_ordered(t_dllnode **list)$/;"	f
 ra	print_operations.c	/^void	ra()$/;"	f
-radix_sort_int	custom_radix_sort.c	/^struct array_member *radix_sort_int(struct array_member *array, int nb_items)$/;"	f
-radix_sort_int_last_pass	custom_radix_sort.c	/^struct array_member *radix_sort_int_last_pass(struct array_member *input_array,$/;"	f
-radix_sort_int_pass	custom_radix_sort.c	/^struct array_member *radix_sort_int_pass(struct array_member *input_array,$/;"	f
+radix_sort_int	custom_radix_sort.c	/^struct fat_int *radix_sort_int(struct fat_int *array, int nb_items)$/;"	f
+radix_sort_int_last_pass	custom_radix_sort.c	/^struct fat_int *radix_sort_int_last_pass(struct fat_int *input_array,$/;"	f
+radix_sort_int_pass	custom_radix_sort.c	/^struct fat_int *radix_sort_int_pass(struct fat_int *input_array,$/;"	f
 rightpad	libft/ft_printf/pad.c	/^void	rightpad(char **str, char c, size_t n)$/;"	f
 rra	print_operations.c	/^void	rra()$/;"	f
 sa	print_operations.c	/^void sa()$/;"	f
@@ -145,5 +131,6 @@ stack_sort	stack_sort.c	/^void 	stack_sort(t_stack *A)$/;"	f
 stack_swaptop	stack_operations.c	/^void	stack_swaptop(t_stack *stack)$/;"	f
 str_repr	libft/ft_printf/repr.c	/^char		*str_repr(char *s, struct s_parameters *format, ssize_t *size)$/;"	f
 swap_buffers	bit_sort.c	/^static void	swap_buffers(int **buff1, int **buff2)$/;"	f	file:
+swap_buffers	custom_radix_sort.c	/^static void	swap_buffers(struct fat_int **buff1, struct fat_int **buff2)$/;"	f	file:
 to_the_power_of	libft/ft_printf/ft_lutoa_base.c	/^static unsigned long	to_the_power_of(unsigned long n, unsigned long p)$/;"	f	file:
 write_format	libft/ft_printf/format_utils.c	/^ssize_t		write_format(int fd,$/;"	f

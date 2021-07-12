@@ -1,4 +1,4 @@
-struct array_member {
+struct fat_int {
 	int	num;
 	int	offset;
 	int	ord;

@@ -1,35 +1,17 @@
 #include <stdlib.h>
 #include "custom_radix_sort.h"
 
-#define PRINT_INT_ARRAY(array, size)	do {	\
-	int i = 0;						\
-	while (i < size)				\
-	{								\
-		printf("%i\t", array[i].num);	\
-		i++;						\
-	}								\
-	printf("\n");					\
-} while (0);
+static void	swap_buffers(struct fat_int **buff1, struct fat_int **buff2)
+{
+		struct fat_int *tmp;
 
-#define PRINT_INT_ARRAY_HEX(array, size)	do {	\
-	int i = 0;						\
-	while (i < size)				\
-	{								\
-		printf("%X\t", array[i]);	\
-		i++;						\
-	}								\
-	printf("\n");					\
-} while (0);
+		tmp = *buff1;
+		*buff1 = *buff2;
+		*buff2 = tmp;
+}
 
-#define SWAP_BUFFERS(buff1, buff2)	do {	\
-	struct array_member *tmp;					\
-	tmp = buff1;				\
-	buff1 = buff2;				\
-	buff2 = tmp;				\
-} while (0);
-
-struct array_member *radix_sort_int_pass(struct array_member *input_array,
-										struct array_member *output_array,
+struct fat_int *radix_sort_int_pass(struct fat_int *input_array,
+										struct fat_int *output_array,
 										int nb_items,
 										int shift)
 {
@@ -64,8 +46,8 @@ struct array_member *radix_sort_int_pass(struct array_member *input_array,
 	return output_array;
 }
 
-struct array_member *radix_sort_int_last_pass(struct array_member *input_array,
-											struct array_member *output_array,
+struct fat_int *radix_sort_int_last_pass(struct fat_int *input_array,
+											struct fat_int *output_array,
 											int nb_items,
 											int shift)
 {
@@ -117,16 +99,16 @@ struct array_member *radix_sort_int_last_pass(struct array_member *input_array,
 }
 
 
-struct array_member *radix_sort_int(struct array_member *array, int nb_items)
+struct fat_int *radix_sort_int(struct fat_int *array, int nb_items)
 {
-	struct array_member *buffer;
+	struct fat_int *buffer;
 	int shift = 0;
 
-	buffer = malloc(nb_items * sizeof(struct array_member));
+	buffer = malloc(nb_items * sizeof(struct fat_int));
 	while (shift < 24)
 	{
 		buffer = radix_sort_int_pass(array, buffer, nb_items, shift);
-		SWAP_BUFFERS(buffer, array);
+		swap_buffers(&buffer, &array);
 		shift += 8;
 	}
 	buffer = radix_sort_int_last_pass(array, buffer, nb_items, shift);

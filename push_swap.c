@@ -3,54 +3,9 @@
 #include <stdbool.h>
 #include <unistd.h>
 #include "push_swap.h"
+#include "debug.h"
 
-#define ENDCOLOR "\033[0m"
-#define GREEN "\033[92m"
-#define RED "\033[31m"
-
-#define SWITCH 50
-
-#define PRINT_ARRAY(arr, size) do { \
-	for(int i = 0; i < size; i++)	\
-	printf("%i\t", arr[i].num);		\
-	printf("\n");					\
-} while (0);												\
-
-#define PRINT_INT_ARRAY(arr, size) do { \
-	for(int i = 0; i < size; i++)	\
-	printf("%i\t", arr[i]);		\
-	printf("\n");					\
-} while (0);												\
-
-#define PRINT_TWO_STACKS(A, B) do { \
-	printf("\x1b[2J");										\
-	printf("\x1b[H");										\
-	printf("\n\tSTACK A\n--------------------------\n");	\
-	print_stack(*A);										\
-	printf("\n\tSTACK B\n--------------------------\n");   	\
-	print_stack(*B);										\
-	put_dll_ordered(&A->top);								\
-} while (0);
-
-void  put_array_ordered(struct array_member *int_array, int size)
-{
-	int i;
-
-	i = 1;
-	while (i < size)
-	{
-		if (int_array[i].num < int_array[i-1].num)
-		{
-			printf(RED "KO" ENDCOLOR "\n");
-			break;
-		}
-		i++;
-	}
-	if (i == size)
-		printf(GREEN "OK" ENDCOLOR "\n");
-}
-
-bool are_there_duplicates(struct array_member *array, int nb_items)
+bool are_there_duplicates(struct fat_int *array, int nb_items)
 {
 	int i;
 	int y;
@@ -97,7 +52,6 @@ bool	check_for_some_order(int *array, int nb_items, int min, int *to_rotate)
 
 void	fewest_rotations(int to_rotate, int nb_items)
 {
-		/*printf("to_rotate is %i\n", to_rotate);*/
 		if ((float)to_rotate <= (float)nb_items / 2.0)
 			while (to_rotate--)
 				ra();
@@ -114,7 +68,7 @@ int 	main(int argc, char **argv)
 	int	i;
 	int	num;
 	int	max;
-	struct array_member	*array;
+	struct fat_int	*array;
 	int	*int_array;
 	int	to_rotate;
 	t_stack	A;
@@ -123,7 +77,7 @@ int 	main(int argc, char **argv)
 	argv++;
 	argc--;
 
-	array = malloc(argc * sizeof(struct array_member));
+	array = malloc(argc * sizeof(struct fat_int));
 	if (!array)
 		return (-1);
 	i = 0;
@@ -141,10 +95,6 @@ int 	main(int argc, char **argv)
 			return (-1);
 	}
 
-
-	/*printf("Input :\n");*/
-	/*PRINT_ARRAY(array, argc);*/
-
 	array = radix_sort_int(array, argc);
 
 	int_array = malloc(argc * sizeof(int));
@@ -155,11 +105,8 @@ int 	main(int argc, char **argv)
 		i++;
 	}
 	free(array);
-	/*printf("Simpler array :\n");*/
-	/*PRINT_INT_ARRAY(int_array, argc);*/
 	if (check_for_some_order(int_array, argc, 0, &to_rotate))
 	{
-		/*printf("to_rotate is %i\n", to_rotate);*/
 		if ((float)to_rotate <= (float)argc / 2.0)
 			while (to_rotate--)
 				ra();
@@ -170,7 +117,7 @@ int 	main(int argc, char **argv)
 				rra();
 		}
 	}
-	else if (argc < SWITCH)
+	else if (argc < 50)
 	{
 		A = (t_stack){.top = NULL, .size = 0};
 		i = 0;
@@ -193,7 +140,6 @@ int 	main(int argc, char **argv)
 
 		int_array = bit_sort_raw(int_array, argc, i);
 
-		/*PRINT_INT_ARRAY(int_array, argc);*/
 	}
 
 	free(int_array);

@@ -2,33 +2,6 @@
 #include <stdlib.h>
 #include "bit_sort.h"
 
-#define PRINT_ARRAY(array, size)	do {	\
-	int i = 0;						\
-	while (i < size)				\
-	{								\
-		printf("%i\t", array[i]);	\
-		i++;						\
-	}								\
-	printf("\n");					\
-} while (0);
-
-#define PRINT_ARRAY_HEX(array, size)	do {	\
-	int i = 0;						\
-	while (i < size)				\
-	{								\
-		printf("%X\t", array[i]);	\
-		i++;						\
-	}								\
-	printf("\n");					\
-} while (0);
-
-#define SWAP_BUFFERS(buff1, buff2)	do {	\
-	int *tmp;					\
-	tmp = buff1;				\
-	buff1 = buff2;				\
-	buff2 = tmp;				\
-} while (0);
-
 static void	swap_buffers(int **buff1, int **buff2)
 {
 		int *tmp;
@@ -84,9 +57,7 @@ int *bit_sort_raw(int *input_array,
 	while (shift < nb_bits_to_sort)
 	{
 		buffer = bit_sort_pass(input_array, buffer, nb_items, shift);
-		/*PRINT_ARRAY(buffer, nb_items);*/
 		swap_buffers(&buffer, &input_array);
-		/*SWAP_BUFFERS(buffer, input_array);*/
 		shift++;
 	}
 	free(buffer);
