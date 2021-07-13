@@ -102,10 +102,10 @@ int	*create_positive_array(struct fat_int *fat_array, int nb_items)
 
 int 	main(int argc, char **argv)
 {
-	int	to_rotate;
+	int				to_rotate;
 	struct fat_int	*fat_array;
-	int	*int_array;
-	t_stack	*A;
+	int				*int_array;
+	t_stack			*A;
 
 	argv++;
 	argc--;
