@@ -57,7 +57,10 @@ int *bit_sort_raw(int *input_array,
 	while (max >> nb_bits_to_sort)
 		nb_bits_to_sort++;
 	if (!(buffer = malloc(nb_items * sizeof(int))))
-			return (NULL);
+	{
+		free(input_array);
+		exit(EXIT_FAILURE);
+	}
 	shift = 0;
 	while (shift < nb_bits_to_sort)
 	{

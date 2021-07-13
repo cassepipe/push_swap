@@ -102,9 +102,15 @@ struct fat_int *radix_sort_int_last_pass(struct fat_int *input_array,
 struct fat_int *fat_int_radix_sort(struct fat_int *array, int nb_items)
 {
 	struct fat_int *buffer;
-	int shift = 0;
+	int shift;
 
+	shift = 0;
 	buffer = malloc(nb_items * sizeof(struct fat_int));
+	if (!buffer)
+	{
+		free(array);
+		exit(EXIT_FAILURE);
+	}
 	while (shift < 24)
 	{
 		buffer = radix_sort_int_pass(array, buffer, nb_items, shift);
@@ -112,7 +118,6 @@ struct fat_int *fat_int_radix_sort(struct fat_int *array, int nb_items)
 		shift += 8;
 	}
 	buffer = radix_sort_int_last_pass(array, buffer, nb_items, shift);
-
 	free(array);
 	return (buffer);
 

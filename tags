@@ -9,9 +9,8 @@ GREEN	checker.c	7;"	d	file:
 PRINT_ARRAY	checker.c	10;"	d	file:
 PRINT_TWO_STACKS	checker.c	16;"	d	file:
 RED	checker.c	8;"	d	file:
-are_there_duplicates	push_swap.c	/^bool are_there_duplicates(struct fat_int *array, int nb_items)$/;"	f
 arrange_format	libft/ft_printf/format_utils.c	/^void		arrange_format(struct s_parameters *format)$/;"	f
-atoi_error	atoi_error.c	/^int	atoi_error(const char *ptr, int *error)$/;"	f
+atoi_error	atoi_error.c	/^static int	atoi_error(const char *ptr, bool *error)$/;"	f	file:
 bit_sort_int	bit_sort.c	/^int *bit_sort_int(int *int_array, int nb_items, int nb_bits_to_sort)$/;"	f
 bit_sort_pass	bit_sort.c	/^static int *bit_sort_pass(int *input_array, int *output_array, int nb_items, int shift)$/;"	f	file:
 bit_sort_raw	bit_sort.c	/^int *bit_sort_raw(int *input_array,$/;"	f
@@ -31,6 +30,7 @@ dll_revrotate	dll_operations.c	/^void	dll_revrotate(t_dllnode **head)$/;"	f
 dll_rotate	dll_operations.c	/^void	dll_rotate(t_dllnode **head)$/;"	f
 dll_swaptop	dll_operations.c	/^void	dll_swaptop(t_dllnode **head)$/;"	f
 empty_stack	stack_operations.c	/^void	empty_stack(t_stack *stack)$/;"	f
+error_if_duplicates	check_duplicates.c	/^void	error_if_duplicates(struct fat_int *array, int nb_items)$/;"	f
 fat_int_radix_sort	custom_radix_sort.c	/^struct fat_int *fat_int_radix_sort(struct fat_int *array, int nb_items)$/;"	f
 fewest_rotations	push_swap.c	/^void	fewest_rotations(int to_rotate, int nb_items)$/;"	f
 free_dll	dll_operations.c	/^void	free_dll(t_dllnode **list, int nmemb)$/;"	f
@@ -104,8 +104,8 @@ new_stack	stack_operations.c	/^t_stack *new_stack(t_dllnode *top, int size)$/;"	
 next_sep	libft/ft_split.c	/^static const char	*next_sep(const char *str, char sep)$/;"	f	file:
 next_word	libft/ft_split.c	/^static const char	*next_word(const char *str, char sep)$/;"	f	file:
 pa	print_operations.c	/^void	pa()$/;"	f
-parse_numbers	push_swap.c	/^struct fat_int *parse_numbers(char **num_strings, int nb_items, int *parse_error)$/;"	f
-parse_sign	atoi_error.c	/^bool	parse_sign(const char **ptr)$/;"	f
+parse_numbers_or_error	atoi_error.c	/^struct fat_int *parse_numbers_or_error(char **num_strings, int nb_items)$/;"	f
+parse_sign	atoi_error.c	/^static bool	parse_sign(const char **ptr)$/;"	f	file:
 parse_str_into_format	libft/ft_printf/format_utils.c	/^void		*parse_str_into_format(const char *fs,$/;"	f
 pb	print_operations.c	/^void	pb()$/;"	f
 print_best_rotation	push_swap.c	/^void	print_best_rotation(int to_rotate, int nb_items)$/;"	f
