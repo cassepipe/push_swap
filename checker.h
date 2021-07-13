@@ -15,7 +15,7 @@ struct s_stack {
 typedef struct s_stack t_stack;
 void free_stack(t_stack *stack);
 t_dllnode *dll_new_node(int n);
-void *stack_append(t_stack *stack,t_dllnode *node);
+t_stack *stack_append(t_stack *stack,t_dllnode *node);
 t_stack *new_stack(t_dllnode *top,int size);
 void stack_rotate(t_stack *stack);
 void stack_revrotate(t_stack *stack);

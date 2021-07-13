@@ -2,25 +2,25 @@
 
 void	pb()
 {
-	write(1, "pb\n", 3);
+	write(STDOUT_FILENO, "pb\n", 3);
 }
 
 void	ra()
 {
-	write(1, "ra\n", 3);
+	write(STDOUT_FILENO, "ra\n", 3);
 }
 
 void	rra()
 {
-	write(1, "rra\n", 4);
+	write(STDOUT_FILENO, "rra\n", 4);
 }
 
 void	pa()
 {
-	write(1, "pa\n", 3);
+	write(STDOUT_FILENO, "pa\n", 3);
 }
 
 void sa()
 {
-	write(1, "sa\n", 3);
+	write(STDOUT_FILENO, "sa\n", 3);
 }

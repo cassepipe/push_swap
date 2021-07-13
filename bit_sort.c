@@ -47,12 +47,17 @@ static int *bit_sort_pass(int *input_array, int *output_array, int nb_items, int
 
 int *bit_sort_raw(int *input_array,
 						int nb_items,
-						int nb_bits_to_sort)
+						int max)
 {
 	int *buffer;
-	int shift = 0;
+	int shift;
+	int nb_bits_to_sort;
 
-	buffer = malloc(nb_items * sizeof(int));
+	nb_bits_to_sort = 0;
+	while (max >> nb_bits_to_sort)
+		nb_bits_to_sort++;
+	if (!(buffer = malloc(nb_items * sizeof(int))))
+			return (NULL);
 	shift = 0;
 	while (shift < nb_bits_to_sort)
 	{

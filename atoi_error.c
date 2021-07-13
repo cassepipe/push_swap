@@ -17,7 +17,7 @@ bool	parse_sign(const char **ptr)
 	return (sign % 2);
 }
 
-int	atoi_error(const char *ptr, bool *error)
+int	atoi_error(const char *ptr, int *error)
 {
 	long	result;
 	bool	neg;

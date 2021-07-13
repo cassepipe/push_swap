@@ -25,5 +25,5 @@ void stack_push(t_stack *stack,t_dllnode *node);
 t_dllnode *stack_pop(t_stack *stack);
 void stack_revrotate(t_stack *stack);
 void stack_rotate(t_stack *stack);
-void *stack_append(t_stack *stack,t_dllnode *node);
+t_stack *stack_append(t_stack *stack,t_dllnode *node);
 t_stack *new_stack(t_dllnode *top,int size);

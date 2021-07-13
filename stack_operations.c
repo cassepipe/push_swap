@@ -16,8 +16,10 @@ t_stack *new_stack(t_dllnode *top, int size)
 	return(new_stack);
 }
 
-void	*stack_append(t_stack *stack, t_dllnode* node)
+t_stack	*stack_append(t_stack *stack, t_dllnode* node)
 {
+	if (!node)
+		return (NULL);
 	if (stack->top)
 	{
 		node->prev = stack->top->prev;
@@ -89,15 +91,17 @@ void	stack_poppush(t_stack *src, t_stack *dst)
 	if (src && src->top)
 	{
 		tmp = stack_pop(src);
-		/*printf("Popped %d out of stack A\n", tmp->num);*/
 		stack_push(dst, tmp);
 	}
 }
 
 void	empty_stack(t_stack *stack)
 {
-	free_dll(&stack->top, stack->size);
-	stack->size = 0;
+	if (stack)
+	{
+		free_dll(&stack->top, stack->size);
+		stack->size = 0;
+	}
 }
 
 void	free_stack(t_stack *stack)
@@ -158,4 +162,3 @@ bool	is_stack_sorted(t_stack A)
 	}
 	return (true);
 }
-

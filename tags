@@ -11,7 +11,7 @@ PRINT_TWO_STACKS	checker.c	16;"	d	file:
 RED	checker.c	8;"	d	file:
 are_there_duplicates	push_swap.c	/^bool are_there_duplicates(struct fat_int *array, int nb_items)$/;"	f
 arrange_format	libft/ft_printf/format_utils.c	/^void		arrange_format(struct s_parameters *format)$/;"	f
-atoi_error	atoi_error.c	/^int	atoi_error(const char *ptr, bool *error)$/;"	f
+atoi_error	atoi_error.c	/^int	atoi_error(const char *ptr, int *error)$/;"	f
 bit_sort_int	bit_sort.c	/^int *bit_sort_int(int *int_array, int nb_items, int nb_bits_to_sort)$/;"	f
 bit_sort_pass	bit_sort.c	/^static int *bit_sort_pass(int *input_array, int *output_array, int nb_items, int shift)$/;"	f	file:
 bit_sort_raw	bit_sort.c	/^int *bit_sort_raw(int *input_array,$/;"	f
@@ -19,6 +19,8 @@ bit_sort_sign_pass	bit_sort.c	/^int *bit_sort_sign_pass(int *input_array, int *o
 char_repr	libft/ft_printf/repr.c	/^char		*char_repr(unsigned char c,$/;"	f
 check_dll_ordered	checker.c	/^bool	check_dll_ordered(t_dllnode **list)$/;"	f
 check_for_some_order	push_swap.c	/^bool	check_for_some_order(int *array, int nb_items, int min, int *to_rotate)$/;"	f
+create_positive_array	push_swap.c	/^int	*create_positive_array(struct fat_int *fat_array, int nb_items)$/;"	f
+create_stack_from_int_array	push_swap.c	/^t_stack *create_stack_from_int_array(int *int_array, int nb_items)$/;"	f
 diralloc	libft/ft_split.c	/^static char			**diralloc(const char *s, char c)$/;"	f	file:
 dll_append	dll_operations.c	/^t_dllnode **dll_append(t_dllnode **head, t_dllnode *node)$/;"	f
 dll_new_node	dll_operations.c	/^t_dllnode	*dll_new_node(int n)$/;"	f
@@ -29,6 +31,7 @@ dll_revrotate	dll_operations.c	/^void	dll_revrotate(t_dllnode **head)$/;"	f
 dll_rotate	dll_operations.c	/^void	dll_rotate(t_dllnode **head)$/;"	f
 dll_swaptop	dll_operations.c	/^void	dll_swaptop(t_dllnode **head)$/;"	f
 empty_stack	stack_operations.c	/^void	empty_stack(t_stack *stack)$/;"	f
+fat_int_radix_sort	custom_radix_sort.c	/^struct fat_int *fat_int_radix_sort(struct fat_int *array, int nb_items)$/;"	f
 fewest_rotations	push_swap.c	/^void	fewest_rotations(int to_rotate, int nb_items)$/;"	f
 free_dll	dll_operations.c	/^void	free_dll(t_dllnode **list, int nmemb)$/;"	f
 free_stack	stack_operations.c	/^void	free_stack(t_stack *stack)$/;"	f
@@ -101,24 +104,24 @@ new_stack	stack_operations.c	/^t_stack *new_stack(t_dllnode *top, int size)$/;"	
 next_sep	libft/ft_split.c	/^static const char	*next_sep(const char *str, char sep)$/;"	f	file:
 next_word	libft/ft_split.c	/^static const char	*next_word(const char *str, char sep)$/;"	f	file:
 pa	print_operations.c	/^void	pa()$/;"	f
-parse_numbers	push_swap.c	/^struct fat_int *parse_numbers(char **num_strings, int nb_items, bool *parse_error)$/;"	f
+parse_numbers	push_swap.c	/^struct fat_int *parse_numbers(char **num_strings, int nb_items, int *parse_error)$/;"	f
 parse_sign	atoi_error.c	/^bool	parse_sign(const char **ptr)$/;"	f
 parse_str_into_format	libft/ft_printf/format_utils.c	/^void		*parse_str_into_format(const char *fs,$/;"	f
 pb	print_operations.c	/^void	pb()$/;"	f
+print_best_rotation	push_swap.c	/^void	print_best_rotation(int to_rotate, int nb_items)$/;"	f
 print_dll	dll_operations.c	/^void	print_dll(t_dllnode **a, int size_a)$/;"	f
 print_stack	stack_operations.c	/^void	print_stack(t_stack stack)$/;"	f
 print_two_stacks	stack_operations.c	/^void	print_two_stacks(t_stack A, t_stack B)$/;"	f
 ptr_repr	libft/ft_printf/repr.c	/^char		*ptr_repr(void *ptr, struct s_parameters *format, ssize_t *size)$/;"	f
 put_dll_ordered	checker.c	/^void	put_dll_ordered(t_dllnode **list)$/;"	f
 ra	print_operations.c	/^void	ra()$/;"	f
-radix_sort_int	custom_radix_sort.c	/^struct fat_int *radix_sort_int(struct fat_int *array, int nb_items)$/;"	f
 radix_sort_int_last_pass	custom_radix_sort.c	/^struct fat_int *radix_sort_int_last_pass(struct fat_int *input_array,$/;"	f
 radix_sort_int_pass	custom_radix_sort.c	/^struct fat_int *radix_sort_int_pass(struct fat_int *input_array,$/;"	f
 rightpad	libft/ft_printf/pad.c	/^void	rightpad(char **str, char c, size_t n)$/;"	f
 rra	print_operations.c	/^void	rra()$/;"	f
 sa	print_operations.c	/^void sa()$/;"	f
 selection_sort	selection_sort.c	/^void 	selection_sort(t_stack *A)$/;"	f
-stack_append	stack_operations.c	/^void	*stack_append(t_stack *stack, t_dllnode* node)$/;"	f
+stack_append	stack_operations.c	/^t_stack	*stack_append(t_stack *stack, t_dllnode* node)$/;"	f
 stack_find	selection_sort.c	/^static int	stack_find(t_stack stack, int num)$/;"	f	file:
 stack_find	stack_sort.c	/^static int	stack_find(t_stack stack, int num)$/;"	f	file:
 stack_pop	stack_operations.c	/^t_dllnode	*stack_pop(t_stack *stack)$/;"	f
