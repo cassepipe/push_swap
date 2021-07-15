@@ -4,8 +4,8 @@
 
 void	error_if_duplicates(struct fat_int *array, int nb_items)
 {
-	int i;
-	int y;
+	int	i;
+	int	y;
 
 	i = 0;
 	while (i < nb_items)

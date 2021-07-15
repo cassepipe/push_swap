@@ -6,7 +6,7 @@
 #    By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/23 16:37:33 by tpouget           #+#    #+#              #
-#    Updated: 2021/07/13 12:03:00 by tpouget          ###   ########.fr        #
+#    Updated: 2021/07/15 14:40:16 by tpouget          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ NAME			=	prog
 
 all:			push_swap 
 
-test:			
+test:			push_swap	
 				cp push_swap push-swap-tester/
 				push-swap-tester/test.sh
 

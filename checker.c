@@ -3,28 +3,10 @@
 #include <stdio.h>
 #include "checker.h"
 
-#define ENDCOLOR "\033[0m"
-#define GREEN "\033[92m"
-#define RED "\033[31m"
-
-#define PRINT_ARRAY(arr, size) do { \
-	for(int i = 0; i < size; i++)	\
-		printf("%li\t", arr[i]);		\
-	printf("\n");					\
-	} while (0);												\
-
-#define PRINT_TWO_STACKS(A, B) do { \
-		printf("\n\tSTACK A\n--------------------------\n");	\
-		print_stack(*A);										\
-		printf("\n\tSTACK B\n--------------------------\n");   	\
-		print_stack(*B);										\
-		put_dll_ordered(&A->top);								\
-	} while (0);
-
 bool	check_dll_ordered(t_dllnode **list)
 {
-	t_dllnode *node;
-	t_dllnode *next_node;
+	t_dllnode	*node;
+	t_dllnode	*next_node;
 
 	if (list && *list)
 	{
@@ -49,12 +31,13 @@ void	put_dll_ordered(t_dllnode **list)
 		printf(RED "KO" ENDCOLOR "\n");
 }
 
-#include <stdio.h>
 void	loop_exec_stack_ops(t_stack *A, t_stack *B)
 {
-	int size = 512;
-	char *line = malloc(512);
+	int		size;
+	char	*line;
 
+	size = 512;
+	*line = malloc(512);
 	while (getline(&line, &size, stdin))
 	{
 		if (line[0] == 's')
@@ -72,9 +55,9 @@ void	loop_exec_stack_ops(t_stack *A, t_stack *B)
 		if (line[0] == 'p')
 		{
 			if (line[1] == 'a')
-				stack_poppush(B,A);
+				stack_poppush(B, A);
 			else if (line[1] == 'b')
-				stack_poppush(A,B);
+				stack_poppush(A, B);
 		}
 		if (line[0] == 'r')
 		{
@@ -108,8 +91,8 @@ void	loop_exec_stack_ops(t_stack *A, t_stack *B)
 
 int 	main(int argc, char **argv)
 {
-	t_stack *A;
-	t_stack *B;
+	t_stack	*A;
+	t_stack	*B;
 	int		i;
 	int		num;
 
@@ -117,7 +100,7 @@ int 	main(int argc, char **argv)
 	argc--;
 	A = new_stack(NULL, 0);
 	B = new_stack(NULL, 0);
-	if (!A || !B )
+	if (!A || !B)
 		return (-1);
 	i = 0;
 	while (i < argc)
@@ -127,15 +110,10 @@ int 	main(int argc, char **argv)
 		i++;
 		stack_append(A, dll_new_node(num));
 	}
-
 	PRINT_TWO_STACKS(A, B);
-
 	loop_exec_stack_ops(A, B);
-
 	PRINT_TWO_STACKS(A, B);
-
 	free_stack(A);
 	free_stack(B);
-
 	return (0);
 }

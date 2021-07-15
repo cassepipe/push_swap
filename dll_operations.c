@@ -4,7 +4,7 @@
 
 t_dllnode	*dll_new_node(int n)
 {
-	t_dllnode *new;
+	t_dllnode	*new;
 
 	new = malloc(sizeof(t_dllnode));
 	if (!new)
@@ -15,9 +15,9 @@ t_dllnode	*dll_new_node(int n)
 	return (new);
 }
 
-t_dllnode **dll_append(t_dllnode **head, t_dllnode *node)
+t_dllnode	**dll_append(t_dllnode **head, t_dllnode *node)
 {
-	t_dllnode *last;
+	t_dllnode	*last;
 
 	if (head)
 	{
@@ -33,7 +33,6 @@ t_dllnode **dll_append(t_dllnode **head, t_dllnode *node)
 		(*head)->prev = node;
 		(*head)->next = node;
 	}
-
 	return (head);
 }
 
@@ -62,19 +61,18 @@ t_dllnode	*dll_pop(t_dllnode **head)
 
 void	dll_push(t_dllnode **dll, t_dllnode *node)
 {
-		dll_append(dll, node);
-		dll_revrotate(dll);
+	dll_append(dll, node);
+	dll_revrotate(dll);
 }
 
 void	dll_swaptop(t_dllnode **head)
 {
-	t_dllnode *tmp;
-	t_dllnode *second_element;
+	t_dllnode	*tmp;
+	t_dllnode	*second_element;
+
 	if (head && *head)
 	{
 		tmp = dll_pop(head);
-		/*printf("Popped struct at %lu { .prev =  %lu, .next = %lu\n", tmp, tmp->prev, tmp->next);*/
-		/*printf("Popped %d out of stack A\n", tmp->num);*/
 		second_element = ((*head)->next);
 		dll_append(&second_element, tmp);
 	}
@@ -82,7 +80,7 @@ void	dll_swaptop(t_dllnode **head)
 
 void	dll_poppush(t_dllnode **a, t_dllnode **b)
 {
-	t_dllnode *tmp;
+	t_dllnode	*tmp;
 
 	if (a && *a)
 	{
@@ -94,7 +92,7 @@ void	dll_poppush(t_dllnode **a, t_dllnode **b)
 
 void	free_dll(t_dllnode **list, int nmemb)
 {
-	t_dllnode *node;
+	t_dllnode	*node;
 
 	if (list)
 	{
@@ -115,7 +113,8 @@ void	print_dll(t_dllnode **a, int size_a)
 {
 	if (a && *a)
 	{
-		size_a = size_a > 0 ? size_a: 0;
+		if (size_a < 0)
+			size_a = 0;
 		while (size_a--)
 		{
 			printf("\t%i", (*a)->num);

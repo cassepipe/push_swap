@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 #define ENDCOLOR "\033[0m"
 #define GREEN "\033[92m"
 #define RED "\033[31m"

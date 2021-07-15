@@ -4,42 +4,36 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-ENDCOLOR	checker.c	6;"	d	file:
-GREEN	checker.c	7;"	d	file:
-PRINT_ARRAY	checker.c	10;"	d	file:
-PRINT_TWO_STACKS	checker.c	16;"	d	file:
-RED	checker.c	8;"	d	file:
 arrange_format	libft/ft_printf/format_utils.c	/^void		arrange_format(struct s_parameters *format)$/;"	f
 assigned_operation	push_swap_tester/files/srcs/share/operation3.c	/^void	assigned_operation(void *ptr, t_deque *stack[2])$/;"	f
 atoi_error	atoi_error.c	/^static int	atoi_error(const char *ptr, bool *error)$/;"	f	file:
 binary_search	push_swap_tester/files/libft/binary_search.c	/^int	binary_search(int *arr, int arr_size, int target)$/;"	f
-bit_sort_int	bit_sort.c	/^int *bit_sort_int(int *int_array, int nb_items, int nb_bits_to_sort)$/;"	f
-bit_sort_pass	bit_sort.c	/^static int *bit_sort_pass(int *input_array, int *output_array, int nb_items, int shift)$/;"	f	file:
-bit_sort_raw	bit_sort.c	/^int *bit_sort_raw(int *input_array,$/;"	f
-bit_sort_sign_pass	bit_sort.c	/^int *bit_sort_sign_pass(int *input_array, int *output_array, int nb_items)$/;"	f
+bit_sort_pass	bit_sort.c	/^static int	*bit_sort_pass(int *input_array,$/;"	f	file:
+bit_sort_raw	bit_sort.c	/^int	*bit_sort_raw(int *input_array,$/;"	f
 char_repr	libft/ft_printf/repr.c	/^char		*char_repr(unsigned char c,$/;"	f
 check	push_swap_tester/files/srcs/checker/check.c	/^int	check(int *arr, int arr_size, t_list *instructions)$/;"	f
 check_bonus	push_swap_tester/files/srcs/bonus/bonus.c	/^void	check_bonus(int *arr, int arr_size, t_list *instructions)$/;"	f
 check_dll_ordered	checker.c	/^bool	check_dll_ordered(t_dllnode **list)$/;"	f
-check_for_some_order	push_swap.c	/^bool	check_for_some_order(int *array, int nb_items, int min, int *to_rotate)$/;"	f
+check_for_some_order	order.c	/^bool	check_for_some_order(int *array, int nb_items, int min, int *to_rotate)$/;"	f
 check_instructions	push_swap_tester/files/srcs/share/parse.c	/^void	check_instructions(char *str)$/;"	f
 check_radix	push_swap_tester/files/srcs/radix/radix.c	/^void	check_radix(int *arr, int arr_size, t_list *instructions)$/;"	f
 clearscreen	push_swap_tester/files/srcs/bonus/bonus.c	/^static void	clearscreen(void)$/;"	f	file:
 clearscreen	push_swap_tester/files/srcs/radix/radix.c	/^static void	clearscreen(void)$/;"	f	file:
 create_positive_array	push_swap.c	/^int	*create_positive_array(struct fat_int *fat_array, int nb_items)$/;"	f
-create_stack_from_int_array	push_swap.c	/^t_stack *create_stack_from_int_array(int *int_array, int nb_items)$/;"	f
+create_stack_from_int_array	push_swap.c	/^t_stack	*create_stack_from_int_array(int *int_array, int nb_items)$/;"	f
 deque_clear	push_swap_tester/files/libft/deque_utils.c	/^void	deque_clear(t_deque *deque, void (*f)(void*))$/;"	f
 deque_init	push_swap_tester/files/libft/deque.c	/^t_deque	*deque_init(void)$/;"	f
 deque_pop_back	push_swap_tester/files/libft/deque.c	/^void	deque_pop_back(t_deque *deque, void (*f)(void *))$/;"	f
 deque_pop_front	push_swap_tester/files/libft/deque.c	/^void	deque_pop_front(t_deque *deque, void (*f)(void*))$/;"	f
 deque_push_back	push_swap_tester/files/libft/deque.c	/^void	deque_push_back(t_deque *deque, void *ptr)$/;"	f
 deque_push_front	push_swap_tester/files/libft/deque.c	/^void	deque_push_front(t_deque *deque, void *ptr)$/;"	f
+die	bit_sort.c	/^static void	die(int *to_free)$/;"	f	file:
 diralloc	libft/ft_split.c	/^static char			**diralloc(const char *s, char c)$/;"	f	file:
 display_number_width11	push_swap_tester/files/srcs/share/operation4.c	/^static void	display_number_width11(int num)$/;"	f	file:
 display_number_width11_base2	push_swap_tester/files/srcs/radix/radix.c	/^static void	display_number_width11_base2(int num)$/;"	f	file:
 display_stack_radix	push_swap_tester/files/srcs/radix/radix.c	/^void	display_stack_radix(t_deque *stack[2], char *message)$/;"	f
 display_stacks	push_swap_tester/files/srcs/share/operation4.c	/^void	display_stacks(t_deque *stack[2], char *message)$/;"	f
-dll_append	dll_operations.c	/^t_dllnode **dll_append(t_dllnode **head, t_dllnode *node)$/;"	f
+dll_append	dll_operations.c	/^t_dllnode	**dll_append(t_dllnode **head, t_dllnode *node)$/;"	f
 dll_new_node	dll_operations.c	/^t_dllnode	*dll_new_node(int n)$/;"	f
 dll_pop	dll_operations.c	/^t_dllnode	*dll_pop(t_dllnode **head)$/;"	f
 dll_poppush	dll_operations.c	/^void	dll_poppush(t_dllnode **a, t_dllnode **b)$/;"	f
@@ -51,8 +45,8 @@ double_list_init	push_swap_tester/files/libft/deque_utils.c	/^t_double_list	*dou
 empty_stack	stack_operations.c	/^void	empty_stack(t_stack *stack)$/;"	f
 error_exit	push_swap_tester/files/srcs/share/utils.c	/^void	error_exit(void)$/;"	f
 error_if_duplicates	check_duplicates.c	/^void	error_if_duplicates(struct fat_int *array, int nb_items)$/;"	f
-fat_int_radix_sort	custom_radix_sort.c	/^struct fat_int *fat_int_radix_sort(struct fat_int *array, int nb_items)$/;"	f
-fewest_rotations	push_swap.c	/^void	fewest_rotations(int to_rotate, int nb_items)$/;"	f
+fat_int_radix_sort	custom_radix_sort.c	/^struct	fat_int	*fat_int_radix_sort(struct fat_int *array, int nb_items)$/;"	f
+fewest_rotations	order.c	/^void	fewest_rotations(int to_rotate, int nb_items)$/;"	f
 free_dll	dll_operations.c	/^void	free_dll(t_dllnode **list, int nmemb)$/;"	f
 free_stack	stack_operations.c	/^void	free_stack(t_stack *stack)$/;"	f
 ft_10powerof	libft/ft_itoa.c	/^static long	ft_10powerof(long n)$/;"	f	file:
@@ -199,7 +193,7 @@ ko	push_swap_tester/files/srcs/radix/radix.c	/^static void	ko(void)$/;"	f	file:
 leftpad	libft/ft_printf/pad.c	/^void	leftpad(char **str, char c, size_t n)$/;"	f
 loop_exec_stack_ops	checker.c	/^void	loop_exec_stack_ops(t_stack *A, t_stack *B)$/;"	f
 main	checker.c	/^int 	main(int argc, char **argv)$/;"	f
-main	push_swap.c	/^int 	main(int argc, char **argv)$/;"	f
+main	push_swap.c	/^int	main(int argc, char **argv)$/;"	f
 main	push_swap_tester/files/srcs/bonus/main.c	/^int	main(int argc, char **argv)$/;"	f
 main	push_swap_tester/files/srcs/checker/main.c	/^int	main(int argc, char **argv)$/;"	f
 main	push_swap_tester/files/srcs/radix/main.c	/^int	main(int argc, char **argv)$/;"	f
@@ -214,12 +208,12 @@ ok	push_swap_tester/files/srcs/bonus/bonus.c	/^static void	ok(t_list *instructio
 ok	push_swap_tester/files/srcs/radix/radix.c	/^static void	ok(t_list *instructions)$/;"	f	file:
 pa	print_operations.c	/^void	pa()$/;"	f
 pa	push_swap_tester/files/srcs/share/operation1.c	/^void	pa(t_deque *stack[2])$/;"	f
-parse_numbers_or_error	atoi_error.c	/^struct fat_int *parse_numbers_or_error(char **num_strings, int nb_items)$/;"	f
+parse_numbers_or_error	atoi_error.c	/^struct fat_int	*parse_numbers_or_error(char **num_strings, int nb_items)$/;"	f
 parse_sign	atoi_error.c	/^static bool	parse_sign(const char **ptr)$/;"	f	file:
 parse_str_into_format	libft/ft_printf/format_utils.c	/^void		*parse_str_into_format(const char *fs,$/;"	f
 pb	print_operations.c	/^void	pb()$/;"	f
 pb	push_swap_tester/files/srcs/share/operation1.c	/^void	pb(t_deque *stack[2])$/;"	f
-print_best_rotation	push_swap.c	/^void	print_best_rotation(int to_rotate, int nb_items)$/;"	f
+print_best_rotation	order.c	/^void	print_best_rotation(int to_rotate, int nb_items)$/;"	f
 print_dll	dll_operations.c	/^void	print_dll(t_dllnode **a, int size_a)$/;"	f
 print_stack	stack_operations.c	/^void	print_stack(t_stack stack)$/;"	f
 print_two_stacks	stack_operations.c	/^void	print_two_stacks(t_stack A, t_stack B)$/;"	f
@@ -228,8 +222,9 @@ put_dll_ordered	checker.c	/^void	put_dll_ordered(t_dllnode **list)$/;"	f
 put_in_list	push_swap_tester/files/srcs/share/parse.c	/^static void	put_in_list(t_list **lst, char *str)$/;"	f	file:
 ra	print_operations.c	/^void	ra()$/;"	f
 ra	push_swap_tester/files/srcs/share/operation2.c	/^void	ra(t_deque *stack[2])$/;"	f
-radix_sort_int_last_pass	custom_radix_sort.c	/^struct fat_int *radix_sort_int_last_pass(struct fat_int *input_array,$/;"	f
-radix_sort_int_pass	custom_radix_sort.c	/^struct fat_int *radix_sort_int_pass(struct fat_int *input_array,$/;"	f
+ra_or_pb	bit_sort.c	/^static void	ra_or_pb(unsigned char c)$/;"	f	file:
+radix_sort_int_last_pass	custom_radix_sort.c	/^struct fat_int	*radix_sort_int_last_pass(struct fat_int *input_array,$/;"	f
+radix_sort_int_pass	custom_radix_sort.c	/^struct fat_int	*radix_sort_int_pass(struct fat_int *input_array,$/;"	f
 rb	push_swap_tester/files/srcs/share/operation2.c	/^void	rb(t_deque *stack[2])$/;"	f
 rightpad	libft/ft_printf/pad.c	/^void	rightpad(char **str, char c, size_t n)$/;"	f
 rr	push_swap_tester/files/srcs/share/operation2.c	/^void	rr(t_deque *stack[2])$/;"	f

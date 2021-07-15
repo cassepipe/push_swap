@@ -5,7 +5,7 @@
 
 static int	stack_find(t_stack stack, int num)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (stack.top->num != num)
@@ -18,7 +18,7 @@ static int	stack_find(t_stack stack, int num)
 
 static int	stack_rev_find(t_stack stack, int num)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (stack.top->num != num)
@@ -31,14 +31,14 @@ static int	stack_rev_find(t_stack stack, int num)
 
 void 	stack_sort(t_stack *A)
 {
-	t_stack B;
-	int min;
-	int r;
-	int l;
+	t_stack	B;
+	int		min;
+	int		r;
+	int		l;
 
-	B = (t_stack){ .top = NULL, .size = 0};
+	B = (t_stack){.top = NULL, .size = 0};
 	min = 0;
-	while (!is_stack_sorted(*A))// && min < A->size)
+	while (!is_stack_sorted(*A))
 	{
 		if (A->top->num == min)
 		{

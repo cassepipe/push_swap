@@ -5,10 +5,10 @@
 
 static bool	parse_sign(const char **ptr)
 {
-	int sign;
+	int	sign;
 
 	sign = 0;
-	while (**ptr == '+' || **ptr  == '-')
+	while (**ptr == '+' || **ptr == '-')
 	{
 		if (**ptr == '-')
 			sign++;
@@ -24,11 +24,10 @@ static int	atoi_error(const char *ptr, bool *error)
 
 	*error = false;
 	result = 0;
-	neg = 0;
 	if (*ptr == '\0')
 		*error = true;
-	while (ft_isspace(*ptr))
-		ptr++;
+	/*while (ft_isspace(*ptr))*/
+	/*    ptr++;*/
 	neg = parse_sign(&ptr);
 	while (ft_isdigit(*ptr) && result <= 2147483648)
 	{
@@ -40,15 +39,18 @@ static int	atoi_error(const char *ptr, bool *error)
 		*error = true;
 	if (neg && result == 2147483648)
 		*error = false;
-	return (neg ? -result : result);
+	if (neg)
+		return (-result);
+	else
+		return (result);
 }
 
-struct fat_int *parse_numbers_or_error(char **num_strings, int nb_items)
+struct fat_int	*parse_numbers_or_error(char **num_strings, int nb_items)
 {
-	struct fat_int *array;
-	int i;
-	int num;
-	bool parse_error;
+	int				i;
+	int				num;
+	bool			parse_error;
+	struct fat_int	*array;
 
 	array = malloc(nb_items * sizeof(struct fat_int));
 	if (!array)

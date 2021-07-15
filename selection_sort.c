@@ -5,7 +5,7 @@
 
 static int	stack_find(t_stack stack, int num)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (stack.top->num != num)
@@ -18,7 +18,7 @@ static int	stack_find(t_stack stack, int num)
 
 static int	stack_rev_find(t_stack stack, int num)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (stack.top->num != num)
@@ -29,34 +29,32 @@ static int	stack_rev_find(t_stack stack, int num)
 	return (i);
 }
 
-
 void 	selection_sort(t_stack *A)
 {
-	t_stack B;
-	int min;
-	int r;
-	int l;
+	t_stack	B;
+	int		min;
+	int		r;
+	int		l;
 
-	B = (t_stack){ .top = NULL, .size = 0};
+	B = (t_stack){ .top = NULL, .size = 0 };
 	min = 0;
-	r = 0;
-	l = 0;
-
 	while (!is_stack_sorted(*A))
 	{
 		r = stack_find(*A, min);
 		l = stack_rev_find(*A, min);
 		if (r < l)
-			while (r--)
+			while (r)
 			{
 				ra();
 				stack_rotate(A);
+				r--;
 			}
 		else
-			while (l--)
+			while (l)
 			{
 				rra();
 				stack_revrotate(A);
+				l--;
 			}
 		pb();
 		stack_poppush(A, &B);
