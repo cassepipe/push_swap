@@ -51,7 +51,6 @@ t_stack	*create_stack_from_int_array(int *int_array, int nb_items)
 
 int	main(int argc, char **argv)
 {
-	int				to_rotate;
 	struct fat_int	*fat_array;
 	int				*int_array;
 	t_stack			*A;
@@ -63,8 +62,8 @@ int	main(int argc, char **argv)
 	fat_array = fat_int_radix_sort(fat_array, argc);
 	int_array = create_positive_array(fat_array, argc);
 	free(fat_array);
-	if (check_for_some_order(int_array, argc, 0, &to_rotate))
-		print_best_rotation(to_rotate, argc);
+	if (check_for_some_order(int_array, argc, 0))
+		;
 	else if (argc < 50)
 	{
 		A = create_stack_from_int_array(int_array, argc);

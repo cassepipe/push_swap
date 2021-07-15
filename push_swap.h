@@ -15,8 +15,7 @@ struct s_stack {
 };
 typedef struct s_stack t_stack;
 void stack_sort(t_stack *A);
-void print_best_rotation(int to_rotate,int nb_items);
-bool check_for_some_order(int *array,int nb_items,int min,int *to_rotate);
+bool check_for_some_order(int *array,int nb_items,int min);
 typedef struct fat_int fat_int;
 struct fat_int *fat_int_radix_sort(struct fat_int *array,int nb_items);
 void error_if_duplicates(struct fat_int *array,int nb_items);
