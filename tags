@@ -25,7 +25,7 @@ dll_rotate	dll_operations.c	/^void	dll_rotate(t_dllnode **head)$/;"	f
 dll_swaptop	dll_operations.c	/^void	dll_swaptop(t_dllnode **head)$/;"	f
 empty_stack	stack_operations.c	/^void	empty_stack(t_stack *stack)$/;"	f
 error_if_duplicates	check_duplicates.c	/^void	error_if_duplicates(struct fat_int *array, int nb_items)$/;"	f
-fat_int_radix_sort	custom_radix_sort.c	/^struct	fat_int	*fat_int_radix_sort(struct fat_int *array, int nb_items)$/;"	f
+fat_int_radix_sort	fat_int_radix_sort.c	/^struct	fat_int	*fat_int_radix_sort(struct fat_int *array, int nb_items)$/;"	f
 free_dll	dll_operations.c	/^void	free_dll(t_dllnode **list, int nmemb)$/;"	f
 free_stack	stack_operations.c	/^void	free_stack(t_stack *stack)$/;"	f
 ft_10powerof	libft/ft_itoa.c	/^static long	ft_10powerof(long n)$/;"	f	file:
@@ -108,8 +108,8 @@ ptr_repr	libft/ft_printf/repr.c	/^char		*ptr_repr(void *ptr, struct s_parameters
 put_dll_ordered	checker.c	/^void	put_dll_ordered(t_dllnode **list)$/;"	f
 ra	print_operations.c	/^void	ra()$/;"	f
 ra_or_pb	bit_sort.c	/^static void	ra_or_pb(unsigned char c)$/;"	f	file:
-radix_sort_int_last_pass	custom_radix_sort.c	/^struct fat_int	*radix_sort_int_last_pass(struct fat_int *input_array,$/;"	f
-radix_sort_int_pass	custom_radix_sort.c	/^struct fat_int	*radix_sort_int_pass(struct fat_int *input_array,$/;"	f
+radix_sort_int_last_pass	fat_int_radix_sort.c	/^struct fat_int	*radix_sort_int_last_pass(struct fat_int *input_array,$/;"	f
+radix_sort_int_pass	fat_int_radix_sort.c	/^struct fat_int	*radix_sort_int_pass(struct fat_int *input_array,$/;"	f
 rightpad	libft/ft_printf/pad.c	/^void	rightpad(char **str, char c, size_t n)$/;"	f
 rra	print_operations.c	/^void	rra()$/;"	f
 sa	print_operations.c	/^void sa()$/;"	f
@@ -128,6 +128,6 @@ stack_sort	stack_sort.c	/^void 	stack_sort(t_stack *A)$/;"	f
 stack_swaptop	stack_operations.c	/^void	stack_swaptop(t_stack *stack)$/;"	f
 str_repr	libft/ft_printf/repr.c	/^char		*str_repr(char *s, struct s_parameters *format, ssize_t *size)$/;"	f
 swap_buffers	bit_sort.c	/^static void	swap_buffers(int **buff1, int **buff2)$/;"	f	file:
-swap_buffers	custom_radix_sort.c	/^static void	swap_buffers(struct fat_int **buff1, struct fat_int **buff2)$/;"	f	file:
+swap_buffers	fat_int_radix_sort.c	/^static void	swap_buffers(struct fat_int **buff1, struct fat_int **buff2)$/;"	f	file:
 to_the_power_of	libft/ft_printf/ft_lutoa_base.c	/^static unsigned long	to_the_power_of(unsigned long n, unsigned long p)$/;"	f	file:
 write_format	libft/ft_printf/format_utils.c	/^ssize_t		write_format(int fd,$/;"	f

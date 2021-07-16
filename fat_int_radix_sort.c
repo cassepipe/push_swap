@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include "libft/libft.h"
-#include "custom_radix_sort.h"
+#include "fat_int_radix_sort.h"
 
 static void	swap_buffers(struct fat_int **buff1, struct fat_int **buff2)
 {
