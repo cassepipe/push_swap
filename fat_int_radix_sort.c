@@ -27,7 +27,7 @@ static void	count(struct fat_int *input_array,
 	}
 }
 
-struct fat_int	*radix_sort_int_pass(struct fat_int *input_array,
+static struct fat_int	*radix_sort_int_pass(struct fat_int *input_array,
 		struct fat_int *output_array,
 		int nb_items,
 		int shift)
@@ -56,7 +56,7 @@ struct fat_int	*radix_sort_int_pass(struct fat_int *input_array,
 	return (output_array);
 }
 
-struct fat_int	*radix_sort_int_last_pass(struct fat_int *input_array,
+static struct fat_int	*radix_sort_int_last_pass(struct fat_int *input_array,
 		struct fat_int *output_array,
 		int nb_items,
 		int shift)
@@ -64,16 +64,14 @@ struct fat_int	*radix_sort_int_last_pass(struct fat_int *input_array,
 	int				counters[256];
 	int				offset_table[256];
 	int				i;
-	int				nb_negative_values;
 	unsigned char	c;
 
 	ft_bzero(counters, 256 * sizeof(int));
 	count(input_array, nb_items, counters, shift);
-	nb_negative_values = 0;
+	offset_table[0] = 0;
 	i = 128;
 	while (i < 256)
-		nb_negative_values += counters[i++];
-	offset_table[0] = nb_negative_values;
+		offset_table[0] += counters[i++];
 	offset_table[255] = 0;
 	i = 0;
 	while (++i < 128)
