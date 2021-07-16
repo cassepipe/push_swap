@@ -11,6 +11,22 @@ static void	swap_buffers(struct fat_int **buff1, struct fat_int **buff2)
 	*buff2 = tmp;
 }
 
+static void	count(struct fat_int *input_array,
+							int nb_items,
+							int *counters,
+							int shift)
+{
+	int				i;
+	unsigned char	c;
+
+	i = 0;
+	while (i < nb_items)
+	{
+		c = (input_array[i++].num >> shift) & 0xff;
+		counters[c]++;
+	}
+}
+
 struct fat_int	*radix_sort_int_pass(struct fat_int *input_array,
 		struct fat_int *output_array,
 		int nb_items,
@@ -23,13 +39,7 @@ struct fat_int	*radix_sort_int_pass(struct fat_int *input_array,
 
 	ft_bzero(counters, 256 * sizeof(int));
 	ft_bzero(offset_table, 256 * sizeof(int));
-	i = 0;
-	while (i < nb_items)
-	{
-		c = (input_array[i].num >> shift) & 0xff;
-		counters[c]++;
-		i++;
-	}
+	count(input_array, nb_items, counters, shift);
 	i = 1;
 	while (i < 256)
 	{
@@ -40,7 +50,8 @@ struct fat_int	*radix_sort_int_pass(struct fat_int *input_array,
 	while (i < nb_items)
 	{
 		c = (input_array[i].num >> shift) & 0xff;
-		output_array[offset_table[c]++] = input_array[i++];
+		output_array[offset_table[c]++] = input_array[i];
+		i++;
 	}
 	return (output_array);
 }
@@ -53,43 +64,28 @@ struct fat_int	*radix_sort_int_last_pass(struct fat_int *input_array,
 	int				counters[256];
 	int				offset_table[256];
 	int				i;
-	int				nb_negative_values = 0;
+	int				nb_negative_values;
 	unsigned char	c;
 
 	ft_bzero(counters, 256 * sizeof(int));
-	i = 0;
-	while (i < nb_items)
-	{
-		c = (input_array[i].num >> shift) & 0xff;
-		counters[c]++;
-		i++;
-	}
+	count(input_array, nb_items, counters, shift);
+	nb_negative_values = 0;
 	i = 128;
 	while (i < 256)
-	{
-		nb_negative_values += counters[i];
-		i++;
-	}
+		nb_negative_values += counters[i++];
 	offset_table[0] = nb_negative_values;
 	offset_table[255] = 0;
-	i = 1;
-	while (i < 128)
-	{
-		offset_table[i] = offset_table[i - 1] + counters[i - 1];
-		i++;
-	}
 	i = 0;
-	while (i < 127)
-	{
+	while (++i < 128)
+		offset_table[i] = offset_table[i - 1] + counters[i - 1];
+	i = -1;
+	while (++i < 127)
 		offset_table[254 - i] = offset_table[255 - i] + counters[255 - i];
-		i++;
-	}
 	i = 0;
 	while (i < nb_items)
 	{
 		c = (input_array[i].num >> shift) & 0xff;
-		output_array[offset_table[c]++] = input_array[i];
-		i++;
+		output_array[offset_table[c]++] = input_array[i++];
 	}
 	return (output_array);
 }
