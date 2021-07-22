@@ -16,14 +16,7 @@ create_positive_array	push_swap.c	/^int	*create_positive_array(struct fat_int *f
 create_stack_from_int_array	push_swap.c	/^t_stack	*create_stack_from_int_array(int *int_array, int nb_items)$/;"	f
 die	bit_sort.c	/^static void	die(int *to_free)$/;"	f	file:
 diralloc	libft/ft_split.c	/^static char			**diralloc(const char *s, char c)$/;"	f	file:
-dll_append	dll_operations.c	/^t_dllnode	**dll_append(t_dllnode **head, t_dllnode *node)$/;"	f
 dll_new_node	dll_operations.c	/^t_dllnode	*dll_new_node(int n)$/;"	f
-dll_pop	dll_operations.c	/^t_dllnode	*dll_pop(t_dllnode **head)$/;"	f
-dll_poppush	dll_operations.c	/^void	dll_poppush(t_dllnode **a, t_dllnode **b)$/;"	f
-dll_push	dll_operations.c	/^void	dll_push(t_dllnode **dll, t_dllnode *node)$/;"	f
-dll_revrotate	dll_operations.c	/^void	dll_revrotate(t_dllnode **head)$/;"	f
-dll_rotate	dll_operations.c	/^void	dll_rotate(t_dllnode **head)$/;"	f
-dll_swaptop	dll_operations.c	/^void	dll_swaptop(t_dllnode **head)$/;"	f
 empty_stack	stack_utils.c	/^void	empty_stack(t_stack *stack)$/;"	f
 error_if_duplicates	check_duplicates.c	/^void	error_if_duplicates(struct fat_int *array, int nb_items)$/;"	f
 fat_int_radix_sort	fat_int_radix_sort.c	/^struct	fat_int	*fat_int_radix_sort(struct fat_int *array, int nb_items)$/;"	f
@@ -101,7 +94,6 @@ pa	print_operations.c	/^void	pa()$/;"	f
 parse_numbers_or_error	atoi_error.c	/^struct fat_int	*parse_numbers_or_error(char **num_strings, int nb_items)$/;"	f
 parse_str_into_format	libft/ft_printf/format_utils.c	/^void		*parse_str_into_format(const char *fs,$/;"	f
 pb	print_operations.c	/^void	pb()$/;"	f
-print_dll	dll_operations.c	/^void	print_dll(t_dllnode **a, int size_a)$/;"	f
 print_stack	stack_utils.c	/^void	print_stack(t_stack stack)$/;"	f
 print_two_stacks	stack_utils.c	/^void	print_two_stacks(t_stack A, t_stack B)$/;"	f
 ptr_repr	libft/ft_printf/repr.c	/^char		*ptr_repr(void *ptr, struct s_parameters *format, ssize_t *size)$/;"	f
