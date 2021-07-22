@@ -29,15 +29,30 @@ static int	stack_rev_find(t_stack stack, int num)
 	return (i);
 }
 
-void 	stack_sort(t_stack *A)
+static void	rotate_towards_min(t_stack *A, int min)
+{
+	int r;
+	int l;
+
+	r = stack_find(*A, min);
+	l = stack_rev_find(*A, min);
+	if (r < l)
+	{
+		ra();
+		stack_rotate(A);
+	}
+	else
+	{
+		rra();
+		stack_revrotate(A);
+	}
+}
+
+void 	stack_sort(t_stack *A, int min)
 {
 	t_stack	B;
-	int		min;
-	int		r;
-	int		l;
 
 	B = (t_stack){.top = NULL, .size = 0};
-	min = 0;
 	while (!is_stack_sorted(*A))
 	{
 		if (A->top->num == min)
@@ -52,20 +67,7 @@ void 	stack_sort(t_stack *A)
 			sa();
 		}
 		else
-		{
-			r = stack_find(*A, min);
-			l = stack_rev_find(*A, min);
-			if (r < l)
-			{
-				ra();
-				stack_rotate(A);
-			}
-			else
-			{
-				rra();
-				stack_revrotate(A);
-			}
-		}
+			rotate_towards_min(A, min);
 	}
 	while (B.size)
 	{

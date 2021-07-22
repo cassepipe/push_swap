@@ -14,7 +14,7 @@ struct s_stack {
 	int size;
 };
 typedef struct s_stack t_stack;
-void stack_sort(t_stack *A);
+void stack_sort(t_stack *A,int min);
 bool check_for_some_order(int *array,int nb_items,int min);
 typedef struct fat_int fat_int;
 struct fat_int *fat_int_radix_sort(struct fat_int *array,int nb_items);

@@ -15,13 +15,13 @@ struct s_stack {
 };
 typedef struct s_stack t_stack;
 t_dllnode *stack_pop(t_stack *stack);
-void rra();
-void ra();
 void sa();
 void stack_swaptop(t_stack *stack);
 void pb();
 void stack_poppush(t_stack *src,t_stack *dst);
 bool is_stack_sorted(t_stack A);
-void stack_sort(t_stack *A);
+void stack_sort(t_stack *A,int min);
+void rra();
+void ra();
 void stack_revrotate(t_stack *stack);
 void stack_rotate(t_stack *stack);

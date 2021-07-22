@@ -67,7 +67,7 @@ int	main(int argc, char **argv)
 	else if (argc < 50)
 	{
 		A = create_stack_from_int_array(int_array, argc);
-		stack_sort(A);
+		stack_sort(A, 0);
 		free_stack(A);
 	}
 	else
