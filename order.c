@@ -8,13 +8,10 @@ bool	check_for_some_order(int *array, int nb_items, int min)
 
 	if (array[0] != min && array[0] > array[nb_items - 1])
 		return (false);
-	i = 0;
-	while (array[i] != min)
-	{
+	i = -1;
+	while (array[++i] != min)
 		if (array[i + 1] < array[i])
 			return (false);
-		i++;
-	}
 	y = i + 1;
 	while (y < nb_items)
 	{
