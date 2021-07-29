@@ -31,8 +31,8 @@ static int	stack_rev_find(t_stack stack, int num)
 
 static void	rotate_towards_min(t_stack *A, int min)
 {
-	int r;
-	int l;
+	int	r;
+	int	l;
 
 	r = stack_find(*A, min);
 	l = stack_rev_find(*A, min);
