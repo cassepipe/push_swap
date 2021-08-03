@@ -18,7 +18,6 @@ t_dllnode *dll_new_node(int n);
 t_stack *stack_append(t_stack *stack,t_dllnode *node);
 t_stack *new_stack(t_dllnode *top,int size);
 #include <stdio.h>
-void print_stack(t_stack stack);
 void put_dll_ordered(t_dllnode **list);
 #define PRINT_TWO_STACKS(A, B) do { \
 	printf("\x1b[2J");										\
