@@ -47,6 +47,7 @@ void	print_two_stacks(t_stack A, t_stack B)
 {
 	printf("\x1b[2J");
 	if (A.size > B.size)
+	{
 		while (A.size > B.size)
 		{
 			printf("\t%i", A.top->num);
@@ -54,7 +55,9 @@ void	print_two_stacks(t_stack A, t_stack B)
 			A.top = A.top->next;
 			A.size--;
 		}
+	}
 	else
+	{
 		while (B.size > A.size)
 		{
 			printf("\t\t%i", B.top->num);
@@ -62,6 +65,7 @@ void	print_two_stacks(t_stack A, t_stack B)
 			B.top = B.top->next;
 			B.size--;
 		}
+	}
 	while (A.size-- && B.size--)
 	{
 		printf("\t%i", A.top->num);

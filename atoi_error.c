@@ -3,19 +3,19 @@
 #include "libft/libft.h"
 #include "atoi_error.h"
 
-/*static bool	parse_sign(const char **ptr)*/
-/*{*/
-/*    int	sign;*/
+static bool	parse_sign(const char **ptr)
+{
+	int	sign;
 
-/*    sign = 0;*/
-/*    while (**ptr == '+' || **ptr == '-')*/
-/*    {*/
-/*        if (**ptr == '-')*/
-/*            sign++;*/
-/*        (*ptr)++;*/
-/*    }*/
-/*    return (sign % 2);*/
-/*}*/
+	sign = 0;
+	while (**ptr == '+' || **ptr == '-')
+	{
+		if (**ptr == '-')
+			sign++;
+		(*ptr)++;
+	}
+	return (sign % 2);
+}
 
 static int	atoi_error(const char *ptr, bool *error)
 {
@@ -28,8 +28,7 @@ static int	atoi_error(const char *ptr, bool *error)
 		*error = true;
 	while (ft_isspace(*ptr))
 		ptr++;
-	if (*ptr == '-' && ptr++)
-		neg = true;
+	neg = parse_sign(&ptr);
 	while (ft_isdigit(*ptr) && result <= 2147483648)
 	{
 		result *= 10;

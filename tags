@@ -92,6 +92,7 @@ next_sep	libft/ft_split.c	/^static const char	*next_sep(const char *str, char se
 next_word	libft/ft_split.c	/^static const char	*next_word(const char *str, char sep)$/;"	f	file:
 pa	print_operations.c	/^void	pa()$/;"	f
 parse_numbers_or_error	atoi_error.c	/^struct fat_int	*parse_numbers_or_error(char **num_strings, int nb_items)$/;"	f
+parse_sign	atoi_error.c	/^static bool	parse_sign(const char **ptr)$/;"	f	file:
 parse_str_into_format	libft/ft_printf/format_utils.c	/^void		*parse_str_into_format(const char *fs,$/;"	f
 pb	print_operations.c	/^void	pb()$/;"	f
 print_stack	stack_utils.c	/^void	print_stack(t_stack stack)$/;"	f
