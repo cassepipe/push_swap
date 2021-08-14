@@ -41,48 +41,48 @@ bool	is_stack_sorted(t_stack A)
 	return (true);
 }
 
-/*void	print_stack(t_stack stack)*/
-/*{*/
-/*    if (stack.top && stack.size > 0)*/
-/*    {*/
-/*        while (stack.size--)*/
-/*        {*/
-/*            printf("\t%i", stack.top->num);*/
-/*            printf("\n");*/
-/*            stack.top = stack.top->next;*/
-/*        }*/
-/*    }*/
-/*}*/
+void	print_stack(t_stack stack)
+{
+	if (stack.top && stack.size > 0)
+	{
+		while (stack.size--)
+		{
+			printf("\t%i", stack.top->num);
+			printf("\n");
+			stack.top = stack.top->next;
+		}
+	}
+}
 
-/*void	print_two_stacks(t_stack A, t_stack B)*/
-/*{*/
-/*    printf("\x1b[2J");*/
-/*    if (A.size > B.size)*/
-/*    {*/
-/*        while (A.size > B.size)*/
-/*        {*/
-/*            printf("\t%i", A.top->num);*/
-/*            printf("\n");*/
-/*            A.top = A.top->next;*/
-/*            A.size--;*/
-/*        }*/
-/*    }*/
-/*    else*/
-/*    {*/
-/*        while (B.size > A.size)*/
-/*        {*/
-/*            printf("\t\t%i", B.top->num);*/
-/*            printf("\n");*/
-/*            B.top = B.top->next;*/
-/*            B.size--;*/
-/*        }*/
-/*    }*/
-/*    while (A.size-- && B.size--)*/
-/*    {*/
-/*        printf("\t%i", A.top->num);*/
-/*        printf("\t\t%i", B.top->num);*/
-/*        printf("\n");*/
-/*        A.top = A.top->next;*/
-/*        B.top = B.top->next;*/
-/*    }*/
-/*}*/
+void	print_two_stacks(t_stack A, t_stack B)
+{
+	printf("\x1b[2J");
+	if (A.size > B.size)
+	{
+		while (A.size > B.size)
+		{
+			printf("\t%i", A.top->num);
+			printf("\n");
+			A.top = A.top->next;
+			A.size--;
+		}
+	}
+	else
+	{
+		while (B.size > A.size)
+		{
+			printf("\t\t%i", B.top->num);
+			printf("\n");
+			B.top = B.top->next;
+			B.size--;
+		}
+	}
+	while (A.size-- && B.size--)
+	{
+		printf("\t%i", A.top->num);
+		printf("\t\t%i", B.top->num);
+		printf("\n");
+		A.top = A.top->next;
+		B.top = B.top->next;
+	}
+}

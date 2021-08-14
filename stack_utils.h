@@ -13,6 +13,8 @@ struct s_stack {
 	int size;
 };
 typedef struct s_stack t_stack;
+void print_two_stacks(t_stack A,t_stack B);
+void print_stack(t_stack stack);
 void stack_rotate(t_stack *stack);
 bool is_stack_sorted(t_stack A);
 void free_dll(t_dllnode **list,int nmemb);

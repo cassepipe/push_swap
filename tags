@@ -94,6 +94,8 @@ parse_numbers_or_error	atoi_error.c	/^struct fat_int	*parse_numbers_or_error(cha
 parse_sign	atoi_error.c	/^static bool	parse_sign(const char **ptr)$/;"	f	file:
 parse_str_into_format	libft/ft_printf/format_utils.c	/^void		*parse_str_into_format(const char *fs,$/;"	f
 pb	print_operations.c	/^void	pb(void)$/;"	f
+print_stack	stack_utils.c	/^void	print_stack(t_stack stack)$/;"	f
+print_two_stacks	stack_utils.c	/^void	print_two_stacks(t_stack A, t_stack B)$/;"	f
 ptr_repr	libft/ft_printf/repr.c	/^char		*ptr_repr(void *ptr, struct s_parameters *format, ssize_t *size)$/;"	f
 put_dll_ordered	checker.c	/^void	put_dll_ordered(t_dllnode **list)$/;"	f
 ra	print_operations.c	/^void	ra(void)$/;"	f

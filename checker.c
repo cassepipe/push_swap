@@ -1,6 +1,8 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <libft/get_next_line.h>
+#include <fcntl.h>
 #include "checker.h"
 
 bool	check_dll_ordered(t_dllnode **list)
@@ -33,12 +35,13 @@ void	put_dll_ordered(t_dllnode **list)
 
 void	loop_exec_stack_ops(t_stack *A, t_stack *B)
 {
-	int		size;
+	size_t		size;
 	char	*line;
 
 	size = 512;
-	*line = malloc(512);
-	while (getline(&line, &size, stdin))
+	line = malloc(512);
+
+	while (get_next_line(STDINp&line) != -1)
 	{
 		if (line[0] == 's')
 		{
@@ -83,10 +86,10 @@ void	loop_exec_stack_ops(t_stack *A, t_stack *B)
 			else if (line[1] == 'b')
 				stack_rotate(B);
 		}
-		/*free(line);*/
+		free(line);
 		PRINT_TWO_STACKS(A, B);
 	}
-	/*free(line);*/
+	free(line);
 }
 
 int 	main(int argc, char **argv)
