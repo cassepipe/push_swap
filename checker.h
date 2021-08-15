@@ -21,8 +21,6 @@ t_stack *new_stack(t_dllnode *top,int size);
 void print_stack(t_stack stack);
 void put_dll_ordered(t_dllnode **list);
 #define PRINT_TWO_STACKS(A, B) do { \
-	printf("\x1b[2J");										\
-	printf("\x1b[H");										\
 	printf("\n\tSTACK A\n--------------------------\n");	\
 	print_stack(*A);										\
 	printf("\n\tSTACK B\n--------------------------\n");   	\
