@@ -1,5 +1,5 @@
 #!/usr/bin/zsh
 echo "$@"
 ./push_swap $@ | ./checker_linux $@
-./push_swap $@ | wc -l
+#./push_swap $@ | wc -l
 

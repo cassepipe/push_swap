@@ -51,7 +51,7 @@ void	stack_swaptop(t_stack *stack)
 	t_dllnode	*first;
 	t_dllnode	*second;
 
-	if (stack && stack->top)
+	if (stack && stack->top && stack->size > 1)
 	{
 		first = stack_pop(stack);
 		second = stack_pop(stack);

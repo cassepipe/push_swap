@@ -36,13 +36,14 @@ void	put_dll_ordered(t_dllnode **list)
 
 void	loop_exec_stack_ops(t_stack *A, t_stack *B)
 {
-	size_t		size;
+	size_t	size;
 	char	*line;
+	int	last_round;
 
 	size = 512;
-	line = malloc(512);
-
-	while (get_next_line(STDIN_FILENO, &line) > 0)
+	last_round = 1;
+//	line = malloc(512);
+	while (get_next_line(STDIN_FILENO, &line) > 0 || last_round--)
 	{
 		if (line[0] == 's')
 		{
