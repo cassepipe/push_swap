@@ -26,7 +26,7 @@ static t_stack	*parse_numbers_or_error(char **num_strings, int nb_items)
 	}
 	if (parse_error)
 	{
-		free(stack);
+		free_stack(stack);
 		write(STDERR_FILENO, "Error\n", sizeof("Error\n"));
 		exit(EXIT_FAILURE);
 	}

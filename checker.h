@@ -13,7 +13,6 @@ struct s_stack {
 	int size;
 };
 typedef struct s_stack t_stack;
-void free_stack(t_stack *stack);
 void loop_exec_stack_ops(t_stack *A,t_stack *B);
 #include <stdio.h>
 #define RED "\033[31m"
@@ -21,6 +20,7 @@ void loop_exec_stack_ops(t_stack *A,t_stack *B);
 #define GREEN "\033[92m"
 bool is_stack_sorted(t_stack A);
 void put_stack_ordered(t_stack stack);
+void free_stack(t_stack *stack);
 t_dllnode *dll_new_node(int n);
 t_stack *stack_append(t_stack *stack,t_dllnode *node);
 int atoi_error(const char *ptr,bool *error);
