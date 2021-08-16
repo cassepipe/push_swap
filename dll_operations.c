@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <stdbool.h>
 #include "dll_operations.h"
 
 t_dllnode	*dll_new_node(int n)
@@ -122,4 +123,24 @@ void	free_dll(t_dllnode **list, int nmemb)
 /*            *a = (*a)->next;*/
 /*        }*/
 /*    }*/
+/*}*/
+
+/*bool	check_dll_ordered(t_dllnode **list)*/
+/*{*/
+	/*t_dllnode	*node;*/
+	/*t_dllnode	*next_node;*/
+
+	/*if (list && *list)*/
+	/*{*/
+		/*node = (*list);*/
+		/*next_node = (*list)->next;*/
+		/*while (next_node != *list)*/
+		/*{*/
+			/*if (node->num > next_node-> num)*/
+				/*return (false);*/
+			/*node = next_node;*/
+			/*next_node = next_node->next;*/
+		/*}*/
+	/*}*/
+	/*return (true);*/
 /*}*/

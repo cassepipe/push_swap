@@ -13,9 +13,8 @@ struct s_stack {
 	int size;
 };
 typedef struct s_stack t_stack;
+void loop_exec_stack_ops(t_stack *A,t_stack *B);
 void stack_rotate(t_stack *stack);
-bool is_stack_sorted(t_stack A);
-void free_dll(t_dllnode **list,int nmemb);
-void free_stack(t_stack *stack);
-t_stack *new_empty_stack(void);
-t_stack *new_stack(t_dllnode *top,int size);
+void stack_revrotate(t_stack *stack);
+void stack_poppush(t_stack *src,t_stack *dst);
+void stack_swaptop(t_stack *stack);

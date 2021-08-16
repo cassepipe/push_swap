@@ -45,11 +45,10 @@ SWAP_BUFFERS	debug.h	/^#define SWAP_BUFFERS(/;"	d
 all	Makefile	/^all:			push_swap  checker$/;"	t
 all	libft/Makefile	/^all:			${NAME}$/;"	t
 arrange_format	libft/ft_printf/format_utils.c	/^void		arrange_format(struct s_parameters *format)$/;"	f	typeref:typename:void
-atoi_error	atoi_error.c	/^static int	atoi_error(const char *ptr, bool *error)$/;"	f	typeref:typename:int	file:
+atoi_error	atoi_error.c	/^int	atoi_error(const char *ptr, bool *error)$/;"	f	typeref:typename:int
 bit_sort_pass	bit_sort.c	/^static int	*bit_sort_pass(int *input_array,$/;"	f	typeref:typename:int *	file:
 bit_sort_raw	bit_sort.c	/^int	*bit_sort_raw(int *input_array,$/;"	f	typeref:typename:int *
 char_repr	libft/ft_printf/repr.c	/^char		*char_repr(unsigned char c,$/;"	f	typeref:typename:char *
-check_dll_ordered	checker.c	/^bool	check_dll_ordered(t_dllnode **list)$/;"	f	typeref:typename:bool
 check_for_some_order	order.c	/^bool	check_for_some_order(int *array, int nb_items, int min)$/;"	f	typeref:typename:bool
 checker	Makefile	/^checker:		obj\/checker.o ${OBJECTFILES} libft\/libft.a$/;"	t
 clean	Makefile	/^clean:			$/;"	t
@@ -64,8 +63,6 @@ dll_new_node	dll_operations.c	/^t_dllnode	*dll_new_node(int n)$/;"	f	typeref:typ
 error	libft/ft_printf/ft_printf_utils.h	/^	int error;$/;"	m	struct:s_parameters	typeref:typename:int
 error_if_duplicates	check_duplicates.c	/^void	error_if_duplicates(struct fat_int *array, int nb_items)$/;"	f	typeref:typename:void
 fat_int	array_member.h	/^struct fat_int {$/;"	s
-fat_int	atoi_error.h	/^struct fat_int {$/;"	s
-fat_int	atoi_error.h	/^typedef struct fat_int fat_int;$/;"	t	typeref:struct:fat_int
 fat_int	check_duplicates.h	/^struct fat_int {$/;"	s
 fat_int	check_duplicates.h	/^typedef struct fat_int fat_int;$/;"	t	typeref:struct:fat_int
 fat_int	fat_int_radix_sort.h	/^struct fat_int {$/;"	s
@@ -132,18 +129,22 @@ ft_toupper	libft/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f	typeref:typename:int
 ft_vdprintf	libft/ft_printf/ft_vdprintf.c	/^int						ft_vdprintf(int fd, const char *fs, va_list args)$/;"	f	typeref:typename:int
 get_next_line	libft/get_next_line.c	/^int			get_next_line(int fd, char **line)$/;"	f	typeref:typename:int
 grow_buffer_until_newline	libft/get_next_line.c	/^static int	grow_buffer_until_newline(int fd, char **buffer,$/;"	f	typeref:typename:int	file:
+handle_push	loop_exec_stack_ops.c	/^static void	handle_push(char *line, t_stack *A, t_stack *B)$/;"	f	typeref:typename:void	file:
+handle_rotation	loop_exec_stack_ops.c	/^static void	handle_rotation(char *line, t_stack *A, t_stack *B)$/;"	f	typeref:typename:void	file:
+handle_swap	loop_exec_stack_ops.c	/^static void	handle_swap(char *line, t_stack *A, t_stack *B)$/;"	f	typeref:typename:void	file:
 init_format	libft/ft_printf/format_utils.c	/^void		init_format(struct s_parameters *format)$/;"	f	typeref:typename:void
 is_in	libft/ft_printf/format_utils.c	/^int			is_in(char c, const char *charset)$/;"	f	typeref:typename:int
 is_in_set	libft/ft_strtrim.c	/^static int	is_in_set(char c, char const *set)$/;"	f	typeref:typename:int	file:
 is_stack_sorted	stack_utils.c	/^bool	is_stack_sorted(t_stack A)$/;"	f	typeref:typename:bool
 leftpad	libft/ft_printf/pad.c	/^void	leftpad(char **str, char c, size_t n)$/;"	f	typeref:typename:void
 libft/libft.a	Makefile	/^libft\/libft.a:$/;"	t
-loop_exec_stack_ops	checker.c	/^void	loop_exec_stack_ops(t_stack *A, t_stack *B)$/;"	f	typeref:typename:void
+loop_exec_stack_ops	loop_exec_stack_ops.c	/^void	loop_exec_stack_ops(t_stack *A, t_stack *B)$/;"	f	typeref:typename:void
 main	checker.c	/^int 	main(int argc, char **argv)$/;"	f	typeref:typename:int
 main	push_swap.c	/^int	main(int argc, char **argv)$/;"	f	typeref:typename:int
 min_field_width	libft/ft_printf/ft_printf_utils.h	/^	int	min_field_width;$/;"	m	struct:s_parameters	typeref:typename:int
 minus_flag	libft/ft_printf/ft_printf_utils.h	/^	int	minus_flag;$/;"	m	struct:s_parameters	typeref:typename:int
 nbr_repr	libft/ft_printf/repr.c	/^char		*nbr_repr(long nbr, struct s_parameters *format, ssize_t *size)$/;"	f	typeref:typename:char *
+new_empty_stack	stack_utils.c	/^t_stack	*new_empty_stack(void)$/;"	f	typeref:typename:t_stack *
 new_int_array	new_int_array.c	/^int 	*new_int_array(int size)$/;"	f	typeref:typename:int *
 new_stack	stack_utils.c	/^t_stack	*new_stack(t_dllnode *top, int size)$/;"	f	typeref:typename:t_stack *
 next	checker.h	/^	struct s_dllnode	*next;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
@@ -151,6 +152,7 @@ next	dll_node.h	/^	struct s_dllnode	*next;$/;"	m	struct:s_dllnode	typeref:struct
 next	dll_operations.h	/^	struct s_dllnode	*next;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
 next	insertion_sort.h	/^	struct s_dllnode	*next;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
 next	libft/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list *
+next	loop_exec_stack_ops.h	/^	struct s_dllnode	*next;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
 next	push_swap.h	/^	struct s_dllnode	*next;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
 next	stack_operations.h	/^	struct s_dllnode	*next;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
 next	stack_rotate.h	/^	struct s_dllnode	*next;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
@@ -159,13 +161,13 @@ next	stack_utils.h	/^	struct s_dllnode	*next;$/;"	m	struct:s_dllnode	typeref:str
 next_sep	libft/ft_split.c	/^static const char	*next_sep(const char *str, char sep)$/;"	f	typeref:typename:const char *	file:
 next_word	libft/ft_split.c	/^static const char	*next_word(const char *str, char sep)$/;"	f	typeref:typename:const char *	file:
 num	array_member.h	/^	int	num;$/;"	m	struct:fat_int	typeref:typename:int
-num	atoi_error.h	/^	int	num;$/;"	m	struct:fat_int	typeref:typename:int
 num	check_duplicates.h	/^	int	num;$/;"	m	struct:fat_int	typeref:typename:int
 num	checker.h	/^	int				num;$/;"	m	struct:s_dllnode	typeref:typename:int
 num	dll_node.h	/^	int				num;$/;"	m	struct:s_dllnode	typeref:typename:int
 num	dll_operations.h	/^	int				num;$/;"	m	struct:s_dllnode	typeref:typename:int
 num	fat_int_radix_sort.h	/^	int	num;$/;"	m	struct:fat_int	typeref:typename:int
 num	insertion_sort.h	/^	int				num;$/;"	m	struct:s_dllnode	typeref:typename:int
+num	loop_exec_stack_ops.h	/^	int				num;$/;"	m	struct:s_dllnode	typeref:typename:int
 num	push_swap.h	/^	int				num;$/;"	m	struct:s_dllnode	typeref:typename:int
 num	push_swap.h	/^	int	num;$/;"	m	struct:fat_int	typeref:typename:int
 num	stack_operations.h	/^	int				num;$/;"	m	struct:s_dllnode	typeref:typename:int
@@ -175,17 +177,16 @@ num	stack_utils.h	/^	int				num;$/;"	m	struct:s_dllnode	typeref:typename:int
 obj	Makefile	/^obj:			$/;"	t
 obj/%.o	Makefile	/^obj\/%.o:		%.c	Makefile ${HEADERS} | obj$/;"	t
 offset	array_member.h	/^	int	offset;$/;"	m	struct:fat_int	typeref:typename:int
-offset	atoi_error.h	/^	int	offset;$/;"	m	struct:fat_int	typeref:typename:int
 offset	check_duplicates.h	/^	int	offset;$/;"	m	struct:fat_int	typeref:typename:int
 offset	fat_int_radix_sort.h	/^	int	offset;$/;"	m	struct:fat_int	typeref:typename:int
 offset	push_swap.h	/^	int	offset;$/;"	m	struct:fat_int	typeref:typename:int
 ord	array_member.h	/^	int	ord;$/;"	m	struct:fat_int	typeref:typename:int
-ord	atoi_error.h	/^	int	ord;$/;"	m	struct:fat_int	typeref:typename:int
 ord	check_duplicates.h	/^	int	ord;$/;"	m	struct:fat_int	typeref:typename:int
 ord	fat_int_radix_sort.h	/^	int	ord;$/;"	m	struct:fat_int	typeref:typename:int
 ord	push_swap.h	/^	int	ord;$/;"	m	struct:fat_int	typeref:typename:int
 pa	print_operations.c	/^void	pa(void)$/;"	f	typeref:typename:void
-parse_numbers_or_error	atoi_error.c	/^struct fat_int	*parse_numbers_or_error(char **num_strings, int nb_items)$/;"	f	typeref:struct:fat_int *
+parse_numbers_or_error	checker.c	/^static t_stack	*parse_numbers_or_error(char **num_strings, int nb_items)$/;"	f	typeref:typename:t_stack *	file:
+parse_numbers_or_error	push_swap.c	/^static struct fat_int	*parse_numbers_or_error(char **num_strings, int nb_items)$/;"	f	typeref:struct:fat_int *	file:
 parse_sign	atoi_error.c	/^static bool	parse_sign(const char **ptr)$/;"	f	typeref:typename:bool	file:
 parse_str_into_format	libft/ft_printf/format_utils.c	/^void		*parse_str_into_format(const char *fs,$/;"	f	typeref:typename:void *
 pb	print_operations.c	/^void	pb(void)$/;"	f	typeref:typename:void
@@ -194,16 +195,15 @@ prev	checker.h	/^	struct s_dllnode	*prev;$/;"	m	struct:s_dllnode	typeref:struct:
 prev	dll_node.h	/^	struct s_dllnode	*prev;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
 prev	dll_operations.h	/^	struct s_dllnode	*prev;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
 prev	insertion_sort.h	/^	struct s_dllnode	*prev;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
+prev	loop_exec_stack_ops.h	/^	struct s_dllnode	*prev;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
 prev	push_swap.h	/^	struct s_dllnode	*prev;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
 prev	stack_operations.h	/^	struct s_dllnode	*prev;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
 prev	stack_rotate.h	/^	struct s_dllnode	*prev;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
 prev	stack_sort.h	/^	struct s_dllnode	*prev;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
 prev	stack_utils.h	/^	struct s_dllnode	*prev;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
-print_stack	stack_utils.c	/^void	print_stack(t_stack stack)$/;"	f	typeref:typename:void
-print_two_stacks	stack_utils.c	/^void	print_two_stacks(t_stack A, t_stack B)$/;"	f	typeref:typename:void
 ptr_repr	libft/ft_printf/repr.c	/^char		*ptr_repr(void *ptr, struct s_parameters *format, ssize_t *size)$/;"	f	typeref:typename:char *
 push_swap	Makefile	/^push_swap:		obj\/push_swap.o ${OBJECTFILES} libft\/libft.a$/;"	t
-put_dll_ordered	checker.c	/^void	put_dll_ordered(t_dllnode **list)$/;"	f	typeref:typename:void
+put_stack_ordered	checker.c	/^void	put_stack_ordered(t_stack stack)$/;"	f	typeref:typename:void
 ra	print_operations.c	/^void	ra(void)$/;"	f	typeref:typename:void
 ra_or_pb	bit_sort.c	/^static void	ra_or_pb(unsigned char c)$/;"	f	typeref:typename:void	file:
 radix_sort_int_last_pass	fat_int_radix_sort.c	/^static struct fat_int	*radix_sort_int_last_pass(struct fat_int *input_array,$/;"	f	typeref:struct:fat_int *	file:
@@ -220,6 +220,8 @@ s_dllnode	dll_operations.h	/^struct s_dllnode {$/;"	s
 s_dllnode	dll_operations.h	/^typedef struct s_dllnode s_dllnode;$/;"	t	typeref:struct:s_dllnode
 s_dllnode	insertion_sort.h	/^struct s_dllnode {$/;"	s
 s_dllnode	insertion_sort.h	/^typedef struct s_dllnode s_dllnode;$/;"	t	typeref:struct:s_dllnode
+s_dllnode	loop_exec_stack_ops.h	/^struct s_dllnode {$/;"	s
+s_dllnode	loop_exec_stack_ops.h	/^typedef struct s_dllnode s_dllnode;$/;"	t	typeref:struct:s_dllnode
 s_dllnode	push_swap.h	/^struct s_dllnode {$/;"	s
 s_dllnode	push_swap.h	/^typedef struct s_dllnode s_dllnode;$/;"	t	typeref:struct:s_dllnode
 s_dllnode	stack_operations.h	/^struct s_dllnode {$/;"	s
@@ -236,6 +238,8 @@ s_stack	checker.h	/^struct s_stack {$/;"	s
 s_stack	checker.h	/^typedef struct s_stack s_stack;$/;"	t	typeref:struct:s_stack
 s_stack	insertion_sort.h	/^struct s_stack {$/;"	s
 s_stack	insertion_sort.h	/^typedef struct s_stack s_stack;$/;"	t	typeref:struct:s_stack
+s_stack	loop_exec_stack_ops.h	/^struct s_stack {$/;"	s
+s_stack	loop_exec_stack_ops.h	/^typedef struct s_stack s_stack;$/;"	t	typeref:struct:s_stack
 s_stack	push_swap.h	/^struct s_stack {$/;"	s
 s_stack	push_swap.h	/^typedef struct s_stack s_stack;$/;"	t	typeref:struct:s_stack
 s_stack	stack.h	/^typedef struct	s_stack	{$/;"	s
@@ -250,6 +254,7 @@ s_stack	stack_utils.h	/^typedef struct s_stack s_stack;$/;"	t	typeref:struct:s_s
 sa	print_operations.c	/^void	sa(void)$/;"	f	typeref:typename:void
 size	checker.h	/^	int size;$/;"	m	struct:s_stack	typeref:typename:int
 size	insertion_sort.h	/^	int size;$/;"	m	struct:s_stack	typeref:typename:int
+size	loop_exec_stack_ops.h	/^	int size;$/;"	m	struct:s_stack	typeref:typename:int
 size	push_swap.h	/^	int size;$/;"	m	struct:s_stack	typeref:typename:int
 size	stack.h	/^	int size;$/;"	m	struct:s_stack	typeref:typename:int
 size	stack_operations.h	/^	int size;$/;"	m	struct:s_stack	typeref:typename:int
@@ -273,6 +278,7 @@ t_dllnode	checker.h	/^typedef struct s_dllnode t_dllnode;$/;"	t	typeref:struct:s
 t_dllnode	dll_node.h	/^} t_dllnode;$/;"	t	typeref:struct:s_dllnode
 t_dllnode	dll_operations.h	/^typedef struct s_dllnode t_dllnode;$/;"	t	typeref:struct:s_dllnode
 t_dllnode	insertion_sort.h	/^typedef struct s_dllnode t_dllnode;$/;"	t	typeref:struct:s_dllnode
+t_dllnode	loop_exec_stack_ops.h	/^typedef struct s_dllnode t_dllnode;$/;"	t	typeref:struct:s_dllnode
 t_dllnode	push_swap.h	/^typedef struct s_dllnode t_dllnode;$/;"	t	typeref:struct:s_dllnode
 t_dllnode	stack_operations.h	/^typedef struct s_dllnode t_dllnode;$/;"	t	typeref:struct:s_dllnode
 t_dllnode	stack_rotate.h	/^typedef struct s_dllnode t_dllnode;$/;"	t	typeref:struct:s_dllnode
@@ -281,6 +287,7 @@ t_dllnode	stack_utils.h	/^typedef struct s_dllnode t_dllnode;$/;"	t	typeref:stru
 t_list	libft/libft.h	/^}					t_list;$/;"	t	typeref:struct:s_list
 t_stack	checker.h	/^typedef struct s_stack t_stack;$/;"	t	typeref:struct:s_stack
 t_stack	insertion_sort.h	/^typedef struct s_stack t_stack;$/;"	t	typeref:struct:s_stack
+t_stack	loop_exec_stack_ops.h	/^typedef struct s_stack t_stack;$/;"	t	typeref:struct:s_stack
 t_stack	push_swap.h	/^typedef struct s_stack t_stack;$/;"	t	typeref:struct:s_stack
 t_stack	stack.h	/^} t_stack;$/;"	t	typeref:struct:s_stack
 t_stack	stack_operations.h	/^typedef struct s_stack t_stack;$/;"	t	typeref:struct:s_stack
@@ -291,6 +298,7 @@ test	Makefile	/^test:			push_swap	$/;"	t
 to_the_power_of	libft/ft_printf/ft_lutoa_base.c	/^static unsigned long	to_the_power_of(unsigned long n, unsigned long p)$/;"	f	typeref:typename:unsigned long	file:
 top	checker.h	/^	t_dllnode *top;$/;"	m	struct:s_stack	typeref:typename:t_dllnode *
 top	insertion_sort.h	/^	t_dllnode *top;$/;"	m	struct:s_stack	typeref:typename:t_dllnode *
+top	loop_exec_stack_ops.h	/^	t_dllnode *top;$/;"	m	struct:s_stack	typeref:typename:t_dllnode *
 top	push_swap.h	/^	t_dllnode *top;$/;"	m	struct:s_stack	typeref:typename:t_dllnode *
 top	stack.h	/^	t_dllnode *top;$/;"	m	struct:s_stack	typeref:typename:t_dllnode *
 top	stack_operations.h	/^	t_dllnode *top;$/;"	m	struct:s_stack	typeref:typename:t_dllnode *

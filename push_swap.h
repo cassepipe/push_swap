@@ -19,15 +19,15 @@ bool check_for_some_order(int *array,int nb_items,int min);
 typedef struct fat_int fat_int;
 struct fat_int *fat_int_radix_sort(struct fat_int *array,int nb_items);
 void error_if_duplicates(struct fat_int *array,int nb_items);
-struct fat_int *parse_numbers_or_error(char **num_strings,int nb_items);
 void free_stack(t_stack *stack);
 t_dllnode *dll_new_node(int n);
 t_stack *stack_append(t_stack *stack,t_dllnode *node);
 t_stack *new_stack(t_dllnode *top,int size);
 t_stack *create_stack_from_int_array(int *int_array,int nb_items);
+int *create_positive_array(struct fat_int *fat_array,int nb_items);
+int atoi_error(const char *ptr,bool *error);
 struct fat_int {
 	int	num;
 	int	offset;
 	int	ord;
 };
-int *create_positive_array(struct fat_int *fat_array,int nb_items);
