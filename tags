@@ -35,6 +35,7 @@ PRINT_ARRAY	debug.h	/^#define PRINT_ARRAY(/;"	d
 PRINT_ARRAY_HEX	debug.h	/^#define PRINT_ARRAY_HEX(/;"	d
 PRINT_FAT_INT_ARRAY	debug.h	/^#define PRINT_FAT_INT_ARRAY(/;"	d
 PRINT_TWO_STACKS	debug.h	/^#define PRINT_TWO_STACKS(/;"	d
+Performance checks	push-swap-tester/README.md	/^### Performance checks$/;"	S
 RED	checker.h	/^#define RED /;"	d
 RED	debug.h	/^#define RED /;"	d
 RM	libft/Makefile	/^RM			= 	rm -rf$/;"	m
@@ -42,6 +43,8 @@ SANITIZER	Makefile	/^SANITIZER		=	-fsanitize=address$/;"	m
 SOURCEFILES	Makefile	/^SOURCEFILES		=	$(filter-out ${BLACKLIST}, $(wildcard *.c))$/;"	m
 SRC	libft/Makefile	/^SRC			=	ft_atoi.c    			\\$/;"	m
 SWAP_BUFFERS	debug.h	/^#define SWAP_BUFFERS(/;"	d
+Tester for push swap	push-swap-tester/README.md	/^### Tester for push swap$/;"	S
+Usage	push-swap-tester/README.md	/^## Usage$/;"	s
 all	Makefile	/^all:			push_swap  checker$/;"	t
 all	libft/Makefile	/^all:			${NAME}$/;"	t
 arrange_format	libft/ft_printf/format_utils.c	/^void		arrange_format(struct s_parameters *format)$/;"	f	typeref:typename:void
@@ -202,6 +205,7 @@ prev	stack_rotate.h	/^	struct s_dllnode	*prev;$/;"	m	struct:s_dllnode	typeref:st
 prev	stack_sort.h	/^	struct s_dllnode	*prev;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
 prev	stack_utils.h	/^	struct s_dllnode	*prev;$/;"	m	struct:s_dllnode	typeref:struct:s_dllnode *
 ptr_repr	libft/ft_printf/repr.c	/^char		*ptr_repr(void *ptr, struct s_parameters *format, ssize_t *size)$/;"	f	typeref:typename:char *
+push-swap-tester	push-swap-tester/README.md	/^# push-swap-tester$/;"	c
 push_swap	Makefile	/^push_swap:		obj\/push_swap.o ${OBJECTFILES} libft\/libft.a$/;"	t
 put_stack_ordered	checker.c	/^void	put_stack_ordered(t_stack stack)$/;"	f	typeref:typename:void
 ra	print_operations.c	/^void	ra(void)$/;"	f	typeref:typename:void
@@ -308,3 +312,4 @@ top	stack_utils.h	/^	t_dllnode *top;$/;"	m	struct:s_stack	typeref:typename:t_dll
 type	libft/ft_printf/ft_printf_utils.h	/^	int	type;$/;"	m	struct:s_parameters	typeref:typename:int
 write_format	libft/ft_printf/format_utils.c	/^ssize_t		write_format(int fd,$/;"	f	typeref:typename:ssize_t
 zero_flag	libft/ft_printf/ft_printf_utils.h	/^	int	zero_flag;$/;"	m	struct:s_parameters	typeref:typename:int
+⚠️ USE THIS TO TEST YOUR PROJECT -> NOT GRADE THEM !! ⚠️	push-swap-tester/README.md	/^## ⚠️ USE THIS TO TEST YOUR PROJECT -> NOT GRADE THEM !! ⚠️$/;"	s

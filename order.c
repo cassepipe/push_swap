@@ -6,13 +6,15 @@ bool	check_for_some_order(int *array, int nb_items, int min)
 	int	i;
 	int	y;
 
-	if (array[0] != min && array[0] > array[nb_items - 1])
+	if (array[0] != min && array[0] < array[nb_items - 1])
 		return (false);
-	i = -1;
-	while (array[++i] != min)
-		if (array[i + 1] < array[i])
+	i = 0;
+	while (array[++i] != min)// && i < nb_items)
+		if (array[i] < array[i - 1])
 			return (false);
-	y = i + 1;
+	if (i == nb_items)
+		return (true);
+	y = i + 2;
 	while (y < nb_items)
 	{
 		if (array[y] < array[y - 1])
