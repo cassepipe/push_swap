@@ -32,11 +32,15 @@ void	free_stack(t_stack *stack)
 
 bool	is_stack_sorted(t_stack A)
 {
-	while (--A.size)
+	if (A.size)
 	{
-		if (A.top->num > A.top->next->num)
-			return (false);
-		stack_rotate(&A);
+		while (--A.size)
+		{
+			if (A.top)
+				if (A.top->num > A.top->next->num)
+					return (false);
+			stack_rotate(&A);
+		}
 	}
 	return (true);
 }

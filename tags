@@ -34,7 +34,6 @@ PHONY	Makefile	/^PHONY			=	all clean fclean re test$/;"	m
 PRINT_ARRAY	debug.h	/^#define PRINT_ARRAY(/;"	d
 PRINT_ARRAY_HEX	debug.h	/^#define PRINT_ARRAY_HEX(/;"	d
 PRINT_FAT_INT_ARRAY	debug.h	/^#define PRINT_FAT_INT_ARRAY(/;"	d
-PRINT_TWO_STACKS	checker.h	/^#define PRINT_TWO_STACKS(/;"	d
 PRINT_TWO_STACKS	debug.h	/^#define PRINT_TWO_STACKS(/;"	d
 RED	checker.h	/^#define RED /;"	d
 RED	debug.h	/^#define RED /;"	d

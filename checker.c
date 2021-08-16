@@ -38,12 +38,9 @@ void	loop_exec_stack_ops(t_stack *A, t_stack *B)
 {
 	size_t	size;
 	char	*line;
-	int	last_round;
 
 	size = 512;
-	last_round = 1;
-//	line = malloc(512);
-	while (get_next_line(STDIN_FILENO, &line) > 0 || last_round--)
+	while (get_next_line(STDIN_FILENO, &line) > 0)
 	{
 		if (line[0] == 's')
 		{
@@ -89,7 +86,7 @@ void	loop_exec_stack_ops(t_stack *A, t_stack *B)
 				stack_rotate(B);
 		}
 		free(line);
-		PRINT_TWO_STACKS(A, B);
+		/*PRINT_TWO_STACKS(A, B);*/
 	}
 	free(line);
 }
@@ -118,6 +115,7 @@ int 	main(int argc, char **argv)
 	PRINT_TWO_STACKS(A, B);
 	loop_exec_stack_ops(A, B);
 	PRINT_TWO_STACKS(A, B);
+	put_dll_ordered(&A->top);
 	free_stack(A);
 	free_stack(B);
 	return (0);

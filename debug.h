@@ -40,5 +40,4 @@
 	print_stack(*A);					\
 	printf("\n\tSTACK B\n--------------------------\n");   	\
 	print_stack(*B);					\
-	put_dll_ordered(&A->top);				\
 } while (0);
