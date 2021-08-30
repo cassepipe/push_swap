@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "check_duplicates.h"
 
-void	error_if_duplicates(struct fat_int *array, int nb_items)
+void	error_if_duplicates(struct s_fat_int *array, int nb_items)
 {
 	int	i;
 	int	y;

@@ -33,7 +33,6 @@ static t_stack	*parse_numbers_or_error(char **num_strings, int nb_items)
 	return (stack);
 }
 
-
 void	put_stack_ordered(t_stack stack)
 {
 	if (is_stack_sorted(stack))
@@ -53,9 +52,7 @@ int 	main(int argc, char **argv)
 	B = new_empty_stack();
 	if (!A || !B)
 		return (-1);
-	/*PRINT_TWO_STACKS(A, B);*/
 	loop_exec_stack_ops(A, B);
-	/*PRINT_TWO_STACKS(A, B);*/
 	put_stack_ordered(*A);
 	free_stack(A);
 	free_stack(B);

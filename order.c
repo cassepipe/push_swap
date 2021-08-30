@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "order.h"
 
-
 bool	check_for_some_order(int *array, int nb_items, int min)
 {
 	int	i;
@@ -11,7 +10,7 @@ bool	check_for_some_order(int *array, int nb_items, int min)
 	if (array[0] != min && array[0] < array[nb_items - 1])
 		return (false);
 	i = 0;
-	while (array[++i] != min)// && i < nb_items)
+	while (array[++i] != min && i < nb_items)
 		if (array[i - 1] > array[i])
 			return (false);
 	if (i == nb_items)

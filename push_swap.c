@@ -4,14 +4,14 @@
 #include <unistd.h>
 #include "push_swap.h"
 
-static struct fat_int	*parse_numbers_or_error(char **num_strings, int nb_items)
+static t_fat_int	*parse_numbers_or_error(char **num_strings, int nb_items)
 {
 	int				i;
 	int				num;
 	bool			parse_error;
-	struct fat_int	*array;
+	t_fat_int		*array;
 
-	array = malloc(nb_items * sizeof(struct fat_int));
+	array = malloc(nb_items * sizeof(t_fat_int));
 	if (!array)
 		exit(EXIT_FAILURE);
 	i = 0;
@@ -32,7 +32,7 @@ static struct fat_int	*parse_numbers_or_error(char **num_strings, int nb_items)
 	return (array);
 }
 
-int	*create_positive_array(struct fat_int *fat_array, int nb_items)
+int	*create_positive_array(t_fat_int *fat_array, int nb_items)
 {
 	int	*int_array;
 	int	i;
@@ -79,7 +79,7 @@ t_stack	*create_stack_from_int_array(int *int_array, int nb_items)
 
 int	main(int argc, char **argv)
 {
-	struct fat_int	*fat_array;
+	t_fat_int		*fat_array;
 	int				*int_array;
 	t_stack			*A;
 

@@ -2,16 +2,16 @@
 #include "libft/libft.h"
 #include "fat_int_radix_sort.h"
 
-static void	swap_buffers(struct fat_int **buff1, struct fat_int **buff2)
+static void	swap_buffers(struct s_fat_int **buff1, struct s_fat_int **buff2)
 {
-	struct fat_int	*tmp;
+	struct s_fat_int	*tmp;
 
 	tmp = *buff1;
 	*buff1 = *buff2;
 	*buff2 = tmp;
 }
 
-static void	count(struct fat_int *input_array,
+static void	count(struct s_fat_int *input_array,
 							int nb_items,
 							int *counters,
 							int shift)
@@ -27,8 +27,8 @@ static void	count(struct fat_int *input_array,
 	}
 }
 
-static struct fat_int	*radix_sort_int_pass(struct fat_int *input_array,
-		struct fat_int *output_array,
+static struct s_fat_int	*radix_sort_int_pass(struct s_fat_int *input_array,
+		struct s_fat_int *output_array,
 		int nb_items,
 		int shift)
 {
@@ -56,8 +56,8 @@ static struct fat_int	*radix_sort_int_pass(struct fat_int *input_array,
 	return (output_array);
 }
 
-static struct fat_int	*radix_sort_int_last_pass(struct fat_int *input_array,
-		struct fat_int *output_array,
+static struct s_fat_int	*radix_sort_int_last_pass(struct s_fat_int *input_array,
+		struct s_fat_int *output_array,
 		int nb_items,
 		int shift)
 {
@@ -88,13 +88,13 @@ static struct fat_int	*radix_sort_int_last_pass(struct fat_int *input_array,
 	return (output_array);
 }
 
-struct	fat_int	*fat_int_radix_sort(struct fat_int *array, int nb_items)
+struct	s_fat_int	*fat_int_radix_sort(struct s_fat_int *array, int nb_items)
 {
-	struct fat_int	*buffer;
-	int				shift;
+	struct s_fat_int	*buffer;
+	int					shift;
 
 	shift = 0;
-	buffer = malloc(nb_items * sizeof(struct fat_int));
+	buffer = malloc(nb_items * sizeof(struct s_fat_int));
 	if (!buffer)
 	{
 		free(array);
