@@ -1,5 +1,7 @@
 #include <stdbool.h>
+#include <stdlib.h>
 #include "order.h"
+
 
 bool	check_for_some_order(int *array, int nb_items, int min)
 {
@@ -10,16 +12,15 @@ bool	check_for_some_order(int *array, int nb_items, int min)
 		return (false);
 	i = 0;
 	while (array[++i] != min)// && i < nb_items)
-		if (array[i] < array[i - 1])
+		if (array[i - 1] > array[i])
 			return (false);
 	if (i == nb_items)
 		return (true);
-	y = i + 2;
-	while (y < nb_items)
+	y = 0;
+	while (i + ++y < nb_items)
 	{
-		if (array[y] < array[y - 1])
+		if (array[i + y - 1] > array[i + y])
 			return (false);
-		y++;
 	}
 	if (i < y)
 		while (i--)
@@ -29,6 +30,37 @@ bool	check_for_some_order(int *array, int nb_items, int min)
 			rra();
 	return (true);
 }
+
+/*static int	*check_order_until_value_or_end(int *array, int *nb_items, int value)*/
+/*{*/
+/*    int i;*/
+/*    i = 1;*/
+/*    while (i < *nb_items && array[i] != value)*/
+/*    {*/
+/*        if (array[i] < array[i - 1])*/
+/*                return (NULL);*/
+/*        i++;*/
+/*    }*/
+/*    *nb_items -= i;*/
+/*    return &array[i];*/
+/*}*/
+
+/*bool	check_for_some_order(int *array, int nb_items, int min)*/
+/*{*/
+/*    int *min_index;*/
+/*    int *min_revindex;*/
+
+/*    if (array[0] != min && array[0] < array[nb_items - 1])*/
+/*        return (false);*/
+/*    array = check_order_until_value_or_end(array, &nb_items, min);*/
+/*    if (!array)*/
+/*        return (false);*/
+/*    min_index = array;*/
+/*    min_revindex = check_order_until_value_or_end(array, &nb_items, min);*/
+/*    if (!array)*/
+/*        return (false);*/
+/*    return (true);*/
+/*}*/
 
 /*void	fewest_rotations(int to_rotate, int nb_items)*/
 /*{*/
