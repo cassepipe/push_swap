@@ -6,7 +6,7 @@
 #    By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/23 16:37:33 by tpouget           #+#    #+#              #
-#    Updated: 2021/08/31 18:29:32 by tpouget          ###   ########.fr        #
+#    Updated: 2021/08/31 18:42:51 by tpouget          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,8 +27,6 @@ SOURCEFILES		=	atoi_error.c \
 					stack_rotate.c \
 					stack_sort.c \
 					stack_utils.c
-
-SRC/SOURCEFILES	=	$(addprefix src/, $(SOURCEFILES))
 
 HEADERS			=	atoi_error.h \
 					bit_sort.h \
@@ -60,10 +58,12 @@ CC	  		  	=	clang
 
 SANITIZER		=	-fsanitize=address
 
+NAME			=	push_swap checker
+
 
 #	Rules
 
-all:			push_swap  checker
+$(NAME):		push_swap  checker
 
 test:			push_swap	
 				cp push_swap push-swap-tester/

@@ -1,4 +1,5 @@
 obj/
+*.o
 tags
 *.swp
 push_swap_*
