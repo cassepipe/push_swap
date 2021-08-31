@@ -6,7 +6,7 @@
 #    By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/23 16:37:33 by tpouget           #+#    #+#              #
-#    Updated: 2021/08/31 18:23:14 by tpouget          ###   ########.fr        #
+#    Updated: 2021/08/31 18:29:32 by tpouget          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,7 +56,7 @@ OBJECTFILES		=	$(patsubst %.c, obj/%.o, $(SOURCEFILES))
 	
 CFLAGS			=	-Wall -Wextra -g3 -pedantic -Iinc -I.
 
-CC	  		  	=	gcc
+CC	  		  	=	clang
 
 SANITIZER		=	-fsanitize=address
 
