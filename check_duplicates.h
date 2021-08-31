@@ -1,9 +1,13 @@
-/* This file was automatically generated.  Do not edit! */
-#undef INTERFACE
-typedef struct fat_int fat_int;
-struct fat_int {
+#ifndef CHECK_DUPLICATES_H
+# define CHECK_DUPLICATES_H
+
+struct s_fat_int
+{
 	int	num;
 	int	offset;
 	int	ord;
 };
-void error_if_duplicates(struct fat_int *array,int nb_items);
+
+void	error_if_duplicates(struct s_fat_int *array, int nb_items);
+
+#endif /* CHECK_DUPLICATES_H */
