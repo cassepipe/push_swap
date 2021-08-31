@@ -46,6 +46,8 @@ int 	main(int argc, char **argv)
 	t_stack	*A;
 	t_stack	*B;
 
+	if (argc < 2)
+		return (0);
 	argv++;
 	argc--;
 	A = parse_numbers_or_error(argv, argc);
@@ -53,7 +55,10 @@ int 	main(int argc, char **argv)
 	if (!A || !B)
 		return (-1);
 	loop_exec_stack_ops(A, B);
-	put_stack_ordered(*A);
+	if (B->size == 0)
+		put_stack_ordered(*A);
+	else
+		printf(RED "KO" ENDCOLOR "\n");
 	free_stack(A);
 	free_stack(B);
 	return (0);

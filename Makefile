@@ -6,7 +6,7 @@
 #    By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/23 16:37:33 by tpouget           #+#    #+#              #
-#    Updated: 2021/08/03 18:30:19 by tpouget          ###   ########.fr        #
+#    Updated: 2021/08/31 18:13:06 by tpouget          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,23 +14,51 @@
 ##  VARIABLES  ##
 #################
 
-PHONY			=	all clean fclean re test
+SOURCEFILES		=	atoi_error.c \
+					bit_sort.c \
+					check_duplicates.c \
+					dll_operations.c \
+					fat_int_radix_sort.c \
+					loop_exec_stack_ops.c \
+					new_int_array.c \
+					order.c \
+					print_operations.c \
+					stack_operations.c \
+					stack_rotate.c \
+					stack_sort.c \
+					stack_utils.c
 
-BLACKLIST		=	push_swap.c checker.c 
+SRC/SOURCEFILES	=	$(addprefix src/, $(SOURCEFILES))
 
-SOURCEFILES		=	$(filter-out ${BLACKLIST}, $(wildcard *.c))
+HEADERS			=	atoi_error.h \
+					bit_sort.h \
+					check_duplicates.h \
+					checker.h \
+					dll_node.h \
+					dll_operations.h \
+					fat_int.h \
+					fat_int_radix_sort.h \
+					insertion_sort.h \
+					loop_exec_stack_ops.h \
+					new_int_array.h \
+					order.h \
+					print_operations.h \
+					push_swap.h \
+					stack.h \
+					stack_operations.h \
+					stack_rotate.h \
+					stack_sort.h \
+					stack_utils.h
 
-OBJECTFILES		=	$(patsubst %.c,obj/%.o,$(SOURCEFILES))
+INC/HEADERS		=	$(addprefix inc/, $(HEADERS))
+
+OBJECTFILES		=	$(patsubst %.c, obj/%.o, $(SOURCEFILES))
 	
-HEADERS			=	$(wildcard *.h)		
-	
-CFLAGS			=	-Wall -Wextra  -g3 -pedantic
+CFLAGS			=	-Wall -Wextra -g3 -pedantic -Iinc #-I.
 
-CC	  		  	=	clang
+CC	  		  	=	gcc
 
 SANITIZER		=	-fsanitize=address
-
-NAME			=	prog
 
 
 #	Rules
@@ -47,9 +75,8 @@ push_swap:		obj/push_swap.o ${OBJECTFILES} libft/libft.a
 checker:		obj/checker.o ${OBJECTFILES} libft/libft.a
 				${CC} ${SANITIZER} obj/checker.o ${OBJECTFILES} -Llibft -lft -o $@
 
-obj/%.o:		%.c	Makefile ${HEADERS} | obj
+obj/%.o:		src/%.c	Makefile ${INC/HEADERS} | obj
 				${CC} ${CFLAGS} -c $< -o $@
-
 
 obj:			
 				mkdir obj
@@ -65,5 +92,4 @@ fclean:			clean
 
 re:				fclean all
 
-.PHONY:			
-				${PHONY}	
+.PHONY:			all clean fclean re test
