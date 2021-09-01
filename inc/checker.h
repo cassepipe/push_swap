@@ -31,5 +31,6 @@ t_dllnode	*dll_new_node(int n);
 t_stack		*stack_append(t_stack *stack, t_dllnode *node);
 int			atoi_error(const char *ptr, bool *error);
 t_stack		*new_empty_stack(void);
+bool		error_if_duplicates_in_stack(t_stack *stack);
 
 #endif /* CHECKER_H */

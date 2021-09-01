@@ -6,7 +6,7 @@
 #    By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/23 16:37:33 by tpouget           #+#    #+#              #
-#    Updated: 2021/08/31 18:42:51 by tpouget          ###   ########.fr        #
+#    Updated: 2021/09/01 19:07:19 by tpouget          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,12 +58,9 @@ CC	  		  	=	clang
 
 SANITIZER		=	-fsanitize=address
 
-NAME			=	push_swap checker
-
-
 #	Rules
 
-$(NAME):		push_swap  checker
+all:			push_swap  checker
 
 test:			push_swap	
 				cp push_swap push-swap-tester/

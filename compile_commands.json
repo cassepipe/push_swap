@@ -1,0 +1,74 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-pedantic",
+      "-Iinc",
+      "-I.",
+      "-c",
+      "-o",
+      "obj/push_swap.o",
+      "src/push_swap.c"
+    ],
+    "directory": "/home/bajaba/pushswap",
+    "file": "/home/bajaba/pushswap/src/push_swap.c",
+    "output": "/home/bajaba/pushswap/obj/push_swap.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-pedantic",
+      "-Iinc",
+      "-I.",
+      "-c",
+      "-o",
+      "obj/atoi_error.o",
+      "src/atoi_error.c"
+    ],
+    "directory": "/home/bajaba/pushswap",
+    "file": "/home/bajaba/pushswap/src/atoi_error.c",
+    "output": "/home/bajaba/pushswap/obj/atoi_error.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-pedantic",
+      "-Iinc",
+      "-I.",
+      "-c",
+      "-o",
+      "obj/bit_sort.o",
+      "src/bit_sort.c"
+    ],
+    "directory": "/home/bajaba/pushswap",
+    "file": "/home/bajaba/pushswap/src/bit_sort.c",
+    "output": "/home/bajaba/pushswap/obj/bit_sort.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-pedantic",
+      "-Iinc",
+      "-I.",
+      "-c",
+      "-o",
+      "obj/check_duplicates.o",
+      "src/check_duplicates.c"
+    ],
+    "directory": "/home/bajaba/pushswap",
+    "file": "/home/bajaba/pushswap/src/check_duplicates.c",
+    "output": "/home/bajaba/pushswap/obj/check_duplicates.o"
+  }
+]

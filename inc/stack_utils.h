@@ -22,6 +22,7 @@ void	stack_rotate(t_stack *stack);
 bool	is_stack_sorted(t_stack A);
 void	free_dll(t_dllnode **list, int nmemb);
 void	free_stack(t_stack *stack);
+void	empty_stack(t_stack *stack);
 t_stack	*new_empty_stack(void);
 t_stack	*new_stack(t_dllnode *top, int size);
 

@@ -29,7 +29,7 @@ typedef struct s_fat_int	t_fat_int;
 int			*bit_sort_raw(int *input_array, int nb_items, int max);
 void		stack_sort(t_stack	*A,	int	min);
 bool		check_for_some_order(int	*array,	int	nb_items,	int	min);
-void		error_if_duplicates(struct	s_fat_int	*array,	int	nb_items);
+void		error_if_duplicates_in_fat_array(struct	s_fat_int	*array,	int	nb_items);
 void		free_stack(t_stack	*stack);
 t_fat_int	*fat_int_radix_sort(struct	s_fat_int	*array,	int	nb_items);
 t_dllnode	*dll_new_node(int	n);

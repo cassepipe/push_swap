@@ -4,6 +4,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include "libft/get_next_line.h"
+#include "libft/ft_printf/ft_printf.h"
 #include "checker.h"
 
 static t_stack	*parse_numbers_or_error(char **num_strings, int nb_items)
@@ -36,9 +37,9 @@ static t_stack	*parse_numbers_or_error(char **num_strings, int nb_items)
 void	put_stack_ordered(t_stack stack)
 {
 	if (is_stack_sorted(stack))
-		printf(GREEN "OK" ENDCOLOR "\n");
+		ft_printf(GREEN "OK" ENDCOLOR "\n");
 	else
-		printf(RED "KO" ENDCOLOR "\n");
+		ft_printf(RED "KO" ENDCOLOR "\n");
 }
 
 int 	main(int argc, char **argv)
@@ -51,15 +52,22 @@ int 	main(int argc, char **argv)
 	argv++;
 	argc--;
 	A = parse_numbers_or_error(argv, argc);
+	if (error_if_duplicates_in_stack(A))
+	{
+		free_stack(A);
+		write(STDERR_FILENO, "Error\n", sizeof("Error\n"));
+		exit(EXIT_FAILURE);
+	}
 	B = new_empty_stack();
 	if (!A || !B)
-		return (-1);
+		return (EXIT_FAILURE);
 	loop_exec_stack_ops(A, B);
 	if (B->size == 0)
 		put_stack_ordered(*A);
 	else
-		printf(RED "KO" ENDCOLOR "\n");
+		ft_printf(RED "KO" ENDCOLOR "\n");
 	free_stack(A);
+	A = NULL;
 	free_stack(B);
 	return (0);
 }

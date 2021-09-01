@@ -20,14 +20,14 @@ t_stack	*new_empty_stack(void)
 	return (new_stack(NULL, 0));
 }
 
-/*void	empty_stack(t_stack *stack)*/
-/*{*/
-/*    if (stack)*/
-/*    {*/
-/*        free_dll(&stack->top, stack->size);*/
-/*        stack->size = 0;*/
-/*    }*/
-/*}*/
+void	empty_stack(t_stack *stack)
+{
+	if (stack)
+	{
+		free_dll(&stack->top, stack->size);
+		stack->size = 0;
+	}
+}
 
 void	free_stack(t_stack *stack)
 {

@@ -86,7 +86,7 @@ int	main(int argc, char **argv)
 	argv++;
 	argc--;
 	fat_array = parse_numbers_or_error(argv, argc);
-	error_if_duplicates(fat_array, argc);
+	error_if_duplicates_in_fat_array(fat_array, argc);
 	fat_array = fat_int_radix_sort(fat_array, argc);
 	int_array = create_positive_array(fat_array, argc);
 	free(fat_array);
