@@ -52,12 +52,7 @@ int 	main(int argc, char **argv)
 	argv++;
 	argc--;
 	A = parse_numbers_or_error(argv, argc);
-	if (error_if_duplicates_in_stack(A))
-	{
-		free_stack(A);
-		write(STDERR_FILENO, "Error\n", sizeof("Error\n"));
-		exit(EXIT_FAILURE);
-	}
+	error_if_duplicates_in_stack(A);
 	B = new_empty_stack();
 	if (!A || !B)
 		return (EXIT_FAILURE);
@@ -67,7 +62,6 @@ int 	main(int argc, char **argv)
 	else
 		ft_printf(RED "KO" ENDCOLOR "\n");
 	free_stack(A);
-	A = NULL;
 	free_stack(B);
 	return (0);
 }

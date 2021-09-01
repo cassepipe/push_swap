@@ -25,7 +25,7 @@ struct s_fat_int
 };
 
 
-bool	error_if_duplicates_in_stack(t_stack *stack);
+void	error_if_duplicates_in_stack(t_stack *stack);
 void	free_stack(t_stack *stack);
 void	error_if_duplicates(struct s_fat_int *array, int nb_items);
 

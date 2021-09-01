@@ -18,7 +18,7 @@ diralloc	libft/ft_split.c	/^static char			**diralloc(const char *s, char c)$/;"	
 dll_new_node	src/dll_operations.c	/^t_dllnode	*dll_new_node(int n)$/;"	f
 empty_stack	src/stack_utils.c	/^void	empty_stack(t_stack *stack)$/;"	f
 error_if_duplicates_in_fat_array	src/check_duplicates.c	/^void	error_if_duplicates_in_fat_array(struct s_fat_int *array, int nb_items)$/;"	f
-error_if_duplicates_in_stack	src/check_duplicates.c	/^bool	error_if_duplicates_in_stack(t_stack *stack)$/;"	f
+error_if_duplicates_in_stack	src/check_duplicates.c	/^void	error_if_duplicates_in_stack(t_stack *stack)$/;"	f
 fat_int_radix_sort	src/fat_int_radix_sort.c	/^struct	s_fat_int	*fat_int_radix_sort(struct s_fat_int *array, int nb_items)$/;"	f
 free_dll	src/dll_operations.c	/^void	free_dll(t_dllnode **list, int nmemb)$/;"	f
 free_stack	src/stack_utils.c	/^void	free_stack(t_stack *stack)$/;"	f

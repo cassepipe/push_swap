@@ -3,28 +3,33 @@
 #include <stdbool.h>
 #include "check_duplicates.h"
 
-bool	error_if_duplicates_in_stack(t_stack *stack)
+void	error_if_duplicates_in_stack(t_stack *stack)
 {
 	t_dllnode	*compared;
 	t_dllnode	*comparee;
+	int			left_to_check;
 	int			comparisons;
 
 	compared = stack->top;
 	comparee = stack->top->next;
-	while (stack->size> 0)
+	left_to_check = stack->size;
+	while (left_to_check > 0)
 	{
-		comparisons = --stack->size;
+		comparisons = --left_to_check;
 		while (comparisons > 0)
 		{
 			if (compared->num == comparee->num)
-				return (true);
+			{
+				free_stack(stack);
+				write(STDERR_FILENO, "Error\n", sizeof("Error\n"));
+				exit(EXIT_FAILURE);
+			}
 			comparee = comparee->next;
 			comparisons--;
 		}
 		compared = compared->next;
 		comparee = compared->next;
 	}
-	return (false);
 }
 
 void	error_if_duplicates_in_fat_array(struct s_fat_int *array, int nb_items)
