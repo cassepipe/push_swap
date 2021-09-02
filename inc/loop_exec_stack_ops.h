@@ -21,5 +21,6 @@ void	stack_rotate(t_stack *stack);
 void	stack_revrotate(t_stack *stack);
 void	stack_poppush(t_stack *src, t_stack *dst);
 void	stack_swaptop(t_stack *stack);
+void	free_stack(t_stack *stack);
 
 #endif /* LOOP_EXEC_STACK_OPS_H */

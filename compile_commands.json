@@ -70,5 +70,1067 @@
     "directory": "/home/bajaba/pushswap",
     "file": "/home/bajaba/pushswap/src/check_duplicates.c",
     "output": "/home/bajaba/pushswap/obj/check_duplicates.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-pedantic",
+      "-Iinc",
+      "-I.",
+      "-c",
+      "-o",
+      "obj/dll_operations.o",
+      "src/dll_operations.c"
+    ],
+    "directory": "/home/bajaba/pushswap",
+    "file": "/home/bajaba/pushswap/src/dll_operations.c",
+    "output": "/home/bajaba/pushswap/obj/dll_operations.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-pedantic",
+      "-Iinc",
+      "-I.",
+      "-c",
+      "-o",
+      "obj/fat_int_radix_sort.o",
+      "src/fat_int_radix_sort.c"
+    ],
+    "directory": "/home/bajaba/pushswap",
+    "file": "/home/bajaba/pushswap/src/fat_int_radix_sort.c",
+    "output": "/home/bajaba/pushswap/obj/fat_int_radix_sort.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-pedantic",
+      "-Iinc",
+      "-I.",
+      "-c",
+      "-o",
+      "obj/loop_exec_stack_ops.o",
+      "src/loop_exec_stack_ops.c"
+    ],
+    "directory": "/home/bajaba/pushswap",
+    "file": "/home/bajaba/pushswap/src/loop_exec_stack_ops.c",
+    "output": "/home/bajaba/pushswap/obj/loop_exec_stack_ops.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-pedantic",
+      "-Iinc",
+      "-I.",
+      "-c",
+      "-o",
+      "obj/new_int_array.o",
+      "src/new_int_array.c"
+    ],
+    "directory": "/home/bajaba/pushswap",
+    "file": "/home/bajaba/pushswap/src/new_int_array.c",
+    "output": "/home/bajaba/pushswap/obj/new_int_array.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-pedantic",
+      "-Iinc",
+      "-I.",
+      "-c",
+      "-o",
+      "obj/order.o",
+      "src/order.c"
+    ],
+    "directory": "/home/bajaba/pushswap",
+    "file": "/home/bajaba/pushswap/src/order.c",
+    "output": "/home/bajaba/pushswap/obj/order.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-pedantic",
+      "-Iinc",
+      "-I.",
+      "-c",
+      "-o",
+      "obj/print_operations.o",
+      "src/print_operations.c"
+    ],
+    "directory": "/home/bajaba/pushswap",
+    "file": "/home/bajaba/pushswap/src/print_operations.c",
+    "output": "/home/bajaba/pushswap/obj/print_operations.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-pedantic",
+      "-Iinc",
+      "-I.",
+      "-c",
+      "-o",
+      "obj/stack_operations.o",
+      "src/stack_operations.c"
+    ],
+    "directory": "/home/bajaba/pushswap",
+    "file": "/home/bajaba/pushswap/src/stack_operations.c",
+    "output": "/home/bajaba/pushswap/obj/stack_operations.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-pedantic",
+      "-Iinc",
+      "-I.",
+      "-c",
+      "-o",
+      "obj/stack_rotate.o",
+      "src/stack_rotate.c"
+    ],
+    "directory": "/home/bajaba/pushswap",
+    "file": "/home/bajaba/pushswap/src/stack_rotate.c",
+    "output": "/home/bajaba/pushswap/obj/stack_rotate.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-pedantic",
+      "-Iinc",
+      "-I.",
+      "-c",
+      "-o",
+      "obj/stack_sort.o",
+      "src/stack_sort.c"
+    ],
+    "directory": "/home/bajaba/pushswap",
+    "file": "/home/bajaba/pushswap/src/stack_sort.c",
+    "output": "/home/bajaba/pushswap/obj/stack_sort.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-pedantic",
+      "-Iinc",
+      "-I.",
+      "-c",
+      "-o",
+      "obj/stack_utils.o",
+      "src/stack_utils.c"
+    ],
+    "directory": "/home/bajaba/pushswap",
+    "file": "/home/bajaba/pushswap/src/stack_utils.c",
+    "output": "/home/bajaba/pushswap/obj/stack_utils.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_atoi.o",
+      "ft_atoi.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_atoi.c",
+    "output": "/home/bajaba/pushswap/libft/ft_atoi.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_strlcat.o",
+      "ft_strlcat.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_strlcat.c",
+    "output": "/home/bajaba/pushswap/libft/ft_strlcat.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_strlcpy.o",
+      "ft_strlcpy.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_strlcpy.c",
+    "output": "/home/bajaba/pushswap/libft/ft_strlcpy.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_strncmp.o",
+      "ft_strncmp.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_strncmp.c",
+    "output": "/home/bajaba/pushswap/libft/ft_strncmp.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_bzero.o",
+      "ft_bzero.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_bzero.c",
+    "output": "/home/bajaba/pushswap/libft/ft_bzero.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_calloc.o",
+      "ft_calloc.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_calloc.c",
+    "output": "/home/bajaba/pushswap/libft/ft_calloc.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_isalnum.o",
+      "ft_isalnum.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_isalnum.c",
+    "output": "/home/bajaba/pushswap/libft/ft_isalnum.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_isalpha.o",
+      "ft_isalpha.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_isalpha.c",
+    "output": "/home/bajaba/pushswap/libft/ft_isalpha.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_isascii.o",
+      "ft_isascii.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_isascii.c",
+    "output": "/home/bajaba/pushswap/libft/ft_isascii.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_isdigit.o",
+      "ft_isdigit.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_isdigit.c",
+    "output": "/home/bajaba/pushswap/libft/ft_isdigit.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_isprint.o",
+      "ft_isprint.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_isprint.c",
+    "output": "/home/bajaba/pushswap/libft/ft_isprint.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_isspace.o",
+      "ft_isspace.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_isspace.c",
+    "output": "/home/bajaba/pushswap/libft/ft_isspace.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_memset.o",
+      "ft_memset.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_memset.c",
+    "output": "/home/bajaba/pushswap/libft/ft_memset.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_memcpy.o",
+      "ft_memcpy.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_memcpy.c",
+    "output": "/home/bajaba/pushswap/libft/ft_memcpy.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_memchr.o",
+      "ft_memchr.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_memchr.c",
+    "output": "/home/bajaba/pushswap/libft/ft_memchr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_memccpy.o",
+      "ft_memccpy.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_memccpy.c",
+    "output": "/home/bajaba/pushswap/libft/ft_memccpy.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_memmove.o",
+      "ft_memmove.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_memmove.c",
+    "output": "/home/bajaba/pushswap/libft/ft_memmove.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_memcmp.o",
+      "ft_memcmp.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_memcmp.c",
+    "output": "/home/bajaba/pushswap/libft/ft_memcmp.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_strchr.o",
+      "ft_strchr.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_strchr.c",
+    "output": "/home/bajaba/pushswap/libft/ft_strchr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_strdup.o",
+      "ft_strdup.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_strdup.c",
+    "output": "/home/bajaba/pushswap/libft/ft_strdup.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_strndup.o",
+      "ft_strndup.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_strndup.c",
+    "output": "/home/bajaba/pushswap/libft/ft_strndup.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_strlen.o",
+      "ft_strlen.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_strlen.c",
+    "output": "/home/bajaba/pushswap/libft/ft_strlen.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_strrchr.o",
+      "ft_strrchr.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_strrchr.c",
+    "output": "/home/bajaba/pushswap/libft/ft_strrchr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_tolower.o",
+      "ft_tolower.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_tolower.c",
+    "output": "/home/bajaba/pushswap/libft/ft_tolower.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_toupper.o",
+      "ft_toupper.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_toupper.c",
+    "output": "/home/bajaba/pushswap/libft/ft_toupper.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_strnstr.o",
+      "ft_strnstr.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_strnstr.c",
+    "output": "/home/bajaba/pushswap/libft/ft_strnstr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_substr.o",
+      "ft_substr.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_substr.c",
+    "output": "/home/bajaba/pushswap/libft/ft_substr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_strjoin.o",
+      "ft_strjoin.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_strjoin.c",
+    "output": "/home/bajaba/pushswap/libft/ft_strjoin.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_strjoin_and_free.o",
+      "ft_strjoin_and_free.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_strjoin_and_free.c",
+    "output": "/home/bajaba/pushswap/libft/ft_strjoin_and_free.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_strtrim.o",
+      "ft_strtrim.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_strtrim.c",
+    "output": "/home/bajaba/pushswap/libft/ft_strtrim.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_split.o",
+      "ft_split.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_split.c",
+    "output": "/home/bajaba/pushswap/libft/ft_split.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_itoa.o",
+      "ft_itoa.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_itoa.c",
+    "output": "/home/bajaba/pushswap/libft/ft_itoa.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_strmapi.o",
+      "ft_strmapi.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_strmapi.c",
+    "output": "/home/bajaba/pushswap/libft/ft_strmapi.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_putchar_fd.o",
+      "ft_putchar_fd.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_putchar_fd.c",
+    "output": "/home/bajaba/pushswap/libft/ft_putchar_fd.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_putstr_fd.o",
+      "ft_putstr_fd.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_putstr_fd.c",
+    "output": "/home/bajaba/pushswap/libft/ft_putstr_fd.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_putendl_fd.o",
+      "ft_putendl_fd.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_putendl_fd.c",
+    "output": "/home/bajaba/pushswap/libft/ft_putendl_fd.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_putnbr_fd.o",
+      "ft_putnbr_fd.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_putnbr_fd.c",
+    "output": "/home/bajaba/pushswap/libft/ft_putnbr_fd.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_lstnew.o",
+      "ft_lstnew.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_lstnew.c",
+    "output": "/home/bajaba/pushswap/libft/ft_lstnew.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_lstsize.o",
+      "ft_lstsize.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_lstsize.c",
+    "output": "/home/bajaba/pushswap/libft/ft_lstsize.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_lstadd_front.o",
+      "ft_lstadd_front.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_lstadd_front.c",
+    "output": "/home/bajaba/pushswap/libft/ft_lstadd_front.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_lstadd_back.o",
+      "ft_lstadd_back.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_lstadd_back.c",
+    "output": "/home/bajaba/pushswap/libft/ft_lstadd_back.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_lstlast.o",
+      "ft_lstlast.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_lstlast.c",
+    "output": "/home/bajaba/pushswap/libft/ft_lstlast.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_lstdelone.o",
+      "ft_lstdelone.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_lstdelone.c",
+    "output": "/home/bajaba/pushswap/libft/ft_lstdelone.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_lstclear.o",
+      "ft_lstclear.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_lstclear.c",
+    "output": "/home/bajaba/pushswap/libft/ft_lstclear.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_lstiter.o",
+      "ft_lstiter.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_lstiter.c",
+    "output": "/home/bajaba/pushswap/libft/ft_lstiter.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_lstmap.o",
+      "ft_lstmap.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_lstmap.c",
+    "output": "/home/bajaba/pushswap/libft/ft_lstmap.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "get_next_line.o",
+      "get_next_line.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/get_next_line.c",
+    "output": "/home/bajaba/pushswap/libft/get_next_line.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_printf/repr.o",
+      "ft_printf/repr.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_printf/repr.c",
+    "output": "/home/bajaba/pushswap/libft/ft_printf/repr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_printf/pad.o",
+      "ft_printf/pad.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_printf/pad.c",
+    "output": "/home/bajaba/pushswap/libft/ft_printf/pad.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_printf/ft_vdprintf.o",
+      "ft_printf/ft_vdprintf.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_printf/ft_vdprintf.c",
+    "output": "/home/bajaba/pushswap/libft/ft_printf/ft_vdprintf.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_printf/ft_printf.o",
+      "ft_printf/ft_printf.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_printf/ft_printf.c",
+    "output": "/home/bajaba/pushswap/libft/ft_printf/ft_printf.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_printf/ft_lutoa_base.o",
+      "ft_printf/ft_lutoa_base.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_printf/ft_lutoa_base.c",
+    "output": "/home/bajaba/pushswap/libft/ft_printf/ft_lutoa_base.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_printf/ft_dprintf.o",
+      "ft_printf/ft_dprintf.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_printf/ft_dprintf.c",
+    "output": "/home/bajaba/pushswap/libft/ft_printf/ft_dprintf.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_printf/format_utils.o",
+      "ft_printf/format_utils.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_printf/format_utils.c",
+    "output": "/home/bajaba/pushswap/libft/ft_printf/format_utils.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-pedantic",
+      "-Iinc",
+      "-I.",
+      "-c",
+      "-o",
+      "obj/checker.o",
+      "src/checker.c"
+    ],
+    "directory": "/home/bajaba/pushswap",
+    "file": "/home/bajaba/pushswap/src/checker.c",
+    "output": "/home/bajaba/pushswap/obj/checker.o"
   }
 ]

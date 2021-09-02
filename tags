@@ -9,6 +9,7 @@ atoi_error	src/atoi_error.c	/^int	atoi_error(const char *ptr, bool *error)$/;"	f
 bit_sort_pass	src/bit_sort.c	/^static int	*bit_sort_pass(int *input_array,$/;"	f	file:
 bit_sort_raw	src/bit_sort.c	/^int	*bit_sort_raw(int *input_array,$/;"	f
 char_repr	libft/ft_printf/repr.c	/^char		*char_repr(unsigned char c,$/;"	f
+check_end_of_line	src/loop_exec_stack_ops.c	/^static void check_end_of_line(char *line, t_stack *A, t_stack *B)$/;"	f	file:
 check_for_some_order	src/order.c	/^bool	check_for_some_order(int *array, int nb_items, int min)$/;"	f
 count	src/fat_int_radix_sort.c	/^static void	count(struct s_fat_int *input_array,$/;"	f	file:
 create_positive_array	src/push_swap.c	/^int	*create_positive_array(t_fat_int *fat_array, int nb_items)$/;"	f
@@ -78,6 +79,7 @@ ft_vdprintf	libft/ft_printf/ft_vdprintf.c	/^int						ft_vdprintf(int fd, const c
 get_next_line	libft/get_next_line.c	/^int			get_next_line(int fd, char **line)$/;"	f
 grow_buffer_until_newline	libft/get_next_line.c	/^static int	grow_buffer_until_newline(int fd, char **buffer,$/;"	f	file:
 handle_push	src/loop_exec_stack_ops.c	/^static void	handle_push(char *line, t_stack *A, t_stack *B)$/;"	f	file:
+handle_reverse_rotation	src/loop_exec_stack_ops.c	/^static void	handle_reverse_rotation(char *line, t_stack *A, t_stack *B)$/;"	f	file:
 handle_rotation	src/loop_exec_stack_ops.c	/^static void	handle_rotation(char *line, t_stack *A, t_stack *B)$/;"	f	file:
 handle_swap	src/loop_exec_stack_ops.c	/^static void	handle_swap(char *line, t_stack *A, t_stack *B)$/;"	f	file:
 init_format	libft/ft_printf/format_utils.c	/^void		init_format(struct s_parameters *format)$/;"	f

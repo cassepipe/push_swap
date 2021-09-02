@@ -6,7 +6,7 @@
 #    By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/23 16:37:33 by tpouget           #+#    #+#              #
-#    Updated: 2021/04/19 17:09:52 by tpouget          ###   ########.fr        #
+#    Updated: 2021/09/02 12:19:40 by tpouget          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,9 +74,6 @@ SRC			=	ft_atoi.c    			\
 				ft_printf/format_utils.c	\
 
 
-#	Includes
-INCLUDES		=	libft.h	get_next_line.h	
-
 #	Objects
 OBJS		= 	${SRC:.c=.o}
 
@@ -84,13 +81,13 @@ OBJS		= 	${SRC:.c=.o}
 NAME			= 	libft.a
 
 #	Compiler
-CFLAGS		=	-Werror -Wall -Wextra -g3
+CFLAGS		=	-Wall -Wextra -g3
 
 RM			= 	rm -rf
 
 AR			= 	ar rcs
 
-CC			= 	gcc
+CC			= 	clang
 
 ATTRIBUT 	= 	-c
 
@@ -98,12 +95,11 @@ ATTRIBUT 	= 	-c
 
 all:			${NAME}
 
--c.o:			
-				${CC} ${CFLAGS} ${ATTRIBUT} $< -o $(<:.c=.o) -I${INCLUDES}
-
 ${NAME}:		${OBJS} Makefile
 				${AR} ${NAME} ${OBJS}
 
+%.o:			%.c libft.h get_next_line.h ft_printf/ft_prinf.h			
+				${CC} ${CFLAGS} ${ATTRIBUT} $< -o $(<:.c=.o) 
 clean:			
 				${RM} ${OBJS} ${OBJS_B}
 
