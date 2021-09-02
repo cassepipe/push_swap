@@ -67,7 +67,7 @@ static void	handle_reverse_rotation(char *line, t_stack *A, t_stack *B)
 		stack_revrotate(A);
 		stack_revrotate(B);
 	}
-	else if (ft_isspace(line[2]))
+	else if (line[2] == '\0' || ft_isspace(line[2]))
 	{
 		stack_rotate(A);
 		stack_rotate(B);
@@ -117,7 +117,7 @@ void	loop_exec_stack_ops(t_stack *A, t_stack *B)
 			handle_push(line, A, B);
 		else if (line[0] == 'r')
 			handle_rotation(line, A, B);
-		else if (line[0] == '\0')
+		else if (line[0] == '\0' || ft_isspace(line[0]))
 		{
 			free(line);
 			continue ;

@@ -6,7 +6,7 @@
 #    By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/23 16:37:33 by tpouget           #+#    #+#              #
-#    Updated: 2021/09/01 19:07:19 by tpouget          ###   ########.fr        #
+#    Updated: 2021/09/02 15:21:00 by tpouget          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,10 +60,11 @@ SANITIZER		=	-fsanitize=address
 
 #	Rules
 
-all:			push_swap  checker
+all:			push_swap checker
 
 test:			push_swap	
 				cp push_swap push-swap-tester/
+				cp checker push-swap-tester/
 				push-swap-tester/test.sh
 
 push_swap:		obj/push_swap.o ${OBJECTFILES} libft/libft.a
