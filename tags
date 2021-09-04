@@ -9,17 +9,18 @@ atoi_error	src/atoi_error.c	/^int	atoi_error(const char *ptr, bool *error)$/;"	f
 bit_sort_pass	src/bit_sort.c	/^static int	*bit_sort_pass(int *input_array,$/;"	f	file:
 bit_sort_raw	src/bit_sort.c	/^int	*bit_sort_raw(int *input_array,$/;"	f
 char_repr	libft/ft_printf/repr.c	/^char		*char_repr(unsigned char c,$/;"	f
-check_end_of_line	src/loop_exec_stack_ops.c	/^static void check_end_of_line(char *line, t_stack *A, t_stack *B)$/;"	f	file:
 check_for_some_order	src/order.c	/^bool	check_for_some_order(int *array, int nb_items, int min)$/;"	f
 count	src/fat_int_radix_sort.c	/^static void	count(struct s_fat_int *input_array,$/;"	f	file:
 create_positive_array	src/push_swap.c	/^int	*create_positive_array(t_fat_int *fat_array, int nb_items)$/;"	f
 create_stack_from_int_array	src/push_swap.c	/^t_stack	*create_stack_from_int_array(int *int_array, int nb_items)$/;"	f
 die	src/bit_sort.c	/^static void	die(int *to_free)$/;"	f	file:
+die_free	src/loop_exec_stack_ops.c	/^static void	die_free(t_stack *stack1, t_stack *stack2)$/;"	f	file:
 diralloc	libft/ft_split.c	/^static char			**diralloc(const char *s, char c)$/;"	f	file:
 dll_new_node	src/dll_operations.c	/^t_dllnode	*dll_new_node(int n)$/;"	f
 empty_stack	src/stack_utils.c	/^void	empty_stack(t_stack *stack)$/;"	f
 error_if_duplicates_in_fat_array	src/check_duplicates.c	/^void	error_if_duplicates_in_fat_array(struct s_fat_int *array, int nb_items)$/;"	f
 error_if_duplicates_in_stack	src/check_duplicates.c	/^void	error_if_duplicates_in_stack(t_stack *stack)$/;"	f
+execute_instruction	src/loop_exec_stack_ops.c	/^	void		(*execute_instruction)();$/;"	m	struct:s_fat_token	file:
 fat_int_radix_sort	src/fat_int_radix_sort.c	/^struct	s_fat_int	*fat_int_radix_sort(struct s_fat_int *array, int nb_items)$/;"	f
 free_dll	src/dll_operations.c	/^void	free_dll(t_dllnode **list, int nmemb)$/;"	f
 free_stack	src/stack_utils.c	/^void	free_stack(t_stack *stack)$/;"	f
@@ -77,17 +78,15 @@ ft_tolower	libft/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f
 ft_toupper	libft/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
 ft_vdprintf	libft/ft_printf/ft_vdprintf.c	/^int						ft_vdprintf(int fd, const char *fs, va_list args)$/;"	f
 get_next_line	libft/get_next_line.c	/^int			get_next_line(int fd, char **line)$/;"	f
+get_next_line_with_newline	libft/get_next_line.c	/^int			get_next_line_with_newline(int fd, char **line)$/;"	f
 grow_buffer_until_newline	libft/get_next_line.c	/^static int	grow_buffer_until_newline(int fd, char **buffer,$/;"	f	file:
-handle_push	src/loop_exec_stack_ops.c	/^static void	handle_push(char *line, t_stack *A, t_stack *B)$/;"	f	file:
-handle_reverse_rotation	src/loop_exec_stack_ops.c	/^static void	handle_reverse_rotation(char *line, t_stack *A, t_stack *B)$/;"	f	file:
-handle_rotation	src/loop_exec_stack_ops.c	/^static void	handle_rotation(char *line, t_stack *A, t_stack *B)$/;"	f	file:
-handle_swap	src/loop_exec_stack_ops.c	/^static void	handle_swap(char *line, t_stack *A, t_stack *B)$/;"	f	file:
 init_format	libft/ft_printf/format_utils.c	/^void		init_format(struct s_parameters *format)$/;"	f
+inverse_stack_stack_poppush	src/loop_exec_stack_ops.c	/^static	void inverse_stack_stack_poppush(t_stack *dst,  t_stack *src)$/;"	f	file:
 is_in	libft/ft_printf/format_utils.c	/^int			is_in(char c, const char *charset)$/;"	f
 is_in_set	libft/ft_strtrim.c	/^static int	is_in_set(char c, char const *set)$/;"	f	file:
 is_stack_sorted	src/stack_utils.c	/^bool	is_stack_sorted(t_stack A)$/;"	f
 leftpad	libft/ft_printf/pad.c	/^void	leftpad(char **str, char c, size_t n)$/;"	f
-loop_exec_stack_ops	src/loop_exec_stack_ops.c	/^void	loop_exec_stack_ops(t_stack *A, t_stack *B)$/;"	f
+loop_exec_stack_ops	src/loop_exec_stack_ops.c	/^void	loop_exec_stack_ops(t_stack *A, t_stack *B) {$/;"	f
 main	src/checker.c	/^int 	main(int argc, char **argv)$/;"	f
 main	src/push_swap.c	/^int	main(int argc, char **argv)$/;"	f
 nbr_repr	libft/ft_printf/repr.c	/^char		*nbr_repr(long nbr, struct s_parameters *format, ssize_t *size)$/;"	f
@@ -112,6 +111,7 @@ radix_sort_int_pass	src/fat_int_radix_sort.c	/^static struct s_fat_int	*radix_so
 rightpad	libft/ft_printf/pad.c	/^void	rightpad(char **str, char c, size_t n)$/;"	f
 rotate_towards_min	src/stack_sort.c	/^static void	rotate_towards_min(t_stack *A, int min)$/;"	f	file:
 rra	src/print_operations.c	/^void	rra(void)$/;"	f
+s_fat_token	src/loop_exec_stack_ops.c	/^static const struct s_fat_token {$/;"	s	file:
 sa	src/print_operations.c	/^void	sa(void)$/;"	f
 stack_append	src/stack_operations.c	/^t_stack	*stack_append(t_stack *stack, t_dllnode *node)$/;"	f
 stack_find	src/stack_sort.c	/^static int	stack_find(t_stack stack, int num)$/;"	f	file:
@@ -127,4 +127,6 @@ str_repr	libft/ft_printf/repr.c	/^char		*str_repr(char *s, struct s_parameters *
 swap_buffers	src/bit_sort.c	/^static void	swap_buffers(int **buff1, int **buff2)$/;"	f	file:
 swap_buffers	src/fat_int_radix_sort.c	/^static void	swap_buffers(struct s_fat_int **buff1, struct s_fat_int **buff2)$/;"	f	file:
 to_the_power_of	libft/ft_printf/ft_lutoa_base.c	/^static unsigned long	to_the_power_of(unsigned long n, unsigned long p)$/;"	f	file:
+token	src/loop_exec_stack_ops.c	/^	const char *token;$/;"	m	struct:s_fat_token	file:
+token_table	src/loop_exec_stack_ops.c	/^} token_table[] =$/;"	v	typeref:struct:s_fat_token	file:
 write_format	libft/ft_printf/format_utils.c	/^ssize_t		write_format(int fd,$/;"	f
