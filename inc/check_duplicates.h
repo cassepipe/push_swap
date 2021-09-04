@@ -10,20 +10,18 @@ typedef struct s_dllnode
 	struct s_dllnode	*next;
 }	t_dllnode;
 
-
 typedef struct s_stack
 {
 	t_dllnode	*top;
 	int			size;
 }	t_stack;
 
-struct s_fat_int
+typedef struct s_fat_int
 {
 	int	num;
 	int	offset;
 	int	ord;
-};
-
+}	t_fat_int;
 
 void	error_if_duplicates_in_stack(t_stack *stack);
 void	free_stack(t_stack *stack);

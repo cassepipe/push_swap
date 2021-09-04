@@ -6,7 +6,7 @@
 #    By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/23 16:37:33 by tpouget           #+#    #+#              #
-#    Updated: 2021/09/02 15:21:00 by tpouget          ###   ########.fr        #
+#    Updated: 2021/09/04 16:26:06 by tpouget          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,16 +58,15 @@ CC	  		  	=	clang
 
 SANITIZER		=	-fsanitize=address
 
+NAME			=	push_swap
+
 #	Rules
 
-all:			push_swap checker
+all:			$(NAME)
 
-test:			push_swap	
-				cp push_swap push-swap-tester/
-				cp checker push-swap-tester/
-				push-swap-tester/test.sh
+bonus:			all checker
 
-push_swap:		obj/push_swap.o ${OBJECTFILES} libft/libft.a
+$(NAME):		obj/push_swap.o ${OBJECTFILES} libft/libft.a
 				${CC} ${SANITIZER} obj/push_swap.o ${OBJECTFILES} -Llibft -lft -o $@
 
 checker:		obj/checker.o ${OBJECTFILES} libft/libft.a
@@ -90,4 +89,7 @@ fclean:			clean
 
 re:				fclean all
 
-.PHONY:			all clean fclean re test
+test:			push_swap	
+				push-swap-tester/test.sh
+
+.PHONY:			all clean fclean re test bonus

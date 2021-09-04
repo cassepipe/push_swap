@@ -1,0 +1,79 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+arrange_format	ft_printf/format_utils.c	/^void		arrange_format(struct s_parameters *format)$/;"	f
+char_repr	ft_printf/repr.c	/^char		*char_repr(unsigned char c,$/;"	f
+diralloc	ft_split.c	/^static char			**diralloc(const char *s, char c)$/;"	f	file:
+ft_10powerof	ft_itoa.c	/^static long	ft_10powerof(long n)$/;"	f	file:
+ft_10powerof	ft_putnbr_fd.c	/^static long	ft_10powerof(long n)$/;"	f	file:
+ft_atoi	ft_atoi.c	/^int			ft_atoi(const char *nptr)$/;"	f
+ft_bzero	ft_bzero.c	/^void	ft_bzero(void *s, size_t n)$/;"	f
+ft_calloc	ft_calloc.c	/^void	*ft_calloc(size_t count, size_t size)$/;"	f
+ft_dprintf	ft_printf/ft_dprintf.c	/^int	ft_dprintf(int fd, const char *formatted_string, ...)$/;"	f
+ft_isalnum	ft_isalnum.c	/^int	ft_isalnum(int c)$/;"	f
+ft_isalpha	ft_isalpha.c	/^int	ft_isalpha(int c)$/;"	f
+ft_isascii	ft_isascii.c	/^int	ft_isascii(int c)$/;"	f
+ft_isdigit	ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f
+ft_isprint	ft_isprint.c	/^int	ft_isprint(int c)$/;"	f
+ft_isspace	ft_isspace.c	/^int	ft_isspace(int c)$/;"	f
+ft_itoa	ft_itoa.c	/^char		*ft_itoa(int n)$/;"	f
+ft_lstadd_back	ft_lstadd_back.c	/^void	ft_lstadd_back(t_list **lst, t_list *new)$/;"	f
+ft_lstadd_front	ft_lstadd_front.c	/^void	ft_lstadd_front(t_list **lst, t_list *new)$/;"	f
+ft_lstclear	ft_lstclear.c	/^void	ft_lstclear(t_list **lst, void (*del)(void*))$/;"	f
+ft_lstdelone	ft_lstdelone.c	/^void	ft_lstdelone(t_list *lst, void (*del)(void*))$/;"	f
+ft_lstiter	ft_lstiter.c	/^void	ft_lstiter(t_list *lst, void (*f)(void *))$/;"	f
+ft_lstlast	ft_lstlast.c	/^t_list	*ft_lstlast(t_list *lst)$/;"	f
+ft_lstmap	ft_lstmap.c	/^t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))$/;"	f
+ft_lstnew	ft_lstnew.c	/^t_list	*ft_lstnew(void *content)$/;"	f
+ft_lstsize	ft_lstsize.c	/^int	ft_lstsize(t_list *lst)$/;"	f
+ft_lutoa_base	ft_printf/ft_lutoa_base.c	/^char					*ft_lutoa_base(unsigned long n, const char *base_str)$/;"	f
+ft_lutoa_format	ft_printf/repr.c	/^static char	*ft_lutoa_format(long nbr, int type)$/;"	f	file:
+ft_memccpy	ft_memccpy.c	/^void	*ft_memccpy(void *dest, const void *src, int c, size_t n)$/;"	f
+ft_memchr	ft_memchr.c	/^void	*ft_memchr(const void *s, int c, size_t n)$/;"	f
+ft_memcmp	ft_memcmp.c	/^int	ft_memcmp(const void *s1, const void *s2, size_t n)$/;"	f
+ft_memcpy	ft_memcpy.c	/^void	*ft_memcpy(void *dest, const void *src, size_t n)$/;"	f
+ft_memmove	ft_memmove.c	/^void	*ft_memmove(void *dst, const void *src, size_t len)$/;"	f
+ft_memset	ft_memset.c	/^void	*ft_memset(void *s, int c, size_t n)$/;"	f
+ft_printf	ft_printf/ft_printf.c	/^int	ft_printf(const char *formatted_string, ...)$/;"	f
+ft_putchar_fd	ft_putchar_fd.c	/^void	ft_putchar_fd(char c, int fd)$/;"	f
+ft_putendl_fd	ft_putendl_fd.c	/^void	ft_putendl_fd(char *s, int fd)$/;"	f
+ft_putnbr_fd	ft_putnbr_fd.c	/^void		ft_putnbr_fd(int n, int fd)$/;"	f
+ft_putstr_fd	ft_putstr_fd.c	/^void	ft_putstr_fd(char *s, int fd)$/;"	f
+ft_split	ft_split.c	/^char				**ft_split(char const *s, char c)$/;"	f
+ft_strchr	ft_strchr.c	/^char	*ft_strchr(const char *s, int c)$/;"	f
+ft_strcmp	ft_strcmp.c	/^int		ft_strcmp(const char *s1, const char *s2)$/;"	f
+ft_strdup	ft_strdup.c	/^char	*ft_strdup(const char *s)$/;"	f
+ft_strjoin	ft_strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/;"	f
+ft_strjoin_and_free	ft_strjoin_and_free.c	/^char	*ft_strjoin_and_free(char const *s1, char const *s2)$/;"	f
+ft_strlcat	ft_strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size_t size)$/;"	f
+ft_strlcpy	ft_strlcpy.c	/^size_t	ft_strlcpy(char *dst, const char *src, size_t size)$/;"	f
+ft_strlen	ft_strlen.c	/^size_t	ft_strlen(const char *s)$/;"	f
+ft_strmapi	ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f
+ft_strncmp	ft_strncmp.c	/^int	ft_strncmp(const char *l, const char *r, size_t n)$/;"	f
+ft_strndup	ft_strndup.c	/^char	*ft_strndup(const char *s, size_t n)$/;"	f
+ft_strnstr	ft_strnstr.c	/^char	*ft_strnstr(const char *big, const char *little, size_t len)$/;"	f
+ft_strrchr	ft_strrchr.c	/^char	*ft_strrchr(const char *s, int c)$/;"	f
+ft_strtrim	ft_strtrim.c	/^char		*ft_strtrim(char const *s1, char const *set)$/;"	f
+ft_substr	ft_substr.c	/^char		*ft_substr(char const *s, unsigned int start, size_t len)$/;"	f
+ft_tolower	ft_tolower.c	/^int	ft_tolower(int c)$/;"	f
+ft_toupper	ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
+ft_vdprintf	ft_printf/ft_vdprintf.c	/^int						ft_vdprintf(int fd, const char *fs, va_list args)$/;"	f
+get_next_line	get_next_line.c	/^int			get_next_line(int fd, char **line)$/;"	f
+get_next_line_with_newline	get_next_line.c	/^int			get_next_line_with_newline(int fd, char **line)$/;"	f
+grow_buffer_until_newline	get_next_line.c	/^static int	grow_buffer_until_newline(int fd, char **buffer,$/;"	f	file:
+init_format	ft_printf/format_utils.c	/^void		init_format(struct s_parameters *format)$/;"	f
+is_in	ft_printf/format_utils.c	/^int			is_in(char c, const char *charset)$/;"	f
+is_in_set	ft_strtrim.c	/^static int	is_in_set(char c, char const *set)$/;"	f	file:
+leftpad	ft_printf/pad.c	/^void	leftpad(char **str, char c, size_t n)$/;"	f
+nbr_repr	ft_printf/repr.c	/^char		*nbr_repr(long nbr, struct s_parameters *format, ssize_t *size)$/;"	f
+next_sep	ft_split.c	/^static const char	*next_sep(const char *str, char sep)$/;"	f	file:
+next_word	ft_split.c	/^static const char	*next_word(const char *str, char sep)$/;"	f	file:
+parse_str_into_format	ft_printf/format_utils.c	/^void		*parse_str_into_format(const char *fs,$/;"	f
+ptr_repr	ft_printf/repr.c	/^char		*ptr_repr(void *ptr, struct s_parameters *format, ssize_t *size)$/;"	f
+rightpad	ft_printf/pad.c	/^void	rightpad(char **str, char c, size_t n)$/;"	f
+str_repr	ft_printf/repr.c	/^char		*str_repr(char *s, struct s_parameters *format, ssize_t *size)$/;"	f
+to_the_power_of	ft_printf/ft_lutoa_base.c	/^static unsigned long	to_the_power_of(unsigned long n, unsigned long p)$/;"	f	file:
+write_format	ft_printf/format_utils.c	/^ssize_t		write_format(int fd,$/;"	f

@@ -32,7 +32,7 @@ void	error_if_duplicates_in_stack(t_stack *stack)
 	}
 }
 
-void	error_if_duplicates_in_fat_array(struct s_fat_int *array, int nb_items)
+void	error_if_duplicates_in_fat_array(t_fat_int *array, int nb_items)
 {
 	int	i;
 	int	y;

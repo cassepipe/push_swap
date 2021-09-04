@@ -1,6 +1,7 @@
 obj/
 *.o
-tags
 *.swp
 push_swap_*
 push-swap-*
+libft/libft.a
+libft/*.o
