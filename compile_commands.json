@@ -253,8 +253,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -269,8 +268,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -285,8 +283,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -301,8 +298,22 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-g3",
+      "-c",
+      "-o",
+      "ft_strcmp.o",
+      "ft_strcmp.c"
+    ],
+    "directory": "/home/bajaba/pushswap/libft",
+    "file": "/home/bajaba/pushswap/libft/ft_strcmp.c",
+    "output": "/home/bajaba/pushswap/libft/ft_strcmp.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -317,8 +328,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -333,8 +343,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -349,8 +358,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -365,8 +373,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -381,8 +388,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -397,8 +403,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -413,8 +418,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -429,8 +433,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -445,8 +448,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -461,8 +463,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -477,8 +478,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -493,8 +493,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -509,8 +508,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -525,8 +523,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -541,8 +538,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -557,8 +553,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -573,8 +568,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -589,8 +583,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -605,8 +598,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -621,8 +613,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -637,8 +628,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -653,8 +643,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -669,8 +658,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -685,8 +673,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -701,8 +688,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -717,8 +703,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -733,8 +718,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -749,8 +733,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -765,8 +748,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -781,8 +763,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -797,8 +778,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -813,8 +793,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -829,8 +808,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -845,8 +823,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -861,8 +838,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -877,8 +853,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -893,8 +868,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -909,8 +883,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -925,8 +898,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -941,8 +913,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -957,8 +928,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -973,8 +943,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -989,8 +958,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -1005,8 +973,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -1021,8 +988,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -1037,8 +1003,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -1053,8 +1018,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -1069,8 +1033,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -1085,8 +1048,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
@@ -1101,8 +1063,7 @@
   },
   {
     "arguments": [
-      "/usr/bin/gcc",
-      "-Werror",
+      "/usr/bin/clang",
       "-Wall",
       "-Wextra",
       "-g3",
