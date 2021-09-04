@@ -6,7 +6,7 @@
 /*   By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/14 18:29:05 by tpouget           #+#    #+#             */
-/*   Updated: 2021/09/02 12:12:42 by tpouget          ###   ########.fr       */
+/*   Updated: 2021/09/04 15:18:55 by tpouget          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ char				*ft_strndup(const char *s, size_t n);
 char				*ft_strchr(const char *s, int c);
 
 char				*ft_strrchr(const char *s, int c);
+
+int					ft_strcmp(const char *s1, const char *s2);
 
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 

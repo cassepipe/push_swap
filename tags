@@ -61,6 +61,7 @@ ft_putnbr_fd	libft/ft_putnbr_fd.c	/^void		ft_putnbr_fd(int n, int fd)$/;"	f
 ft_putstr_fd	libft/ft_putstr_fd.c	/^void	ft_putstr_fd(char *s, int fd)$/;"	f
 ft_split	libft/ft_split.c	/^char				**ft_split(char const *s, char c)$/;"	f
 ft_strchr	libft/ft_strchr.c	/^char	*ft_strchr(const char *s, int c)$/;"	f
+ft_strcmp	libft/ft_strcmp.c	/^int		ft_strcmp(const char *s1, const char *s2)$/;"	f
 ft_strdup	libft/ft_strdup.c	/^char	*ft_strdup(const char *s)$/;"	f
 ft_strjoin	libft/ft_strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/;"	f
 ft_strjoin_and_free	libft/ft_strjoin_and_free.c	/^char	*ft_strjoin_and_free(char const *s1, char const *s2)$/;"	f
@@ -101,7 +102,6 @@ parse_numbers_or_error	src/push_swap.c	/^static t_fat_int	*parse_numbers_or_erro
 parse_sign	src/atoi_error.c	/^static bool	parse_sign(const char **ptr)$/;"	f	file:
 parse_str_into_format	libft/ft_printf/format_utils.c	/^void		*parse_str_into_format(const char *fs,$/;"	f
 pb	src/print_operations.c	/^void	pb(void)$/;"	f
-print_stack	src/stack_utils.c	/^void	print_stack(t_stack stack)$/;"	f
 ptr_repr	libft/ft_printf/repr.c	/^char		*ptr_repr(void *ptr, struct s_parameters *format, ssize_t *size)$/;"	f
 put_stack_ordered	src/checker.c	/^void	put_stack_ordered(t_stack stack)$/;"	f
 ra	src/print_operations.c	/^void	ra(void)$/;"	f

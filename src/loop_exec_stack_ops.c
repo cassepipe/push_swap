@@ -4,9 +4,6 @@
 #include "libft/get_next_line.h"
 #include "loop_exec_stack_ops.h"
 
-# include <string.h>
-# include "../debug.h"
-
 static	void inverse_stack_stack_poppush(t_stack *dst,  t_stack *src)
 {
 	stack_poppush(src, dst);
@@ -48,7 +45,7 @@ void	loop_exec_stack_ops(t_stack *A, t_stack *B) {
 		i = 0;
 		while (i < sizeof(token_table) / sizeof(token_table[0]))
 		{
-			if (!strcmp(token_table[i].token, line))
+			if (!ft_strcmp(token_table[i].token, line))
 			{
 				if (line[1] == 'a' || line[2] == 'a')
 					token_table[i].execute_instruction(A, B);
