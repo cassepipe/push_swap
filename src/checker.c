@@ -44,24 +44,24 @@ void	put_stack_ordered(t_stack stack)
 
 int 	main(int argc, char **argv)
 {
-	t_stack	*A;
-	t_stack	*B;
+	t_stack	*a;
+	t_stack	*b;
 
 	if (argc < 2)
 		return (0);
 	argv++;
 	argc--;
-	A = parse_numbers_or_error(argv, argc);
-	error_if_duplicates_in_stack(A);
-	B = new_empty_stack();
-	if (!A || !B)
+	a = parse_numbers_or_error(argv, argc);
+	error_if_duplicates_in_stack(a);
+	b = new_empty_stack();
+	if (!a || !b)
 		return (EXIT_FAILURE);
-	loop_exec_stack_ops(A, B);
-	if (B->size == 0)
-		put_stack_ordered(*A);
+	loop_exec_stack_ops(a, b);
+	if (b->size == 0)
+		put_stack_ordered(*a);
 	else
 		ft_printf(RED "KO" ENDCOLOR "\n");
-	free_stack(A);
-	free_stack(B);
+	free_stack(a);
+	free_stack(b);
 	return (0);
 }

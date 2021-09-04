@@ -16,7 +16,7 @@ struct s_stack
 };
 typedef struct s_stack		t_stack;
 
-void	loop_exec_stack_ops(t_stack *A, t_stack *B);
+void	loop_exec_stack_ops(t_stack *a, t_stack *b);
 void	stack_rotate(t_stack *stack);
 void	stack_revrotate(t_stack *stack);
 void	stack_poppush(t_stack *src, t_stack *dst);

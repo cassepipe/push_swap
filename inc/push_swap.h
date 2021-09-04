@@ -27,7 +27,7 @@ struct	s_fat_int
 typedef struct s_fat_int	t_fat_int;
 
 int			*bit_sort_raw(int *input_array, int nb_items, int max);
-void		stack_sort(t_stack	*A,	int	min);
+void		stack_sort(t_stack	*a,	int	min);
 bool		check_for_some_order(int	*array,	int	nb_items,	int	min);
 void		error_if_duplicates_in_fat_array(t_fat_int *array, int nb_items);
 void		free_stack(t_stack	*stack);

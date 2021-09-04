@@ -8,7 +8,7 @@ arrange_format	libft/ft_printf/format_utils.c	/^void		arrange_format(struct s_pa
 atoi_error	src/atoi_error.c	/^int	atoi_error(const char *ptr, bool *error)$/;"	f
 bit_sort_pass	src/bit_sort.c	/^static int	*bit_sort_pass(int *input_array,$/;"	f	file:
 bit_sort_raw	src/bit_sort.c	/^int	*bit_sort_raw(int *input_array,$/;"	f
-bs_fun	src/loop_exec_stack_ops.c	/^static void	bs_fun(char *line, unsigned long i, t_stack *A, t_stack *B)$/;"	f	file:
+bs_fun	src/loop_exec_stack_ops.c	/^static void	bs_fun(char *line, unsigned long i, t_stack *a, t_stack *b)$/;"	f	file:
 char_repr	libft/ft_printf/repr.c	/^char		*char_repr(unsigned char c,$/;"	f
 check_for_some_order	src/order.c	/^bool	check_for_some_order(int *array, int nb_items, int min)$/;"	f
 count	src/fat_int_radix_sort.c	/^static void	count(struct s_fat_int *input_array,$/;"	f	file:
@@ -86,9 +86,9 @@ init_format	libft/ft_printf/format_utils.c	/^void		init_format(struct s_paramete
 inverse_stack_stack_poppush	src/loop_exec_stack_ops.c	/^static void	inverse_stack_stack_poppush(t_stack *dst, t_stack *src)$/;"	f	file:
 is_in	libft/ft_printf/format_utils.c	/^int			is_in(char c, const char *charset)$/;"	f
 is_in_set	libft/ft_strtrim.c	/^static int	is_in_set(char c, char const *set)$/;"	f	file:
-is_stack_sorted	src/stack_utils.c	/^bool	is_stack_sorted(t_stack A)$/;"	f
+is_stack_sorted	src/stack_utils.c	/^bool	is_stack_sorted(t_stack a)$/;"	f
 leftpad	libft/ft_printf/pad.c	/^void	leftpad(char **str, char c, size_t n)$/;"	f
-loop_exec_stack_ops	src/loop_exec_stack_ops.c	/^void	loop_exec_stack_ops(t_stack *A, t_stack *B)$/;"	f
+loop_exec_stack_ops	src/loop_exec_stack_ops.c	/^void	loop_exec_stack_ops(t_stack *a, t_stack *b)$/;"	f
 main	src/checker.c	/^int 	main(int argc, char **argv)$/;"	f
 main	src/push_swap.c	/^int	main(int argc, char **argv)$/;"	f
 nbr_repr	libft/ft_printf/repr.c	/^char		*nbr_repr(long nbr, struct s_parameters *format, ssize_t *size)$/;"	f
@@ -110,7 +110,7 @@ ra_or_pb	src/bit_sort.c	/^static void	ra_or_pb(unsigned char c)$/;"	f	file:
 radix_sort_int_last_pass	src/fat_int_radix_sort.c	/^static struct s_fat_int	*radix_sort_int_last_pass(struct s_fat_int *input_array,$/;"	f	file:
 radix_sort_int_pass	src/fat_int_radix_sort.c	/^static struct s_fat_int	*radix_sort_int_pass(struct s_fat_int *input_array,$/;"	f	file:
 rightpad	libft/ft_printf/pad.c	/^void	rightpad(char **str, char c, size_t n)$/;"	f
-rotate_towards_min	src/stack_sort.c	/^static void	rotate_towards_min(t_stack *A, int min)$/;"	f	file:
+rotate_towards_min	src/stack_sort.c	/^static void	rotate_towards_min(t_stack *a, int min)$/;"	f	file:
 rra	src/print_operations.c	/^void	rra(void)$/;"	f
 s_fat_token	src/loop_exec_stack_ops.c	/^static const struct s_fat_token {$/;"	s	file:
 sa	src/print_operations.c	/^void	sa(void)$/;"	f
@@ -122,7 +122,7 @@ stack_push	src/stack_operations.c	/^void	stack_push(t_stack *stack, t_dllnode *n
 stack_rev_find	src/stack_sort.c	/^static int	stack_rev_find(t_stack stack, int num)$/;"	f	file:
 stack_revrotate	src/stack_rotate.c	/^void	stack_revrotate(t_stack *stack)$/;"	f
 stack_rotate	src/stack_rotate.c	/^void	stack_rotate(t_stack *stack)$/;"	f
-stack_sort	src/stack_sort.c	/^void 	stack_sort(t_stack *A, int min)$/;"	f
+stack_sort	src/stack_sort.c	/^void 	stack_sort(t_stack *a, int min)$/;"	f
 stack_swaptop	src/stack_operations.c	/^void	stack_swaptop(t_stack *stack)$/;"	f
 str_repr	libft/ft_printf/repr.c	/^char		*str_repr(char *s, struct s_parameters *format, ssize_t *size)$/;"	f
 swap_buffers	src/bit_sort.c	/^static void	swap_buffers(int **buff1, int **buff2)$/;"	f	file:

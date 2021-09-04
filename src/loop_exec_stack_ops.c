@@ -27,16 +27,16 @@ static const struct s_fat_token {
 	{"pb\n", &inverse_stack_stack_poppush},
 };
 
-static void	bs_fun(char *line, unsigned long i, t_stack *A, t_stack *B)
+static void	bs_fun(char *line, unsigned long i, t_stack *a, t_stack *b)
 {
 	if (line[1] == 'a' || line[2] == 'a')
-		token_table[i].execute_instruction(A, B);
+		token_table[i].execute_instruction(a, b);
 	else if (line[1] == 'b' || line[2] == 'b')
-		token_table[i].execute_instruction(B, A);
+		token_table[i].execute_instruction(b, a);
 	else
 	{
-		token_table[i].execute_instruction(A, B);
-		token_table[i].execute_instruction(B, A);
+		token_table[i].execute_instruction(a, b);
+		token_table[i].execute_instruction(b, a);
 	}
 }
 
@@ -48,7 +48,7 @@ static void	die_free(t_stack *stack1, t_stack *stack2)
 	exit(EXIT_FAILURE);
 }
 
-void	loop_exec_stack_ops(t_stack *A, t_stack *B)
+void	loop_exec_stack_ops(t_stack *a, t_stack *b)
 {
 	char			*line;
 	unsigned long	i;
@@ -60,14 +60,14 @@ void	loop_exec_stack_ops(t_stack *A, t_stack *B)
 		{
 			if (!ft_strcmp(token_table[i].token, line))
 			{
-				bs_fun(line, i, A, B);
+				bs_fun(line, i, a, b);
 				break ;
 			}
 			i++;
 		}
 		free(line);
 		if (i == sizeof(token_table) / sizeof(token_table[0]))
-			die_free(A, B);
+			die_free(a, b);
 	}
 	free(line);
 }

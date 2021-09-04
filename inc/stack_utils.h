@@ -19,7 +19,7 @@ struct s_stack
 typedef struct s_stack		t_stack;
 
 void	stack_rotate(t_stack *stack);
-bool	is_stack_sorted(t_stack A);
+bool	is_stack_sorted(t_stack a);
 void	free_dll(t_dllnode **list, int nmemb);
 void	free_stack(t_stack *stack);
 void	empty_stack(t_stack *stack);

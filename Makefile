@@ -6,7 +6,7 @@
 #    By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/23 16:37:33 by tpouget           #+#    #+#              #
-#    Updated: 2021/09/04 16:26:06 by tpouget          ###   ########.fr        #
+#    Updated: 2021/09/04 17:25:26 by tpouget          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +74,6 @@ checker:		obj/checker.o ${OBJECTFILES} libft/libft.a
 
 obj/%.o:		src/%.c	Makefile ${INC/HEADERS} | obj
 				${CC} ${CFLAGS} -c $< -o $@
-
 obj:			
 				mkdir obj
 

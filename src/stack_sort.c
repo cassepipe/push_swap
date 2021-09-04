@@ -29,49 +29,49 @@ static int	stack_rev_find(t_stack stack, int num)
 	return (i);
 }
 
-static void	rotate_towards_min(t_stack *A, int min)
+static void	rotate_towards_min(t_stack *a, int min)
 {
 	int	r;
 	int	l;
 
-	r = stack_find(*A, min);
-	l = stack_rev_find(*A, min);
+	r = stack_find(*a, min);
+	l = stack_rev_find(*a, min);
 	if (r < l)
 	{
 		ra();
-		stack_rotate(A);
+		stack_rotate(a);
 	}
 	else
 	{
 		rra();
-		stack_revrotate(A);
+		stack_revrotate(a);
 	}
 }
 
-void 	stack_sort(t_stack *A, int min)
+void 	stack_sort(t_stack *a, int min)
 {
-	t_stack	B;
+	t_stack	b;
 
-	B = (t_stack){.top = NULL, .size = 0};
-	while (!is_stack_sorted(*A))
+	b = (t_stack){.top = NULL, .size = 0};
+	while (!is_stack_sorted(*a))
 	{
-		if (A->top->num == min)
+		if (a->top->num == min)
 		{
-			stack_poppush(A, &B);
+			stack_poppush(a, &b);
 			min++;
 			pb();
 		}
-		else if (A->top->num > A->top->next->num)
+		else if (a->top->num > a->top->next->num)
 		{
-			stack_swaptop(A);
+			stack_swaptop(a);
 			sa();
 		}
 		else
-			rotate_towards_min(A, min);
+			rotate_towards_min(a, min);
 	}
-	while (B.size)
+	while (b.size)
 	{
-		free(stack_pop(&B));
+		free(stack_pop(&b));
 		pa();
 	}
 }

@@ -23,8 +23,8 @@ struct s_stack
 };
 typedef struct s_stack		t_stack;
 
-void		loop_exec_stack_ops(t_stack *A, t_stack *B);
-bool		is_stack_sorted(t_stack A);
+void		loop_exec_stack_ops(t_stack *a, t_stack *b);
+bool		is_stack_sorted(t_stack a);
 void		put_stack_ordered(t_stack stack);
 void		free_stack(t_stack *stack);
 t_dllnode	*dll_new_node(int n);

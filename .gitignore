@@ -1,7 +1,9 @@
 obj/
+libft/
 *.o
 *.swp
+push_swap
 push_swap_*
 push-swap-*
-libft/libft.a
-libft/*.o
+checker
+checker_linux
