@@ -6,13 +6,13 @@
 /*   By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 15:18:16 by tpouget           #+#    #+#             */
-/*   Updated: 2021/09/04 15:18:27 by tpouget          ###   ########.fr       */
+/*   Updated: 2021/09/07 11:59:48 by tpouget          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strcmp(const char *s1, const char *s2)
+int	ft_strcmp(const char *s1, const char *s2)
 {
 	int	i;
 

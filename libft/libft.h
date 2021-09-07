@@ -6,7 +6,7 @@
 /*   By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/14 18:29:05 by tpouget           #+#    #+#             */
-/*   Updated: 2021/09/04 15:18:55 by tpouget          ###   ########.fr       */
+/*   Updated: 2021/09/07 12:01:04 by tpouget          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <unistd.h>
 # include "get_next_line.h"
 
-typedef struct		s_list
+typedef struct s_list
 {
 	struct s_list	*next;
 	void			*content;
@@ -57,7 +57,7 @@ size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 
 char				*ft_strnstr(const char *big,
-								const char *little, size_t len);
+						const char *little, size_t len);
 
 int					ft_atoi(const char *nptr);
 
@@ -101,5 +101,5 @@ void				ft_lstdelone(t_list *lst, void (*del)(void*));
 void				ft_lstclear(t_list **lst, void (*del)(void*));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
-											void (*del)(void *));
+						void (*del)(void *));
 #endif

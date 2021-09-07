@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int			ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
 	long	result;
 	size_t	i;

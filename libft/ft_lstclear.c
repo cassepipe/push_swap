@@ -6,7 +6,7 @@
 /*   By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/15 16:25:32 by tpouget           #+#    #+#             */
-/*   Updated: 2020/05/23 17:23:06 by tpouget          ###   ########.fr       */
+/*   Updated: 2021/09/07 12:05:41 by tpouget          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list *tmp;
+	t_list	*tmp;
 
 	if (lst)
 	{

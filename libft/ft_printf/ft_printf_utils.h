@@ -6,7 +6,7 @@
 /*   By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/13 11:20:06 by tpouget           #+#    #+#             */
-/*   Updated: 2021/04/19 16:40:47 by tpouget          ###   ########.fr       */
+/*   Updated: 2021/09/07 11:52:15 by tpouget          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ struct	s_parameters {
 	int	min_field_width;
 	int	precision;
 	int	type;
-	int error;
+	int	error;
 };
 
 int		ft_vdprintf(int fd, const char *formatted_string, va_list arg_list);
@@ -40,7 +40,7 @@ int		is_in(char c, const char *charset);
 void	init_format(struct s_parameters *format);
 void	arrange_format(struct s_parameters *format);
 void	*parse_str_into_format(const char *fs, struct s_parameters *format,
-																va_list args);
+			va_list args);
 ssize_t	write_format(int fd, va_list args, struct s_parameters *format);
 
 #endif

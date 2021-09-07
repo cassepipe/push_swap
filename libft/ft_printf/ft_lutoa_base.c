@@ -6,7 +6,7 @@
 /*   By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/21 11:00:49 by tpouget           #+#    #+#             */
-/*   Updated: 2021/04/19 16:39:29 by tpouget          ###   ########.fr       */
+/*   Updated: 2021/09/07 11:29:40 by tpouget          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static unsigned long	to_the_power_of(unsigned long n, unsigned long p)
 {
-	long result;
+	long	result;
 
 	result = 1;
 	while (p--)
@@ -22,7 +22,7 @@ static unsigned long	to_the_power_of(unsigned long n, unsigned long p)
 	return (result);
 }
 
-char					*ft_lutoa_base(unsigned long n, const char *base_str)
+char	*ft_lutoa_base(unsigned long n, const char *base_str)
 {
 	unsigned long	base;
 	long			pos;

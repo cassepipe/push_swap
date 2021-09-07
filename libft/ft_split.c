@@ -6,7 +6,7 @@
 /*   By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/14 17:04:37 by tpouget           #+#    #+#             */
-/*   Updated: 2021/04/28 11:53:32 by tpouget          ###   ########.fr       */
+/*   Updated: 2021/09/07 11:57:50 by tpouget          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static const char	*next_word(const char *str, char sep)
 	return (str);
 }
 
-static char			**diralloc(const char *s, char c)
+static char	**diralloc(const char *s, char c)
 {
 	size_t	size;
 
@@ -40,10 +40,10 @@ static char			**diralloc(const char *s, char c)
 		s = next_word(s, c);
 		size++;
 	}
-	return (malloc(size * sizeof(char*)));
+	return (malloc(size * sizeof(char *)));
 }
 
-char				**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char		**dir;
 	const char	*follower;

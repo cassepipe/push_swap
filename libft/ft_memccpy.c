@@ -6,7 +6,7 @@
 /*   By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/14 17:04:37 by tpouget           #+#    #+#             */
-/*   Updated: 2021/04/28 11:52:58 by tpouget          ###   ########.fr       */
+/*   Updated: 2021/09/07 11:55:37 by tpouget          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	unsigned char	value;
 
 	i = 0;
-	d = (unsigned char*)dest;
-	s = (unsigned char*)src;
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
 	value = (unsigned char)c;
 	while (i < n)
 	{

@@ -6,7 +6,7 @@
 /*   By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/14 17:04:37 by tpouget           #+#    #+#             */
-/*   Updated: 2021/04/28 11:53:02 by tpouget          ###   ########.fr       */
+/*   Updated: 2021/09/07 12:03:55 by tpouget          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	value;
 
 	i = 0;
-	data = (unsigned char*)s;
+	data = (unsigned char *)s;
 	value = (unsigned char)c;
 	while (i < n && data[i] != value)
 		i++;

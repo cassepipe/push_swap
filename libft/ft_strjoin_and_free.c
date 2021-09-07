@@ -6,7 +6,7 @@
 /*   By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/08 16:22:39 by tpouget           #+#    #+#             */
-/*   Updated: 2020/12/02 19:25:29 by tpouget          ###   ########.fr       */
+/*   Updated: 2021/09/07 12:02:54 by tpouget          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strjoin_and_free(char const *s1, char const *s2)
 	while (s2[++j])
 		joined[i + j] = s2[j];
 	joined[i + j] = '\0';
-	free((void*)s1);
-	free((void*)s2);
+	free((void *)s1);
+	free((void *)s2);
 	return (joined);
 }

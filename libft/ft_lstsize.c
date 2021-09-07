@@ -6,7 +6,7 @@
 /*   By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/15 10:56:19 by tpouget           #+#    #+#             */
-/*   Updated: 2020/05/23 17:25:07 by tpouget          ###   ########.fr       */
+/*   Updated: 2021/09/07 11:54:45 by tpouget          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (lst)

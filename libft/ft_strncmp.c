@@ -6,7 +6,7 @@
 /*   By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/14 17:04:38 by tpouget           #+#    #+#             */
-/*   Updated: 2021/04/28 11:53:52 by tpouget          ###   ########.fr       */
+/*   Updated: 2021/09/07 12:05:04 by tpouget          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ int	ft_strncmp(const char *l, const char *r, size_t n)
 
 	i = 0;
 	diff = 0;
-	s1 = (unsigned char*)l;
-	s2 = (unsigned char*)r;
+	s1 = (unsigned char *)l;
+	s2 = (unsigned char *)r;
 	while (i < n)
 	{
 		if ((diff = s1[i] - s2[i]))

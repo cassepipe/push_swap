@@ -6,7 +6,7 @@
 /*   By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/14 17:04:37 by tpouget           #+#    #+#             */
-/*   Updated: 2021/04/28 11:52:46 by tpouget          ###   ########.fr       */
+/*   Updated: 2021/09/07 11:30:55 by tpouget          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static long	ft_10powerof(long n)
 {
-	long result;
+	long	result;
 
 	result = 1;
 	while (n--)
@@ -22,13 +22,13 @@ static long	ft_10powerof(long n)
 	return (result);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	long nbr;
-	long digit;
-	long i;
-	long len;
-	char *result;
+	long	nbr;
+	long	digit;
+	long	i;
+	long	len;
+	char	*result;
 
 	len = 1;
 	nbr = n < 0 ? -1 * (long)n : n;

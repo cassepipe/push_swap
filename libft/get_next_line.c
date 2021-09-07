@@ -6,7 +6,7 @@
 /*   By: tpouget <cassepipe@ymail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/27 00:48:46 by tpouget           #+#    #+#             */
-/*   Updated: 2021/09/04 13:52:08 by tpouget          ###   ########.fr       */
+/*   Updated: 2021/09/07 12:04:23 by tpouget          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static int	grow_buffer_until_newline(int fd, char **buffer,
 	return (1);
 }
 
-int			get_next_line(int fd, char **line)
+int	get_next_line(int fd, char **line)
 {
 	static char	*buffer[OPEN_MAX];
 	char		*newline;
@@ -69,7 +69,7 @@ int			get_next_line(int fd, char **line)
 	return (newline ? 1 : 0);
 }
 
-int			get_next_line_with_newline(int fd, char **line)
+int	get_next_line_with_newline(int fd, char **line)
 {
 	static char	*buffer[OPEN_MAX];
 	char		*newline;
